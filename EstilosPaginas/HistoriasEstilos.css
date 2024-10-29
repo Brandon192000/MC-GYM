@@ -1,0 +1,137 @@
+/* Ajuste de margen en el body */
+body, HTML {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 100px; /* Para dejar espacio debajo del navbar fijo */
+}
+
+header {
+    background-color: #000;
+    width: 100%; /* Asegura que el header ocupe el ancho completo */
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Espaciado uniforme entre elementos */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed; /* Fija la navbar en la parte superior */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Cambia a 100% para ocupar todo el ancho */
+    background-color: #333; /* Color de fondo */
+    z-index: 1000; /* Asegura que la barra quede sobre otros elementos */
+    height: 15%;
+}
+
+/* Logo */
+.logo {
+    margin-right: 20px;
+}
+
+.logo-img {
+    width: 80px; /* Tamaño del logo */
+    height: auto;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+
+.navbar li a:hover {
+    background-color: #cf0a0a;
+    transition: 2s;
+}
+
+/* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
+.logo-img:hover {
+    background-color: black; /* Cambia el fondo de la imagen a blanco */
+    padding: 5px; /* Añade un padding para ver el efecto del fondo blanco */
+    border-radius: 5px; /* Añade bordes redondeados si lo prefieres */
+    transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+.logo {
+    background-color: transparent; /* Mantener transparente el fondo de la imagen inicialmente */
+}
+
+
+.frase{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #cf0a0a;
+}
+
+
+
+/*Modifys contenedor info historias*/
+
+.containerPrincipalHistorias{
+    background-color: #000;
+    border: 5px solid black; /* Grosor, estilo y color del borde */
+    padding: 10px; /* Espaciado interno */
+    
+  
+}
+
+.containerSecundarioHistorias{
+    background-color: #f2f2f2;
+    border: 5px solid #f2f2f2; 
+    padding: 10px; 
+    margin: 20px; 
+    display: flex;
+    justify-content: center;
+    
+}
+
+.BlogEmbebido{
+    
+}
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #eeeeee; /* Color de fondo claro */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c; /* Color rojo */
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 5rem; /* Espacio entre los iconos */
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 5rem; /* Tamaño de los iconos */
+    height: 5rem;
+    filter: grayscale(100%); /* Blanco y negro */
+}
+
+.social-icons img:hover {
+    filter: none; /* Color al pasar el mouse */
+}
+
+
+
+

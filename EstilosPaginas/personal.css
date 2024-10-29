@@ -1,0 +1,185 @@
+/* Reset body */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    background-color: #eeee;
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background-color: #cf0a0a;
+    transition: 2s;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+/* Quote Section */
+.quote {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #cf0a0a;
+    margin: 20px auto;
+    width: 70%;
+    border: 2px solid #cf0a0a;
+}
+
+/* Estilo básico */
+.container {
+    width: 300px;
+    margin: 0 auto 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.coach-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Estilo para la lista de títulos oculta */
+.titles-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* Mostrar la lista cuando se expande */
+.titles-list.expanded {
+    max-height: 200px; /* Ajustar según la cantidad de títulos */
+}
+
+.view-more {
+    color: blue;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+/* Estilo para los enlaces de los títulos */
+.titles-list a {
+    color: blue;
+    text-decoration: underline;
+    display: block;
+    margin: 5px 0;
+}
+
+.titles-list a:hover {
+    color: darkblue;
+}
+
+/* Estilo adicional para el coach */
+.coach-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.coach-img {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+color: #555;
+}
+
+
+
+.containerFoot {
+    background-color: black; /* Fondo negro para el footer */
+    padding: 20px;
+    text-align: center; /* Centra el contenido */
+    position: relative; /* Asegura que el footer-banner se posicione relativamente a este contenedor */
+}
+
+/* Footer Banner */
+.footer-banner {
+    width: 50%; /* Define el ancho del div rojo */
+    background-color: #cf0a0a; /* Fondo rojo */
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto; /* Centrar horizontalmente */
+    
+    position: relative; /* Permite posicionar el div dentro del contenedor */
+    top: -40px; /* Desplaza el div rojo 20px hacia arriba, ajusta este valor según lo que necesites */
+}
+
+.footer-banner h2 {
+    font-size: 1.5rem;
+    color: #cf0a0a;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    background-color: black; /* Fondo negro detrás del texto */
+    display: inline-block;
+}
+
+/* Footer Icons */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cf0a0a; /* Mismo fondo rojo */
+    padding: 20px 0;
+}
+
+.footer-icons a {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-icons img {
+    width: 50px; /* Tamaño de los iconos */
+    height: auto;
+}
