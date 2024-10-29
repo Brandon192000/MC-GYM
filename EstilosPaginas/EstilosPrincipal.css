@@ -2,15 +2,25 @@
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-
-    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed\ \(1\).jpeg'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Hace que la imagen de fondo permanezca fija al hacer scroll */
+    position: relative; /* Para que el pseudo-elemento se posicione correctamente */
 
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed\ \(1\).jpeg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(10px); /* Aplica el efecto blur */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
 /* Header */
 header {
     background-color: #252525;
@@ -60,14 +70,10 @@ header {
 /* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
 .logo-img:hover {
     background-color: #252525; /* Cambia el fondo de la imagen a blanco */
-    padding: 5px; /* Añade un padding para ver el efecto del fondo blanco */
     border-radius: 5px; 
     transition: all 0.3s ease; /* Suaviza la transición */
 }
 
-.logo {
-    background-color: transparent; /* Mantener transparente el fondo de la imagen inicialmente */
-}
 
 
 /* Hero Section */
@@ -211,7 +217,7 @@ header {
     bottom: -1px;
     left: -8px;
     width: 0;
-    background-color: #ff4655; /* Rojo */
+    background-color: #cf0a0a; /* Rojo */
     transform: skew(-15deg);
     transition: all 2s ease;
 }
@@ -334,7 +340,6 @@ button:hover {
 }
 
 .membership-box button {
-    background-color: white;
     color: #252525;
     padding: 1rem 3rem;
     border: none;

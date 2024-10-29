@@ -53,7 +53,6 @@ header {
 /* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
 .logo-img:hover {
     background-color: black; /* Cambia el fondo de la imagen a blanco */
-    padding: 5px; /* Añade un padding para ver el efecto del fondo blanco */
     border-radius: 5px; /* Añade bordes redondeados si lo prefieres */
     transition: all 0.3s ease; /* Suaviza la transición */
 }
