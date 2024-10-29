@@ -5,6 +5,22 @@ body {
     padding-top: 100px; /* Para dejar espacio debajo del navbar fijo */
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/Img/FondosImagenes/pared\ bloc.avif'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(10px); /* Aplica el efecto blur */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
 header {
     background-color: #000;
     width: 100%; /* Asegura que el header ocupe el ancho completo */
@@ -273,6 +289,9 @@ button:hover i:nth-child(10) {
     color: #cf0a0a;
     font-size: 3.5rem;
     margin-top: -5rem; /* Mueve el div más hacia arriba */
+    background-color: #f2f2f2;
+    height: 100%;
+    width: 100;
 }
 
 .logo-img:hover {
