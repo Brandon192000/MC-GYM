@@ -1,32 +1,54 @@
 /* Ajuste de margen en el body */
-html, body {
-    height: 100%;
-    width: 100%;
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Evita el scroll horizontal */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-header {
-    background-color: #000;
-    width: 100%; /* Asegura que el header ocupe el ancho completo */
+
+/*-------------------------------------------------------------------------*/
+
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed (1).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(10px);
+    z-index: -1;
 }
 
-/* Navegación */
-.navbar {
+
+header {
+    background-color: #252525;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.burger {
+    display: none;
+}
+
+ /* Navegación */
+ .navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-around; /* Espaciado uniforme entre elementos */
+    flex-direction: row; /* Asegura que los elementos estén en una fila */
+    justify-content: space-around;
     list-style: none;
     margin: 0;
     padding: 0;
-    position: fixed; /* Fija la navbar en la parte superior */
-    top: 0; /* Posición en la parte superior */
-    width: 100%; /* Cambia a 100% para ocupar todo el ancho */
-    background-color: #333; /* Color de fondo */
-    z-index: 1000; /* Asegura que la barra quede sobre otros elementos */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #252525;
+    z-index: 1000;
 }
 
 /* Logo */
@@ -35,13 +57,19 @@ header {
 }
 
 .logo-img {
-    width: 80px; /* Tamaño del logo */
-    height: 10px;
+    width: 80px;
+    height: auto;
+}
+
+/* Enlaces de navegación */
+.navbar li {
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li a {
     text-decoration: none;
-    color: white;
+    color: #eeeeee;
     padding: 15px 20px;
     font-size: 16px;
     text-align: center;
@@ -53,51 +81,53 @@ header {
     transition: 2s;
 }
 
+/* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
+.logo-img:hover {
+    background-color: #252525;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
 /* Banner */
 .banner {
-    background-color: #000;
-    color: white;
+    background-color: #252525;
+    color: #eeeeee;
     text-align: center;
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     margin: 10rem auto;
     width: 70%;
 }
 
-/* Map Section */
-.map-section {
+/*-------------------------------------------------------------------------*/
+
+.map-section {/*seccion que contiene el contenedor del mapa*/
     text-align: center;
-    margin: 20px auto;
+    margin: 5rem 5rem;
+    
 }
 
-.map-container {
-    width: 80%;
-    height: 300px;
-    background-color: #eee;
-    margin: 20px auto;
+
+.map-container {/*contenedor del mapa*/
+    width: 90%; 
+    height: 600px;
+    margin: 5rem auto;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: red 5px dotted;
 }
 
-.map-container span {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 0.9rem;
-    color: black;
-}
-
-.map-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.map-iframe { /*clase del mapa*/
+    width: 100%;
     height: 100%;
+    border: 0;
 }
 
-.map-icon img {
-    width: 80px;
-    height: 80px;
-    opacity: 0.7;
-}
+
+/*-------------------------------------------------------------------------*/
 
 /* Background text */
 .background-text {
@@ -109,8 +139,8 @@ header {
 
 /* Family Section */
 .family-section {
-    background-color: #1d1d1d;
-    color: white;
+    background-color: #252525;
+    color: #eeeeee;
     text-align: center;
     padding: 2rem;
 }
@@ -136,109 +166,100 @@ header {
     font-size: 1.5rem;
     color: #555;
 }
+/*---------------------------------------------------------------------------------------------------------------*/
 
-
-
-.map-container {
-    width: 80%; /* Adjust width if necessary */
-    height: 450px;
-    margin: 5rem auto;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para el carrusel */
-.carousel {
-    position: relative;
-    max-width: 700px; /* Adjust the width to make the carousel smaller */
-    margin: 20px auto; /* Center the carousel */
-    overflow: hidden; /* Prevent images from overflowing */
-    background-color: #333; /* Dark background */
-    padding: 20px 0; /* Padding to give space around the carousel */
-    border-radius: 10px; /* Add slight rounding to the edges */
-}
-
-.carousel-container {
-    display: flex;
-    width: 100%; /* Ensure the container fills the width */
-    justify-content: space-between; /* Ensure images are spaced evenly */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for movement */
-}
-
-.carousel-slide {
-    display: flex; /* Align images horizontally */
-    transition: transform 0.3s ease-in-out; /* Smooth movement */
-}
-
-.carousel-slide img {
-    width: 45%; /* Reduce the width of the images to fit two per slide */
-    height: auto; /* Keep the aspect ratio */
-    object-fit: cover; /* Ensure the images are not distorted */
-    border-radius: 8px; /* Rounded corners for the images */
-    background-color: #ccc; /* Placeholder background color for images */
-}
-
-/* Botones de navegación */
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 2rem;
-    z-index: 1;
-}
-
-button.prev {
-    left: 10px;
-}
-
-button.next {
-    right: 10px;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Text and buttons */
-.carousel p {
-    color: white;
-    font-size: 24px;
+.contenedorprincipalCarrucel{
+    background-color: #252525;
+    /* Estilos para el contenedor principal del carrusel */
     text-align: center;
-    margin-bottom: 20px;
+    max-width: 100%; /* Ajusta el ancho del contenedor si es necesario */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px;
 }
 
-button[type="button"] {
-    margin-top: 20px;
+/* Estilo para el título "Nuestra familia." */
+.PNuestraFam {
+    font-size: 1.8em; /* Tamaño de la fuente */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio debajo del título */
+    color: #eeeeee; /* Cambia el color según tu preferencia */
+}
+
+/* Estilos para el botón "Conocer más" */
+.contenedorprincipalCarrucel button {
+    margin-top: 15px;
     padding: 10px 20px;
-    background-color: #fff;
-    color: #222;
+    background-color: #007bff00; /* Color de fondo azul */
+    color: white;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.contenedorprincipalCarrucel button:hover {
+    background-color: #0057b300; /* Cambia el color al pasar el mouse */
+}
+
+ /* Ajustes del carrusel */
+ #carouselExample {
+    max-width: 800px; /* Ancho máximo del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-inner img {
+    width: 100%; /* Hace que las imágenes ocupen el ancho del carrusel */
+    height: 600px; /* Altura fija para reducir el tamaño */
+    object-fit: cover; /* Recorta la imagen si es necesario */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+/* Personalización de las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* Fondo transparente */
+    width: 2rem; /* Ajusta el tamaño del botón */
+    height: 2rem;
+    background-size: 10%; /* Asegura que el icono ocupe todo el botón */
+    filter: invert(1); /* Cambia el color del ícono a blanco */
 }
 
 
+
+/*--------------------------------------------------------------------------------*/
+
+.botonVermas{
+    background-color: white; /* Fondo blanco */
+    color: #333; /* Color del texto en un tono oscuro */
+    border: 2px solid #333; /* Borde oscuro para darle contraste */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Efecto hover para el botón */
+.botonVermas:hover {
+    background-color: #333; /* Fondo oscuro al pasar el mouse */
+    color: white; /* Texto en blanco al pasar el mouse */
+}
+
+/*-------------------------------------------------------------------------------------------*/
 /* Caja de contacto */
 .contact-box {
     width: 100%; /* Ajustar el tamaño de ancho */
     height: 250px; /* Ajustar el tamaño de alto */
-    border: 1px solid #ccc;
+    border: 1px solid #eeeeee;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Encabezado de contacto en rojo */
 .contact-header {
     width: 100%; /* Ajustar el tamaño de ancho */
-    background-color: #c8102e; /* Rojo fuerte */
-    color: white;
+    background-color: #cf0a0a; /* Rojo fuerte */
+    color: #eeeeee;
     text-align: center;
     padding: 1rem;
     font-family: Arial, sans-serif;
@@ -256,7 +277,7 @@ button[type="button"] {
 
 /* Cuerpo con el icono de WhatsApp */
 .contact-body {
-    background-color: #fff;
+    background-color: #eeeeee;
     text-align: center;
     padding: 30px; /* Aumentar el padding para más espacio */
 }
@@ -270,3 +291,7 @@ button[type="button"] {
     display: inline-block;
     text-decoration: none;
 }
+
+/*-------------------------------------------------------------*/
+
+

@@ -1,9 +1,9 @@
 /* Estilos generales */
-body {
+body,html {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    position: relative; /* Para que el pseudo-elemento se posicione correctamente */
-
+    position: relative;
+    font-size: 0.875rem; /* Reduce el tamaño de fuente global para móviles */
 }
 
 body::before {
@@ -13,74 +13,37 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed\ \(1\).jpeg'); /* Ruta de la imagen */
+    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed (1).jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: blur(10px); /* Aplica el efecto blur */
-    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+    filter: blur(8px); /*ESTILO VIDRIO */
+    z-index: -1;
 }
+
 /* Header */
 header {
     background-color: #252525;
 }
 
-/* Navegación */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around; /* Espaciado uniforme entre elementos */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: fixed; /* Fija la navbar en la parte superior */
-    top: 0; /* Posición en la parte superior */
-    width: 100%; /* Ocupar todo el ancho de la página */
-    background-color: #252525; /* Agrega un color de fondo (puedes ajustar) */
-    z-index: 1000; /* Asegura que la barra quede sobre otros elementos */
-   
+/* Estilo del botón burger */
+.burger {
+    display: block; /* Se muestra el burger en CEL */
+    cursor: pointer;
 }
 
-/* Logo */
-.logo {
-    margin-right: 20px;
+.burger-img {
+    width: 30px; 
+    height: 30px;
 }
-
-.logo-img {
-    width: 80px; /* Tamaño más grande del logo */
-    height: auto;
-}
-
-/* Enlaces de navegación */
-.navbar li a {
-    text-decoration: none;
-    color: white;
-    padding: 15px 20px; /* Espaciado interno del texto */
-    font-size: 16px; /* Tamaño de fuente */
-    text-align: center;
-    display: block;
-}
-
-.navbar li a:hover {
-    background-color: #cf0a0a; /* Color al pasar el cursor */
-    transition: 2s;
-}
-
-/* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
-.logo-img:hover {
-    background-color: #252525; /* Cambia el fondo de la imagen a blanco */
-    border-radius: 5px; 
-    transition: all 0.3s ease; /* Suaviza la transición */
-}
-
 
 
 /* Hero Section */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la ventana */
+    height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -91,44 +54,40 @@ header {
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para que la imagen cubra todo el contenedor sin deformarse */
-    position: absolute; /* La imagen se posiciona detrás del contenido */
+    object-fit: cover;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Asegura que la imagen esté detrás del texto */
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Coloca el texto por encima de la imagen */
-    color: white; /* Color del texto */
+    z-index: 2;
+    color: #eeeeee;
     padding: 20px;
 }
 
 .hero h1 {
-    font-size: 4.5em; /* Tamaño del título más grande */
+    font-size: 2rem; /* Reduce el tamaño del título */
     margin: 0;
 }
 
 .hero p {
-    font-size: 2em; /* Tamaño del subtítulo más grande */
+    font-size: 1.2rem; /* Reduce el subtítulo */
     margin: 20px 0;
 }
 
 /* Estilo del botón */
 .button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
     border: none;
     background: none;
     color: #252525;
     cursor: pointer;
     position: relative;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding: 10px 20px; /* Reduce el padding */
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1rem; /* Reduce el tamaño de fuente */
     transition: all 2s ease;
 }
 
@@ -173,43 +132,14 @@ header {
     bottom: 3px;
 }
 
-/* Estilo del contenedor interior del botón */
 .button_lg {
-    position: relative;
-    display: block;
     padding: 10px 20px;
-    color: #fff;
+    color: #eeeeee;
     background-color: #0f1923;
     overflow: hidden;
     box-shadow: inset 0px 0px 0px 1px transparent;
 }
 
-
-
-.button_lg::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 2px;
-    background-color: #0f1923;
-}
-
-.button_lg::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 4px;
-    height: 4px;
-    background-color: #252525;
-    transition: all 2s ease;
-}
-
-/* Efecto de barra que pasa por detrás */
 .button_sl {
     display: block;
     position: absolute;
@@ -217,18 +147,15 @@ header {
     bottom: -1px;
     left: -8px;
     width: 0;
-    background-color: #cf0a0a; /* Rojo */
+    background-color: #cf0a0a;
     transform: skew(-15deg);
     transition: all 2s ease;
 }
 
-/* Estilo del texto dentro del botón */
 .button_text {
-    position: relative;
-    color: #fff;
+    color: #eeeeee;
 }
 
-/* Efectos al hacer hover */
 .button:hover {
     color: #252525;
 }
@@ -238,37 +165,32 @@ header {
 }
 
 .button:hover .button_lg::after {
-    background-color: #fff;
+    background-color: #eeeeee;
 }
 
-
-
-
-
-
-/* Estilos para el carrusel */
+/* Carrusel */
 .carousel {
     position: relative;
-    max-width: 50rem; /* Puedes ajustar este valor según tus necesidades */
+    max-width: 100%; /* El carrusel ocupa todo el ancho */
     margin: auto;
     overflow: hidden;
 }
 
 .carousel-container {
     display: flex;
-    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
-    transition: transform 0.3s ease-in-out; /* Transición suave para el movimiento */
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
 }
 
 .carousel-slide {
-    display: flex; /* Alinea las imágenes horizontalmente */
-    transition: transform 0.3s ease-in-out; /* Transición suave al mover las imágenes */
+    display: flex;
+    transition: transform 0.3s ease-in-out;
 }
 
 .carousel-slide img {
-    width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
-    height: 100%; /* Ajusta la altura de las imágenes para que no sobrepasen el contenedor */
-    object-fit: cover; /* Asegura que las imágenes mantengan proporción sin deformarse */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Botones de navegación */
@@ -297,51 +219,42 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-
-/* Contenedor de la sección de membresía */
+/* Membresía Section */
 .membership-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 5rem;
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center;
+    padding: 2rem 1rem; /* Reduce el padding para móviles */
     background-color: #252525;
-    color: white;
-    position: relative;
-    overflow: visible;
-    flex-wrap: wrap;
+    color: #eeeeee;
 }
 
-/* Caja de la membresía */
 .membership-box {
     background-color: #cf0a0a;
-    padding: 5rem;
+    padding: 2rem;
     text-align: center;
     border-radius: 8px;
-    margin-right: 2rem;
-    color: white;
+    margin-bottom: 2rem; /* Margen inferior para separar elementos */
+    color: #eeeeee;
     border: 0.3rem solid #eeeeee;
     position: relative;
-    z-index: 10;
-    transform: translateY(-7.5rem);
 }
 
 .membership-box h2 {
     color: #252525;
-    font-size: 4rem;
+    font-size: 2.5rem; /* Reduce el tamaño del título */
     margin: 0;
 }
 
-/* Tamaño ajustado del precio */
 .membership-box .price {
-    font-size: 3rem; /* Tamaño aún más reducido del precio */
+    font-size: 2rem; /* Reduce el tamaño del precio */
     font-weight: bold;
     margin: 2rem 0;
 }
 
 .membership-box button {
     color: #252525;
-    padding: 1rem 3rem;
+    padding: 10px 15px;
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -350,303 +263,413 @@ button:hover {
 
 .membership-box button:hover {
     background-color: #252525;
-    color: white;
+    color: #eeeeee;
 }
 
-/* Caja de información adicional */
+/* Información adicional */
 .info-box {
     background-color: #252525;
-    padding: 5rem;
-    color: white;
+    padding: 2rem;
+    color: #eeeeee;
     text-align: left;
-    z-index: 1;
-    position: relative;
     flex: 1;
 }
 
-/* Párrafos dentro de la caja de información */
 .info-box p {
     display: flex;
     align-items: center;
     margin: 2rem 0;
-    font-size: 1.2rem; /* Tamaño más reducido para la parte de la información */
+    font-size: 1.2rem;
 }
 
-/* Espacio entre los íconos y el texto */
-.info-box p span {
-    display: block;
-    margin-left: 2rem;
-    line-height: 1.2;
-}
-
-/* Para la clase p2 */
-.membership-box .p2 {
-    font-size: 1rem; /* Tamaño responsivo base */
-}
-
-/* Tamaño de los íconos */
+/* Iconos */
 .info-box i {
     margin-right: 2rem;
-    font-size: 3rem; /* Tamaño más pequeño de los íconos */
+    font-size: 2rem; /* Tamaño más pequeño de los íconos */
 }
 
-/* Separador entre el parqueo y la advertencia */
 .info-box .separator {
     margin: 3rem 0;
-    border-top: 2px solid white;
-}
-
-/* Iconos personalizados */
-.icon-clock:before {
-    content: "🕐";
-}
-
-.icon-parking:before {
-    content: "🅿️";
-}
-
-.icon-warning:before {
-    content: "⚠️";
+    border-top: 2px solid #eeeeee;
 }
 
 
-
-/* Estilos para el footer */
+/* Footer */
 footer {
-    background-color: #eeeeee; /* Color de fondo claro */
+    background-color: #eeeeee;
     padding: 20px 0;
     text-align: center;
 }
 
 .footer-container p {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
     font-weight: bold;
-    color: #e74c3c; /* Color rojo */
-    margin-bottom: 20px;
+    color: #e74c3c;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 5rem; /* Espacio entre los iconos */
-}
-
-.social-icons a {
-    text-decoration: none;
+    gap: 2rem; /* Reduce el espacio entre los iconos */
 }
 
 .social-icons img {
-    width: 5rem; /* Tamaño de los iconos */
-    height: 5rem;
-    filter: grayscale(100%); /* Blanco y negro */
+    width: 3rem; /* Tamaño más pequeño de los iconos sociales */
+    height: 3rem;
+    filter: grayscale(100%);
 }
 
 .social-icons img:hover {
-    filter: none; /* Color al pasar el mouse */
+    filter: none;
 }
 
-/* Estilo general para los logos */
+/* Logo */
 .logo-container {
     position: absolute;
-    bottom: 10px; /* Lo coloca cerca del borde inferior */
-    width: 5rem; /* Tamaño del logo */
-    opacity: 0.3; /* Controla la transparencia del logo */
-    z-index: 2; /* Asegura que el logo esté visible sobre las imágenes */
-    animation: float 6s ease-in-out infinite; /* Aplica la animación de flotación */
+    bottom: 10px;
+    width: 4rem; /* Tamaño más pequeño del logo */
+    opacity: 0.3;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
 }
 
 /* Logo en el lado izquierdo */
 .left-logo {
-    left: 3rem; /* Lo coloca alineado al borde izquierdo del carrusel */
+    left: 2rem; /* Ajusta la posición en móviles */
 }
 
-/* Logo en el lado derecho */
-.right-logo {
-    right: 2rem; /* Lo coloca alineado al borde derecho del carrusel */
-}
-
-/* Para asegurarte de que la imagen no se deforme o exceda los límites */
 .logo-container img {
-    width: 100%; /* Hace que la imagen respete el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin estirarse */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Animación flotante */
 @keyframes float {
     0%, 100% {
-        transform: translateY(0); /* Posición inicial y final */
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(5px); /* Movimiento pequeño */
+        transform: translateY(5px);
     }
 }
 
-/* Hover interactivo */
 .logo-container:hover {
-    opacity: 0.6; /* Al pasar el ratón, el logo se vuelve menos transparente */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+    opacity: 0.6;
+    transform: scale(1.05);
 }
 
-/*media querys para responsividad*/
-@media (max-width: 480px) {
-    /* Ajustes generales */
+/*menu burger*/
+.burger {
+    display: block; /* Mostrar el menú burger en dispositivos Cel */
+    cursor: pointer;
+    position: fixed; /* Fijar el burger en la pantalla mientras se hace scroll */
+    top: 10px;
+    right: 10px;
+    z-index: 1001; /* Asegura que el burger esté por encima de otros elementos */
+}
+
+.navbar {
+    display: none; /* Ocultar el menú de navegación en cel */
+}
+
+.burger-img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mostrar el menú de navegación cuando se hace clic en el burger */
+.burger.active + .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #252525;
+    z-index: 1000;
+}
+
+
+
+/* Media query para pantallas grandes (PC) */
+@media (min-width: 769px) {
+    
+    /* Estilos generales */
     body {
-        font-size: 0.875rem; /* Reduce el tamaño de fuente global */
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed (1).jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: blur(10px);
+        z-index: -1;
+    }
+
+    /* Header */
+    header {
+        background-color: #252525;
+    }
+
+    .burger {
+        display: none;
     }
 
     /* Navegación */
     .navbar {
-        flex-direction: column; /* Pone los elementos de la barra de navegación en columna */
-        padding: 0.5rem;
+        display: flex;
+        flex-direction: row; /* Asegura que los elementos estén en una fila */
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #252525;
+        z-index: 1000;
+    }
+
+    /* Logo */
+    .logo {
+        margin-right: 20px;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: auto;
+    }
+
+    /* Enlaces de navegación */
+    .navbar li {
+        margin: 0;
+        padding: 0;
     }
 
     .navbar li a {
-        font-size: 0.9rem; /* Reduce el tamaño del texto en la navegación */
-        padding: 10px 15px;
+        text-decoration: none;
+        color: #eeeeee;
+        padding: 15px 20px;
+        font-size: 16px;
+        text-align: center;
+        display: block;
     }
+
+    .navbar li a:hover {
+        background-color: #cf0a0a;
+        transition: 2s;
+    }
+
+    /* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
+    .logo-img:hover {
+        background-color: #252525;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Estilo del botón */
+    .button {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        background: none;
+        color: #252525;
+        cursor: pointer;
+        position: relative;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 2s ease;
+    }
+
+    .button::before,
+    .button::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: calc(50% - 5px);
+        border: 1px solid #7D8082;
+        transition: all 2s ease;
+    }
+
+    .button::before {
+        top: 0;
+        border-bottom-width: 0;
+    }
+
+    .button::after {
+        bottom: 0;
+        border-top-width: 0;
+    }
+
+    .button:active,
+    .button:focus {
+        outline: none;
+    }
+
+    .button:active::before,
+    .button:active::after {
+        right: 3px;
+        left: 3px;
+    }
+
+    .button:active::before {
+        top: 3px;
+    }
+
+    .button:active::after {
+        bottom: 3px;
+    }
+
+    /* Estilo del contenedor interior del botón */
+    .button_lg {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        color: #eeeeee;
+        background-color: #0f1923;
+        overflow: hidden;
+        box-shadow: inset 0px 0px 0px 1px transparent;
+    }
+
+
+
+    .button_lg::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background-color: #0f1923;
+    }
+
+    .button_lg::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 4px;
+        height: 4px;
+        background-color: #252525;
+        transition: all 2s ease;
+    }
+
+    /* Efecto de barra que pasa por detrás */
+    .button_sl {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: -1px;
+        left: -8px;
+        width: 0;
+        background-color: #cf0a0a; /* Rojo */
+        transform: skew(-15deg);
+        transition: all 2s ease;
+    }
+
+    /* Estilo del texto dentro del botón */
+    .button_text {
+        position: relative;
+        color: #eeeeee;
+    }
+
+    /* Efectos al hacer hover */
+    .button:hover {
+        color: #252525;
+    }
+
+    .button:hover .button_sl {
+        width: 90rem;
+    }
+
+    .button:hover .button_lg::after {
+        background-color: #eeeeee;
+    }
+
 
     /* Hero Section */
     .hero h1 {
-        font-size: 2rem; /* Reduce el tamaño del título */
+        font-size: 4.5em;
+        margin: 0;
     }
 
     .hero p {
-        font-size: 1.2rem; /* Reduce el subtítulo */
+        font-size: 2em;
+        margin: 20px 0;
     }
 
     .hero button {
-        font-size: 1rem; /* Reduce el tamaño del botón */
-        padding: 10px 20px;
+        font-size: 14px;
+        padding: 1rem;
     }
 
     /* Carrusel */
     .carousel {
-        max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho en móviles */
+        max-width: 50rem;
+        margin: auto;
     }
 
     /* Membresía Section */
     .membership-container {
-        flex-direction: column; /* Los elementos de membresía se apilan verticalmente */
-        padding: 2rem 1rem;
+        flex-direction: row;
+        padding: 5rem;
     }
 
     .membership-box {
-        padding: 2rem; /* Reduce el padding */
-        margin: 0 0 2rem 0; /* Añade margen inferior para separar los elementos */
-        transform: translateY(0); /* Elimina la traducción vertical */
+        padding: 5rem;
+        margin-right: 2rem;
+        transform: translateY(-7.5rem);
     }
 
     .membership-box h2 {
-        font-size: 2.5rem; /* Reduce el tamaño del título */
+        font-size: 4rem;
     }
 
     .membership-box .price {
-        font-size: 2rem; /* Reduce el tamaño del precio */
+        font-size: 3rem;
     }
 
     .membership-box button {
         font-size: 1rem;
-        padding: 10px 15px;
+        padding: 1rem 3rem;
     }
 
     .info-box {
-        padding: 2rem;
+        padding: 5rem;
     }
 
     /* Footer */
     .footer-container p {
-        font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
+        font-size: 2rem;
     }
 
     .social-icons {
-        gap: 2rem; /* Reduce el espacio entre los iconos */
+        gap: 5rem;
     }
 
     .social-icons img {
-        width: 3rem; /* Reduce el tamaño de los iconos sociales */
-        height: 3rem;
-    }
-}
-
-
-@media (min-width: 481px) and (max-width: 768px) {
-    /* Ajustes generales */
-    body {
-        font-size: 1rem; /* Tamaño de fuente más pequeño */
-    }
-
-    /* Navegación */
-    .navbar {
-        flex-direction: column; /* Los elementos se colocan en columna */
-        padding: 1rem;
-    }
-
-    .navbar li a {
-        font-size: 1rem; /* Ajuste del tamaño de los enlaces de la navegación */
-        padding: 10px 20px;
-    }
-
-    /* Hero Section */
-    .hero h1 {
-        font-size: 3rem; /* Ajuste del tamaño del título */
-    }
-
-    .hero p {
-        font-size: 1.5rem; /* Ajuste del subtítulo */
-    }
-
-    .hero button {
-        font-size: 1.2rem; /* Ajuste del tamaño del botón */
-        padding: 10px 25px;
-    }
-
-    /* Carrusel */
-    .carousel {
-        max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
-    }
-
-    /* Membresía Section */
-    .membership-container {
-        flex-direction: column; /* Los elementos se apilan verticalmente */
-        padding: 3rem;
-    }
-
-    .membership-box {
-        margin-right: 0; /* Elimina el margen derecho */
-        margin-bottom: 2rem; /* Añade margen inferior */
-        transform: translateY(0); /* Elimina la traducción vertical */
-        padding: 3rem;
-    }
-
-    .membership-box h2 {
-        font-size: 3rem;
-    }
-
-    .membership-box .price {
-        font-size: 2.5rem;
-    }
-
-    .membership-box button {
-        font-size: 1.2rem;
-        padding: 10px 20px;
-    }
-
-    .info-box {
-        padding: 3rem;
-    }
-
-    /* Footer */
-    .footer-container p {
-        font-size: 1.7rem; /* Ajusta el tamaño del texto del footer */
-    }
-
-    .social-icons {
-        gap: 3rem; /* Reduce el espacio entre los iconos */
-    }
-
-    .social-icons img {
-        width: 4rem; /* Ajusta el tamaño de los iconos sociales */
-        height: 4rem;
+        width: 5rem;
+        height: 5rem;
     }
 }

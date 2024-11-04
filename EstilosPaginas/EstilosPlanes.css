@@ -12,7 +12,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('/Img/FondosImagenes/pared\ bloc.avif'); /* Ruta de la imagen */
+    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed (1).jpeg'); /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,18 +28,18 @@ header {
 
 /* Navegación */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around; /* Espaciado uniforme entre elementos */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: fixed; /* Fija la navbar en la parte superior */
-    top: 0; /* Posición en la parte superior */
-    width: 100%; /* Cambia a 100% para ocupar todo el ancho */
-    background-color: #333; /* Color de fondo */
-    z-index: 1000; /* Asegura que la barra quede sobre otros elementos */
-   
+display: flex;
+flex-direction: row; /* Asegura que los elementos estén en una fila */
+align-items: center;
+justify-content: space-around;
+list-style: none;
+margin: 0;
+padding: 0;
+position: fixed;
+top: 0;
+width: 100%;
+background-color: #252525;
+z-index: 1000;
 }
 
 /* Logo */
@@ -48,13 +48,19 @@ header {
 }
 
 .logo-img {
-    width: 100px; /* Tamaño del logo */
+    width: 80px;
     height: auto;
+}
+
+/* Enlaces de navegación */
+.navbar li {
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li a {
     text-decoration: none;
-    color: white;
+    color: #eeeeee;
     padding: 15px 20px;
     font-size: 16px;
     text-align: center;
@@ -64,6 +70,13 @@ header {
 .navbar li a:hover {
     background-color: #cf0a0a;
     transition: 2s;
+}
+
+/* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
+.logo-img:hover {
+    background-color: #252525;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 /* Banner rojo */
@@ -294,88 +307,17 @@ button:hover i:nth-child(10) {
     width: 100;
 }
 
-.logo-img:hover {
-    background-color: black; /* Cambia el fondo de la imagen a blanco */
-    padding: 5px; /* Añade un padding para ver el efecto del fondo blanco */
-    border-radius: 5px; /* Añade bordes redondeados si lo prefieres */
-    transition: all 0.3s ease; /* Suaviza la transición */
+
+
+/* Estilo del botón burger */
+.burger {
+    display: none; /* Se oculta por defecto en pantallas grandes */
+    cursor: pointer;
+}
+
+.burger-img {
+    width: 30px; /* Ajusta el tamaño de la imagen del burger button */
+    height: 30px;
 }
 
 
-/* Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Poner los elementos de la barra de navegación en columna */
-        padding: 1rem;
-    }
-
-    .banner {
-        font-size: 1.5rem; /* Reducir tamaño del banner en pantallas más pequeñas */
-        padding: 10px;
-    }
-
-    .plans-container {
-        flex-direction: column; /* Poner los elementos uno debajo del otro en pantallas más pequeñas */
-        padding: 2rem;
-        margin: 5rem auto;
-    }
-
-    .plan-text {
-        max-width: 100%; /* Asegura que ocupe todo el ancho */
-        text-align: center; /* Centrar el texto */
-        margin-bottom: 20px;
-    }
-
-    .plan-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .contact-details {
-        flex-direction: column; /* Alinear los detalles de contacto en columna */
-        width: 90%; /* Ampliar el ancho en pantallas más pequeñas */
-    }
-
-    .contact-info {
-        padding-right: 0;
-        margin-bottom: 10px; /* Añadir margen entre secciones de contacto */
-        text-align: center;
-    }
-
-    .contact-details img {
-        width: 100px; /* Reducir el tamaño de la imagen de contacto */
-    }
-
-    .footer {
-        padding: 10px; /* Reducir padding del footer */
-    }
-
-    .contactenos {
-        font-size: 2rem; /* Ajustar el tamaño de texto en pantallas más pequeñas */
-    }
-}
-
-/* Media query para pantallas muy pequeñas (móviles) */
-@media (max-width: 480px) {
-    .plans-container {
-        padding: 1rem;
-    }
-
-    .plan-text h2 {
-        font-size: 2rem; /* Reducir el tamaño del título del plan */
-    }
-
-    .plan-text button {
-        padding: 0.5rem 3rem; /* Reducir tamaño de los botones */
-        font-size: 14px;
-    }
-
-    .plan-details {
-        font-size: 10px;
-    }
-
-    .contactenos {
-        font-size: 1.5rem; /* Ajustar aún más para pantallas pequeñas */
-    }
-}

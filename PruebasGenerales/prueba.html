@@ -1,98 +1,99 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Estilo básico */
-    .container {
-      width: 300px;
-      margin: 0 auto;
-      font-family: Arial, sans-serif;
+
+    <!-- METADATOS... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entrenamiento personalizado, clases grupales y un ambiente motivador para alcanzar tus metas fitness.">
+    <meta name="keywords" content="Gimnasio, entrenamiento, fitness, MC Gym, suplemetos energeticos">
+    <meta name="author" content="Brandon Blanco Chinchilla">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>MC GYM Pagina Web</title>
+
+    <link rel="stylesheet" href="/EstilosPaginas/EstilosPrincipal.css">
+
+    <style>
+         /* Navegación */
+    .navbar {
+        display: flex;
+        flex-direction: row; /* Asegura que los elementos estén en una fila */
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #252525;
+        z-index: 1000;
     }
 
-    .title {
-      font-size: 1.2em;
-      font-weight: bold;
+    /* Logo */
+    .logo {
+        margin-right: 20px;
     }
 
-    .description {
-      margin: 10px 0;
+    .logo-img {
+        width: 80px;
+        height: auto;
     }
 
-    /* Estilo para la lista de títulos oculta */
-    .titles-list {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
+    /* Enlaces de navegación */
+    .navbar li {
+        margin: 0;
+        padding: 0;
     }
 
-    /* Mostrar la lista cuando se expande */
-    .titles-list.expanded {
-      max-height: 200px; /* Ajustar según la cantidad de títulos */
+    .navbar li a {
+        text-decoration: none;
+        color: #eeeeee;
+        padding: 15px 20px;
+        font-size: 16px;
+        text-align: center;
+        display: block;
     }
 
-    .view-more {
-      color: blue;
-      cursor: pointer;
-      margin-top: 10px;
-      text-decoration: underline;
+    .navbar li a:hover {
+        background-color: #cf0a0a;
+        transition: 2s;
     }
 
-    /* Estilo para los enlaces de los títulos */
-    .titles-list a {
-      color: blue;
-      text-decoration: underline;
-      display: block;
+    /* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
+    .logo-img:hover {
+        background-color: #252525;
+        border-radius: 5px;
+        transition: all 0.3s ease;
     }
 
-    .titles-list a:hover {
-      color: darkblue;
-    }
-  </style>
-  <title>Títulos del Entrenador</title>
+    </style>
+
 </head>
+
 <body>
-
-<div class="container">
-  <p class="title">Entrenador: Juan Pérez</p>
-  <p class="description">Especialista en fitness y nutrición deportiva con años de experiencia ayudando a transformar vidas.</p>
-  
-  <!-- Lista de títulos oculta -->
-  <ul class="titles-list" id="titlesList">
-    <li><a href="/Ejercicio 05 - Sección de Sociales/images/image-colton.jpg" target="_blank">Certificado en Entrenamiento Personal</a></li>
-    <li><a href="certificados/nutricion_deportiva.jpg" target="_blank">Especialista en Nutrición Deportiva</a></li>
-    <li><a href="certificados/rehabilitacion_fisica.jpg" target="_blank">Certificado en Rehabilitación Física</a></li>
-    <li><a href="certificados/entrenador_funcional.jpg" target="_blank">Entrenador Funcional Nivel Avanzado</a></li>
-    <li><a href="certificados/rendimiento_deportivo.jpg" target="_blank">Master en Rendimiento Deportivo</a></li>
-  </ul>
-
-  <!-- Botón de "Ver más" -->
-  <span class="view-more" id="viewMoreBtn">Ver más</span>
-</div>
-
-<script>
-  // Seleccionamos el botón y la lista
-  const viewMoreBtn = document.getElementById("viewMoreBtn");
-  const titlesList = document.getElementById("titlesList");
-
-  // Variable para controlar si está expandido o no
-  let isExpanded = false;
-
-  // Añadir evento click al botón
-  viewMoreBtn.addEventListener("click", function() {
-    // Alternar la clase expanded para mostrar u ocultar la lista
-    if (isExpanded) {
-      titlesList.classList.remove("expanded");
-      viewMoreBtn.textContent = "Ver más";
-    } else {
-      titlesList.classList.add("expanded");
-      viewMoreBtn.textContent = "Ver menos";
-    }
-    isExpanded = !isExpanded; // Cambiar el estado
-  });
-</script>
+    
+     <!-- Barra de navegación -->
+     <header>
+        <nav>
+            <ul class="navbar">
+                <li class="logo">
+                    <a href="/PaginasWeb/index.html"><img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img"></a>
+                </li>
+                    <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+                    <li><a href="#Horarios">Horarios</a></li>
+                    <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+                    <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+                    <li><a href="/PaginasWeb/Planes.html">Contacto</a></li>
+                    <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+                    <li><a href="/PaginasWeb/Historias.html">Historias</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 </body>
-</html> 
-
+</html>
