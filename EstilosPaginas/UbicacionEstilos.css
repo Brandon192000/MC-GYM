@@ -98,8 +98,8 @@ header {
     text-align: center;
     padding: 10px;
     font-size: 1.7rem;
-    margin: 10rem auto;
-    width: 70%;
+    margin: 5rem auto;
+    width: 73%;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -112,12 +112,13 @@ header {
 
 
 .map-container {/*contenedor del mapa*/
-    width: 90%; 
-    height: 600px;
+    width: 80%; 
+    height: 500px;
     margin: 5rem auto;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: red 5px dotted;
+    border: black 5px solid;
+    margin-top: -2rem;
 }
 
 .map-iframe { /*clase del mapa*/
@@ -279,7 +280,7 @@ header {
 .contact-body {
     background-color: #eeeeee;
     text-align: center;
-    padding: 30px; /* Aumentar el padding para más espacio */
+    padding: 4rem; /* Aumentar el padding para más espacio */
 }
 
 .whatsapp-icon {

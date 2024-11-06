@@ -1,99 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- METADATOS... -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entrenamiento personalizado, clases grupales y un ambiente motivador para alcanzar tus metas fitness.">
-    <meta name="keywords" content="Gimnasio, entrenamiento, fitness, MC Gym, suplemetos energeticos">
-    <meta name="author" content="Brandon Blanco Chinchilla">
-    <meta name="robots" content="index, follow">
-
+    <title>Coaches MC FITNESS GYM</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>MC GYM Pagina Web</title>
-
-    <link rel="stylesheet" href="/EstilosPaginas/EstilosPrincipal.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
-         /* Navegación */
-    .navbar {
-        display: flex;
-        flex-direction: row; /* Asegura que los elementos estén en una fila */
-        align-items: center;
-        justify-content: space-around;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #252525;
-        z-index: 1000;
-    }
+        /* Estilos personalizados */
+        body {
+            background-color: #f4f4f4;
+        }
 
-    /* Logo */
-    .logo {
-        margin-right: 20px;
-    }
+        .navbar {
+            background-color: #252525; /* Negro */
+        }
 
-    .logo-img {
-        width: 80px;
-        height: auto;
-    }
+        .navbar .brand-logo img {
+            height: 50px;
+            padding-left: 15px;
+        }
 
-    /* Enlaces de navegación */
-    .navbar li {
-        margin: 0;
-        padding: 0;
-    }
+        .navbar ul li a {
+            color: #eeeeee;
+        }
 
-    .navbar li a {
-        text-decoration: none;
-        color: #eeeeee;
-        padding: 15px 20px;
-        font-size: 16px;
-        text-align: center;
-        display: block;
-    }
+        .navbar ul li a:hover {
+            color: #cf0a0a; /* Rojo */
+        }
 
-    .navbar li a:hover {
-        background-color: #cf0a0a;
-        transition: 2s;
-    }
+        /* Tarjeta del entrenador */
+        .card {
+            background-color: #ffffff; /* Blanco */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    /* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
-    .logo-img:hover {
-        background-color: #252525;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
+        .card-image img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 250px;
+            object-fit: cover;
+        }
 
+        .card-title {
+            color: #252525;
+            font-weight: bold;
+        }
+
+        .card-content {
+            color: #555555;
+        }
+
+        .card-action {
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+        }
+
+        /* Estilos para el botón "Ver más" */
+        .btn-ver-mas {
+            color: #cf0a0a;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px 0;
+        }
+
+        .btn-ver-mas:hover {
+            color: #ff4c4c;
+        }
+
+        /* Lista de títulos adicionales */
+        .titles-list {
+            padding-left: 20px;
+            color: #252525;
+        }
+
+        .titles-list li a {
+            color: #cf0a0a;
+            text-decoration: none;
+        }
+
+        .titles-list li a:hover {
+            text-decoration: underline;
+            color: #ff4c4c;
+        }
     </style>
-
 </head>
-
 <body>
-    
-     <!-- Barra de navegación -->
-     <header>
-        <nav>
-            <ul class="navbar">
-                <li class="logo">
-                    <a href="/PaginasWeb/index.html"><img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img"></a>
-                </li>
-                    <li><a href="/PaginasWeb/index.html">Inicio</a></li>
-                    <li><a href="#Horarios">Horarios</a></li>
-                    <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
-                    <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
-                    <li><a href="/PaginasWeb/Planes.html">Contacto</a></li>
-                    <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
-                    <li><a href="/PaginasWeb/Historias.html">Historias</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+                <li><a href="#Horarios">Horarios</a></li>
+                <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+                <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+                <li><a href="/PaginasWeb/Planes.html">Contacto</a></li>
+                <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+                <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tarjeta del Entrenador -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <!-- Imagen del entrenador -->
+                    <div class="card-image">
+                        <img src="ruta_a_imagen_del_entrenador.jpg" alt="Entrenador">
+                        <span class="card-title">Norman Loria</span>
+                    </div>
+                    <!-- Contenido principal de la tarjeta -->
+                    <div class="card-content">
+                        <p>Especialista en fitness y nutrición deportiva con años de experiencia ayudando a transformar vidas.</p>
+                    </div>
+                    <!-- Botón "Ver más" usando <details> -->
+                    <div class="card-action">
+                        <details>
+                            <summary class="btn-ver-mas">Ver más</summary>
+                            <ul class="titles-list">
+                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.09 (1).jpeg" target="_blank">Certificado Entrenador de fútbol infantil FIFA GRASSROOTS</a></li>
+                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.09.jpeg" target="_blank">Especialista en Nutrición Deportiva</a></li>
+                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10 (1).jpeg" target="_blank">Certificado en Rehabilitación Física</a></li>
+                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10 (2).jpeg" target="_blank">Entrenador Funcional Nivel Avanzado</a></li>
+                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10.jpeg" target="_blank">Master en Rendimiento Deportivo</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

@@ -298,13 +298,14 @@ button:hover i:nth-child(10) {
 }
 
 .contactenos {
+    display: flex;
+    justify-content: center;
     text-align: center;
     color: #cf0a0a;
     font-size: 3.5rem;
-    margin-top: -5rem; /* Mueve el div más hacia arriba */
+    margin-top: -10rem; 
     background-color: #f2f2f2;
-    height: 100%;
-    width: 100;
+   
 }
 
 

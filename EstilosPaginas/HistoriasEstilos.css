@@ -10,40 +10,57 @@ header {
     background-color: #252525;
     width: 100%; /* Asegura que el header ocupe el ancho completo */
 }
-
 /* Navegación */
 .navbar {
     display: flex;
-    flex-direction: row; /* Asegura que los elementos estén en una fila */
     align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #252525;
     z-index: 1000;
+    padding: 0; /* Elimina el padding lateral */
+    height: 7rem;
 }
 
 /* Logo */
-.logo {
-    margin-right: 20px;
+.navbar-logo {
+    flex-shrink: 0; /* Evita que el logo cambie de tamaño */
+    margin-left: 4.5rem; /* Añade espacio solo al logo si es necesario */
 }
 
 .logo-img {
     width: 80px;
     height: auto;
+
+}
+
+.logo-img:hover{
+    background-color:#cf0a0a ;
 }
 
 /* Enlaces de navegación */
-.navbar li {
+.navbar-menu {
+    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
+    display: flex;
+    justify-content: center; /* Centra los elementos del menú */
+}
+
+.navbar-menu ul {
+    display: flex;
+    gap: 4rem; /* Espacio entre los elementos del menú */
+    align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.navbar li a {
+.navbar-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a {
     text-decoration: none;
     color: #eeeeee;
     padding: 15px 20px;
@@ -52,23 +69,10 @@ header {
     display: block;
 }
 
-.navbar li a:hover {
+.navbar-menu li a:hover {
     background-color: #cf0a0a;
-    transition: 2s;
+    transition: 0.3s;
 }
-
-
-
-.frase{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #f2f2f2;
-    color: #cf0a0a;
-    
-}
-
-
 
 /*Modifys contenedor info historias*/
 

@@ -25,6 +25,7 @@ body, html {
     width: 100%;
     background-color: #252525;
     z-index: 1000;
+    height: 7.9rem;
 }
 
 /* Logo */
@@ -35,6 +36,7 @@ body, html {
 .logo-img {
     width: 80px;
     height: auto;
+    margin-bottom: -20%;
 }
 
 /* Enlaces de navegación */
@@ -71,77 +73,67 @@ body, html {
     margin-top: 8rem; /* Ajusta este valor según la distancia que prefieras */
 }
 
-/* Estilo básico */
-.container {
-    width: 300px;
-    margin: 0 auto 3.2rem;
-    font-family: Arial, sans-serif;
-    border: 1px solid #ccc;
-    padding: 2rem;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
 
-.coach-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.description {
-    margin: 10px 0;
-    font-size: 0.9em;
-}
-
-/* Estilo para la lista de títulos oculta */
-.titles-list {
-    max-height: 0;
+/*---------------------------------------------------------------------------------------*/
+/* Estilos personalizados */
+.card {
+    border-radius: 10px;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    background-color: #252525;
+    color: #ffffff;
 }
 
-/* Mostrar la lista cuando se expande */
-.titles-list.expanded {
-    max-height: 200px; /* Ajustar según la cantidad de títulos */
-}
-
-.view-more {
-    color: blue;
-    cursor: pointer;
-    margin-top: 10px;
-    text-decoration: underline;
-    font-size: 0.9em;
-}
-
-/* Estilo para los enlaces de los títulos */
-.titles-list a {
-    color: blue;
-    text-decoration: underline;
-    display: block;
-    margin: 5px 0;
-}
-
-.titles-list a:hover {
-    color: darkblue;
-}
-
-/* Estilo adicional para el coach */
-.coach-container {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.coach-img {
-    width: 9rem;
-    height: 4rem;
-    background-color: #ccc;
-    border-radius: 100%;
+.card-custom .card-image {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    color: #555;
+    padding: 10px;
+}
+
+.card-custom .card-image img {
+    width: 120px;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border: 3px solid #cf0a0a; /* Borde temporal para verificar */
+}
+
+.card:hover{
+
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+}
+
+.card-content .card-title {
+    display: block;
+    font-size: 1.2em; /* Tamaño de fuente ajustado */
+    font-weight: bold;
+    margin: 10px 0; /* Espacio entre el nombre y la imagen */
+    color: #000000; /* Color del texto negro */
+    text-align: center; /* Centrar el nombre */
+}
+
+.card .card-content {
+    color: #252525;
+}
+.titles-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+.titles-list li a {
+    color: #cf0a0a;
+    text-decoration: none;
+}
+.titles-list li a:hover {
+    text-decoration: underline;
+}
+.view-more {
+    color: #cf0a0a;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+    font-size: 0.9em;
 }
 
 
