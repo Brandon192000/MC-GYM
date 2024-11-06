@@ -2,7 +2,6 @@
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 100px; /* Para dejar espacio debajo del navbar fijo */
 }
 
 body::before {
@@ -22,61 +21,25 @@ body::before {
 }
 
 header {
-    background-color: #000;
+    background-color: #25252525;
     width: 100%; /* Asegura que el header ocupe el ancho completo */
 }
 
-/* Navegación */
-.navbar {
-display: flex;
-flex-direction: row; /* Asegura que los elementos estén en una fila */
-align-items: center;
-justify-content: space-around;
-list-style: none;
-margin: 0;
-padding: 0;
-position: fixed;
-top: 0;
-width: 100%;
-background-color: #252525;
-z-index: 1000;
-}
 
-/* Logo */
-.logo {
-    margin-right: 20px;
-}
 
 .logo-img {
-    width: 80px;
+    width: 63px;
     height: auto;
 }
 
-/* Enlaces de navegación */
-.navbar li {
-    margin: 0;
-    padding: 0;
+#nav-mobile a {
+    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
+    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
 }
 
-.navbar li a {
-    text-decoration: none;
-    color: #eeeeee;
-    padding: 15px 20px;
-    font-size: 16px;
-    text-align: center;
-    display: block;
-}
-
-.navbar li a:hover {
-    background-color: #cf0a0a;
+.custom-nav a:hover {
+    background-color:  #cf0a0a;
     transition: 2s;
-}
-
-/* Estilos para cambiar el comportamiento al pasar el cursor sobre la imagen */
-.logo-img:hover {
-    background-color: #252525;
-    border-radius: 5px;
-    transition: all 0.3s ease;
 }
 
 /* Banner rojo */
@@ -122,110 +85,36 @@ z-index: 1000;
     color: #f2f2f2;
 }
 
-/* Estilo para el botón */
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    position: relative;
-    padding: 0 4.5rem;
-    font-size: 18px;
-    text-transform: uppercase;
-    border: 0;
-    box-shadow: hsl(0deg 87% 36%) 0px 7px 0px 0px; /* Sombra roja */
-    background-color: hsl(0deg 100% 44%); /* Rojo */
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 31ms cubic-bezier(.5, .7, .4, 1);
+.custom-btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+    width: 13rem;
+    height: 60px;
+    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%); /* Gradiente de negro a rojo */
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: #eeeeee;
 }
 
-button:before {
-    content: attr(alt);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    inset: 0;
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-    letter-spacing: 4px;
-    opacity: 1;
+.custom-btn:hover {
+    transform: translateY(3px); /* Efecto de desplazamiento */
+    box-shadow: none; /* Elimina la sombra en hover */
 }
 
-button:active {
-    box-shadow: none;
-    transform: translateY(7px);
-    transition: 35ms cubic-bezier(.5, .7, .4, 1);
+.custom-btn:active {
+    opacity: 0.7; /* Reduce la opacidad al hacer clic */
+    transform: scale(0.95); /* Efecto de reducción de tamaño en clic */
 }
 
-button:hover:before {
-    transition: all 0s;
-    transform: translateY(100%);
-    opacity: 0;
-}
-
-button i {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    font-style: normal;
-    transition: all 2s ease;
-    transform: translateY(-20px);
-    opacity: 0;
-}
-
-button:hover i {
-    transition: all .2s ease;
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-button:hover i:nth-child(1) {
-    transition-delay: 0.045s;
-}
-
-button:hover i:nth-child(2) {
-    transition-delay: calc(0.045s * 2);
-}
-
-button:hover i:nth-child(3) {
-    transition-delay: calc(0.045s * 3);
-}
-
-button:hover i:nth-child(4) {
-    transition-delay: calc(0.045s * 4);
-}
-
-button:hover i:nth-child(5) {
-    transition-delay: calc(0.045s * 5);
-}
-
-button:hover i:nth-child(6) {
-    transition-delay: calc(0.045s * 6);
-}
-
-button:hover i:nth-child(7) {
-    transition-delay: calc(0.045s * 7);
-}
-
-button:hover i:nth-child(8) {
-    transition-delay: calc(0.045s * 8);
-}
-
-button:hover i:nth-child(9) {
-    transition-delay: calc(0.045s * 9);
-}
-
-button:hover i:nth-child(10) {
-    transition-delay: calc(0.045s * 10);
+.custom-2{
+    width: 15rem;
 }
 
 .plan-image {
-    background-color: #ccc;
-    width: 350px;
+    background-color: #eeeeee;
+    width: 58%;
     height: 250px;
     display: flex;
     justify-content: center;
@@ -241,10 +130,20 @@ button:hover i:nth-child(10) {
 }
 
 .plan-details {
-    font-size: 12px;
-    color: #aaa;
+    font-size: 1rem;
+    color: #eeeeee;
     margin-top: 10px;
 }
+
+.plan-details ul {
+    list-style-type: none; /* Cambia a "circle" o "square" si prefieres otro estilo de viñeta */
+    margin-left: 20px; /* Ajusta el margen para que la lista tenga un poco de sangría */
+}
+
+.plan-details li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
 
 /* Contacto */
 .contact-container {
@@ -260,7 +159,7 @@ button:hover i:nth-child(10) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #eeeeee;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
@@ -287,7 +186,7 @@ button:hover i:nth-child(10) {
 
 /* Footer */
 .footer {
-    background-color: #f2f2f2;
+    background-color: #eeeeee;
     padding: 5rem;
     text-align: center;
     font-size: 16px;
@@ -304,21 +203,11 @@ button:hover i:nth-child(10) {
     color: #cf0a0a;
     font-size: 3.5rem;
     margin-top: -10rem; 
-    background-color: #f2f2f2;
+    background-color: #eeeeee;
    
 }
 
 
-
-/* Estilo del botón burger */
-.burger {
-    display: none; /* Se oculta por defecto en pantallas grandes */
-    cursor: pointer;
+.RESTRICCION{
+    text-decoration: underline;
 }
-
-.burger-img {
-    width: 30px; /* Ajusta el tamaño de la imagen del burger button */
-    height: 30px;
-}
-
-

@@ -4,34 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Planes Membresías</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="/EstilosPaginas/EstilosPlanes.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
 
-    <!-- Burger button con imagen -->
-    <div class="burger" id="burger">
-        <img src="/Img/imagenesIconsRedes/burger.png" alt="Burger Menu" class="burger-img">
-    </div>
-
-    <!-- Barra de navegación -->
     <header>
-        <nav>
-            <ul class="navbar">
-                <li class="logo">
-                    <a href="/PaginasWeb/index.html"><img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img"></a>
-                </li>
-                    <li><a href="/PaginasWeb/index.html">Inicio</a></li>
-                    <li><a href="/PaginasWeb/index.html#Horarios">Horarios</a></li>
-                    <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
-                    <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
-                    <li><a href="/PaginasWeb/Planes.html">Contacto</a></li>
-                    <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
-                    <li><a href="/PaginasWeb/Historias.html">Historias</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="navbar-fixed">
+            <nav class="black">
+                <div class="nav-wrapper container">
+                    <!-- Botón de menú para móvil -->
+                    <a href="#" data-target="mobile-menu" class="sidenav-trigger right">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <!-- Logo -->
+                    <a href="/PaginasWeb/index.html" class="brand-logo">
+                        <img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img">
+                    </a>
+                    <!-- Navegación para pantallas grandes -->
+                    <ul id="nav-mobile" class="right hide-on-med-and-down custom-nav">
+                        <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+                        <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
+                        <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+                        <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+                        <li><a href="/PaginasWeb/Contacto.html">Contacto</a></li>
+                        <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+                        <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
+
+
+    <!-- Sidenav para dispositivos móviles -->
+    <ul class="sidenav" id="mobile-menu">
+        <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+        <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
+        <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+        <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+        <li><a href="/PaginasWeb/Contacto.html">Contacto</a></li>
+        <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+        <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+    </ul>
     
     
     <main>
@@ -45,20 +62,20 @@
             <div class="plan-text centered">
                 <div>
                     <h2>Plan individual.</h2>
-                    <button alt="Únete">
-                        <i>Ú</i><i>N</i><i>E</i><i>T</i><i>E</i>
-                    </button>
+                    <button class="btn custom-btn">Únete</button>
+
                 </div>
             </div>
 
             <div>
                 <div class="plan-image">
-                    <img src="/Img/IMG PLANES/DALL·E 2024-10-24 23.03.44 - A logo-style image for 'MC GYM' with a person in the background doing exercises such as weightlifting or running. The person should be slightly abstra (1).webp" alt="Plan individual">
+                    <img src="/Img/Planes membresia/download.jpeg" alt="Plan individual">
                 </div>
                 <div class="plan-details">
-                    Mensual ##@<br>
-                    Mediciones InBody<br>
-                    Rutina personalizada
+                    <h5 class="red-text text-darken-2"><strong>Plan posee algunas ventajas</strong></h5>
+                    <p>»Mensualidad <strong>16 000 mil colones</strong></p>
+                    <p>»Mediciones InBody <ul><li>Análisis detallado de la composición corporal para evaluar grasa, músculo y agua,<br> ayudando a personalizar entrenamientos y mejorar resultados.</li></ul></p>
+                    <p>»Rutina personalizada <ul><li>Plan de ejercicio adaptado a los objetivos, condición física y <br> necesidades específicas de cada persona para maximizar resultados.</li></ul></p>
                 </div>
             </div>
         </section>
@@ -67,21 +84,24 @@
         <section class="plans-container plan-reverse">
             <div>
                 <div class="plan-image">
-                    <img src="/Img/logos%20gym/MC-GYM-logo.png" alt="Plan estudiantil">
+                    <img src="/Img/Planes membresia/download (1).jpeg" alt="Plan estudiantil">
                 </div>
                 <div class="plan-details">
-                    Mensual ##@<br>
-                    Trimestral ##@<br>
-                    Semestral ##@<br>
-                    Anual ##@
+                    <h5 class="red-text text-darken-2"><strong>Plan posee algunas ventajas</strong></h5>
+                    <p>»Mensualidad <strong>14 000 mil colones</strong></p>
+                    <p>» Mediciones InBody</p>
+                    <ul>
+                        <li>Análisis detallado de la composición corporal para evaluar grasa, músculo y agua, <br> ayudando a personalizar entrenamientos y mejorar resultados.</li>
+                    </ul>
+                    <p>»Rutina personalizada <ul><li>Plan de ejercicio adaptado a los objetivos, condición física y <br> necesidades específicas de cada persona para maximizar resultados.</li></ul></p>
+                    <p class="RESTRICCION">****EL PLAN SOLO RIGE PARA PERSONAS MEJORES DE EDAD Y QUE SEAN ESTUDIATES DEL COLEGIO****</p>
                 </div>
             </div>
             <div class="plan-text centered">
                 <div>
-                    <h2>Plan individual.</h2>
-                    <button alt="Únete">
-                        <i>Ú</i><i>N</i><i>E</i><i>T</i><i>E</i>
-                    </button>
+                    <h2>Plan Estudiantil.</h2>
+                    <button class="btn custom-btn custom-2">Únete</button>
+
                 </div>
             </div>
         </section>
@@ -114,5 +134,9 @@
         </section>
     </main>
     
+
+    <script src="/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 </html>
