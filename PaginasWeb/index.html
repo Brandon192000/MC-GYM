@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 
-    <!-- METADATOS... -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Entrenamiento personalizado, clases grupales y un ambiente motivador para alcanzar tus metas fitness.">
@@ -23,7 +22,7 @@
 </head>
 
 <body>
-    
+    <main>
         <header>
             <div class="navbar-fixed">
                 <nav class="black">
@@ -82,8 +81,8 @@
     
         
     
-        <!-- Carrusel con Materialize -->
-        <section class="carousel carousel-slider center">
+    <!-- Carrusel con Materialize -->
+        <section class="carousel carousel-slider ">
             <div class="carousel-item" href="#one!">
                 <img src="/Img/instalaciones gym/WhatsApp Image 2024-10-23 at 15.10.51 (1).jpeg" alt="Imagen 1">
             </div>
@@ -96,7 +95,7 @@
             <div class="carousel-item" href="#four!">
                 <img src="/Img/instalaciones gym/WhatsApp Image 2024-10-23 at 15.10.52 (1).jpeg" alt="Imagen 4">
             </div>
-            <div class="carousel-item" href="#five!">
+            <div class="carousel-item" >
                 <img src="/Img/instalaciones gym/WhatsApp Image 2024-10-23 at 15.10.52 (2).jpeg" alt="Imagen 5">
             </div>
             <div class="carousel-item" href="#six!">
@@ -139,9 +138,9 @@
                 <img src="/Img/instalaciones gym/WhatsApp Image 2024-10-23 at 15.10.54 (3).jpeg" alt="Imagen 18">
             </div>
             
-        <!-- Botones de navegación personalizados -->
-        <button class="carousel-control prev" onclick="moveCarousel('prev')">&#10094;</button>
-        <button class="carousel-control next" onclick="moveCarousel('next')">&#10095;</button>
+            <!-- Botones de navegación personalizados -->
+            <button class="carousel-control prev" onclick="moveCarousel('prev')">&#10094;</button>
+            <button class="carousel-control next" onclick="moveCarousel('next')">&#10095;</button>
 
         </section>
     
@@ -175,22 +174,41 @@
             </div>
         </section>
     
-        <!-- Contenedor del logo en el lado izquierdo -->
-        <div class="logo-container left-logo">
-            <img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (2).jpeg" alt="Logo Izquierdo" class="logo">
-        </div>
-
+        
         <footer>
-            <div class="footer-container">
-                <p>Síguenos en nuestras redes sociales.</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/people/MC-Fitness/100063640237382/" target="_blank">
-                        <img src="/Img/imagenesIconsRedes/facebook.png" alt="Facebook" title="Redirigir a nuestra página de facebook">
-                    </a>
-                    <a href="https://instagram.com" target="_blank">
-                        <img src="/Img/imagenesIconsRedes/instagram.png" alt="Instagram" title="Redirigir a nuestra página de instagram">
-                    </a>
+            <div class="info-box1">
+                <div class="containerImg">
+                    <img class="logo-Foot" src="/Img/logos gym/image.png" alt="">
                 </div>
+
+                <div class="separator"></div>
+                <h5 class="black-text center"><strong>Nuestras redes sociales</strong></h5><br>
+
+                <div class="container-Redes-Foot">
+                    <a href="https://www.facebook.com/people/MC-Fitness/100063640237382/"><img src="/Img/imagenesIconsRedes/facebook.png" alt="Facebook" class="ImgIcons"></a>
+                    <a href="https://www.instagram.com/mc_fitness_gym/?hl=es"><img src="/Img/imagenesIconsRedes/instagram.png" alt="Instagram" class="ImgIcons"></a>
+                    <a href="https://wa.me/86495651"><img src="/Img/imagenesIconsRedes/whatsapp_1384095.png" alt="WhatsApp" class="ImgIcons"></a>
+                    <a href="mailto:mcfitness0818@gmail.com"><img src="/Img/imagenesIconsRedes/mail_16866791.png" alt="Email" class="ImgIcons"></a>
+                </div>
+
+                <div class="separator"></div>
+                <h5 class="black-text center">Información</h5><br>
+                <section class="PaginasWebsFoot container">
+                    
+                    <div class="info-Foot">
+                        <a class="red-text" href="Planes.html">»Visita Nuestros planes«</a><br>
+                        <a class="red-text" href="/PaginasWeb/Historias.html">»Mira nuestras historias de motivacion«</a><br>
+                        <a class="red-text" href="Ubicacion.html">»Mira donde estamos ubicados«</a>
+                        
+                    </div>
+                </section>
+
+                <div class="separator"></div>
+
+                <section class="footer black-text center">
+                    © 2024 By <a class="red-text" href="https://www.facebook.com/zurdo.bch/?_rdr">Brandon Blanco Chinchilla</a> Alajuela-Costa Rica
+                </section>
+
             </div>
         </footer>
     
@@ -202,5 +220,6 @@
         <!-- Agregar JavaScript de Materialize -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    </main>
 </body>
 </html> 

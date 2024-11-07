@@ -1,74 +1,38 @@
-/* Ajuste de margen en el body */
+/* Fondo de pantalla con efecto de vidrio en el body */
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 100px; /* Para dejar espacio debajo del navbar fijo */
     background-color: #eeeeee;
+    overflow-x: hidden; /* Para evitar desbordamiento horizontal */
 }
+
 
 header {
     background-color: #252525;
     width: 100%; /* Asegura que el header ocupe el ancho completo */
 }
-/* Navegación */
-.navbar {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #252525;
-    z-index: 1000;
-    padding: 0; /* Elimina el padding lateral */
-    height: 7rem;
+
+
+#nav-mobile a {
+    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
+    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
 }
 
-/* Logo */
-.navbar-logo {
-    flex-shrink: 0; /* Evita que el logo cambie de tamaño */
-    margin-left: 4.5rem; /* Añade espacio solo al logo si es necesario */
+.custom-nav a:hover {
+    background-color:  #cf0a0a;
+    transition: 2s;
 }
 
-.logo-img {
-    width: 80px;
-    height: auto;
 
+.left-logo {
+    position: relative;
+    top: 8rem; 
+    left: 10rem;  
 }
 
-.logo-img:hover{
-    background-color:#cf0a0a ;
+.logo-img{
+    height: 63px;
 }
-
-/* Enlaces de navegación */
-.navbar-menu {
-    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
-    display: flex;
-    justify-content: center; /* Centra los elementos del menú */
-}
-
-.navbar-menu ul {
-    display: flex;
-    gap: 4rem; /* Espacio entre los elementos del menú */
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-menu li {
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-menu li a {
-    text-decoration: none;
-    color: #eeeeee;
-    padding: 15px 20px;
-    font-size: 16px;
-    text-align: center;
-    display: block;
-}
-
 .navbar-menu li a:hover {
     background-color: #cf0a0a;
     transition: 0.3s;
@@ -78,7 +42,7 @@ header {
 
 .containerPrincipalHisto {
     background-color: #252525;
-    height: 145vh;
+    height: 200vh;
 
     /* Flexbox para centrar el contenedor */
     display: flex;
@@ -86,12 +50,7 @@ header {
     align-items: center; /* Centrar verticalmente */
 }
 
-.container {
-    background-color: #eeeeee;
-    width: 80%; /* Ajusta el ancho del contenedor interno */
-    padding: 20px;
-    border-radius: 8px; /* Opcional: bordes redondeados para un mejor estilo */
-}
+
 
 
 
@@ -136,6 +95,17 @@ footer {
 
 /*-----------------------------------------------------------------------------------------*/
 
+/* Tamaño específico para las cartas */
+.card {
+    width: 300px; /* Ancho específico para cada carta */
+    height: 480px; /* Altura específica para cada carta */
+    margin: 15px auto; /* Centra las cartas horizontalmente */
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+    display: flex;
+    flex-direction: column; /* Coloca el contenido verticalmente */
+    justify-content: space-between; /* Espacia el contenido */
+}
+
 /* Estilo del contenedor de la imagen en la tarjeta */
 .card-image-placeholder {
     display: flex;
@@ -158,6 +128,7 @@ footer {
     font-weight: bold;
 }
 
+/* Efectos al hacer hover */
 .card-content {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -167,20 +138,19 @@ footer {
     transform: translateY(-5px); /* Desplaza el contenido ligeramente hacia arriba */
 }
 
-.card-image {
-    padding-top: 10px; /* Despega la imagen del borde superior */
-}
+
 
 .card-image img {
     width: 100%;
-    max-width: 150px;
-    max-height: 120px;
+    max-width: 300px;
+    max-height: 200px; /* Altura máxima de la imagen */
     height: auto;
     display: block;
     margin: 0 auto;
     object-fit: cover;
     border-radius: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid red;
 }
 
 .card-image:hover img {

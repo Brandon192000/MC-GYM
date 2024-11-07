@@ -1,63 +1,55 @@
-/* Reset body */
-body, html {
+/* Fondo de pantalla con efecto de vidrio en el body */
+body {
     margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    box-sizing: border-box;
-    background-color: #eeee;
-    
+    background-color: #eeeeee;
+    overflow-x: hidden; /* Para evitar desbordamiento horizontal */
 }
 
 
-/* Navegación */
-.navbar {
-    display: flex;
-    flex-direction: row; /* Asegura que los elementos estén en una fila */
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: fixed;
+main {
+    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed\ \(1\).jpeg'); /* Cambia esta ruta */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    position: relative;
+    z-index: 1;
+}
+
+/* Capa de filtro de vidrio */
+main::before {
+    content: "";
+    position: absolute;
     top: 0;
-    width: 100%;
-    background-color: #252525;
-    z-index: 1000;
-    height: 7.9rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px); /* Aplica el efecto de vidrio borroso */
+    z-index: -1; /* Para que quede debajo del contenido */
 }
 
-/* Logo */
-.logo {
-    margin-right: 20px;
+
+#nav-mobile a {
+    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
+    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
 }
 
-.logo-img {
-    width: 80px;
-    height: auto;
-    margin-bottom: -20%;
-}
-
-/* Enlaces de navegación */
-.navbar li {
-    margin: 0;
-    padding: 0;
-}
-
-.navbar li a {
-    text-decoration: none;
-    color: #eeeeee;
-    padding: 15px 20px;
-    font-size: 16px;
-    text-align: center;
-    display: block;
-}
-
-.navbar li a:hover {
-    background-color: #cf0a0a;
+.custom-nav a:hover {
+    background-color:  #cf0a0a;
     transition: 2s;
 }
+
+
+.left-logo {
+    position: relative;
+    top: 8rem; 
+    left: 10rem;  
+}
+
+.logo-img{
+    height: 63px;
+}
+
 
 .quote {
     background-color: white;
@@ -69,65 +61,76 @@ body, html {
     width: 70%;
     border: 2px solid #cf0a0a;
     
-    /* Espacio adicional entre el nav y la quote */
-    margin-top: 8rem; /* Ajusta este valor según la distancia que prefieras */
 }
 
 
 /*---------------------------------------------------------------------------------------*/
 /* Estilos personalizados */
-.card {
+.card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border-radius: 10px;
     overflow: hidden;
     background-color: #252525;
     color: #ffffff;
+    width: 100%;
+    max-width: 1100px;
+    margin: 100px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-custom .card-image {
+.card-horizontal .card-image {
+    flex: 0 0 200px; /* Define el ancho de la imagen en la tarjeta horizontal */
     display: flex;
     justify-content: center;
-    padding: 10px;
+    align-items: center;
 }
 
-.card-custom .card-image img {
-    width: 120px;
-    height: 20rem;
+.card-horizontal .card-image img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    object-position: center;
-    display: block;
     border: 3px solid #cf0a0a; /* Borde temporal para verificar */
 }
 
-.card:hover{
-
-    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+.card-horizontal .card-content {
+    flex: 1;
+    padding: 20px;
 }
 
-.card-content .card-title {
-    display: block;
-    font-size: 1.2em; /* Tamaño de fuente ajustado */
+.card-horizontal .card-title {
+    font-size: 1.5em;
     font-weight: bold;
-    margin: 10px 0; /* Espacio entre el nombre y la imagen */
-    color: #000000; /* Color del texto negro */
-    text-align: center; /* Centrar el nombre */
+    color: #cf0a0a;
+    margin-bottom: 10px;
 }
 
-.card .card-content {
-    color: #252525;
+.card-horizontal .card-content p {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0 0 10px;
 }
+
+.card-horizontal .card-action {
+    padding-top: 10px;
+}
+
 .titles-list {
     list-style-type: none;
     padding-left: 0;
     margin: 10px 0;
 }
+
 .titles-list li a {
     color: #cf0a0a;
     text-decoration: none;
 }
+
 .titles-list li a:hover {
     text-decoration: underline;
 }
+
 .view-more {
     color: #cf0a0a;
     cursor: pointer;
@@ -136,6 +139,10 @@ body, html {
     font-size: 0.9em;
 }
 
+.card-horizontal:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 
 /*----------------------------------------------------------------------------------*/

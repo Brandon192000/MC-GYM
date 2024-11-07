@@ -4,53 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historias MC FITNESS GYM</title>
-    <link rel="stylesheet" href="/EstilosPaginas/HistoriasEstilos.css">
 
     <!-- Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awesome para iconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <!-- Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="/EstilosPaginas/HistoriasEstilos.css">
     
 </head>
 <body>
-    
-    <main class="containerPrincipal">
-        <!-- Barra de navegación -->
+    <main>
         <header>
-            <div class="navbar">
-                <div class="navbar-logo">
-                    <a href="/PaginasWeb/index.html"><img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img"></a>
-                </div>
-                <div class="navbar-menu">
-                    <ul>
-                        <li><a href="/PaginasWeb/index.html">Inicio</a></li>
-                        <li><a href="/PaginasWeb/index.html #Horarios">Horarios</a></li>
-                        <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
-                        <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
-                        <li><a href="/PaginasWeb/Planes.html">Contacto</a></li>
-                        <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
-                        <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
-                    </ul>
-                </div>
+            <div class="navbar-fixed">
+                <nav class="black">
+                    <div class="nav-wrapper container">
+                        <!-- Botón de menú para móvil -->
+                        <a href="#" data-target="mobile-menu" class="sidenav-trigger right">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <!-- Logo -->
+                        <a href="/PaginasWeb/index.html" class="brand-logo">
+                            <img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img">
+                        </a>
+                        <!-- Navegación para pantallas grandes -->
+                        <ul id="nav-mobile" class="right hide-on-med-and-down custom-nav">
+                            <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+                            <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
+                            <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+                            <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+                            <li><a href="/PaginasWeb/Contacto.html">Contacto</a></li>
+                            <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+                            <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
         </header>
-                
+    
+    
+        <!-- Sidenav para dispositivos móviles -->
+        <ul class="sidenav" id="mobile-menu">
+            <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+            <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
+            <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+            <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+            <li><a href="/PaginasWeb/Contacto.html">Contacto</a></li>
+            <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+            <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+        </ul>
+                    
         <!-- Banner titulo -->
         <section>
             <div class="frase">
-                
-                    <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vitae neque illo maiores aliquid ipsa vero similique iste repellat magnam temporibus aut, facere ratione quasi officiis ex sint ullam amet."</p>
-                
+                <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vitae neque illo maiores aliquid ipsa vero similique iste repellat magnam temporibus aut, facere ratione quasi officiis ex sint ullam amet."</p>
             </div>
         </section>
-
+    
         <!-- Contenedor de historias -->
-        <div class="containerPrincipalHisto">
-            <div class="container">
+        <section class="containerPrincipalHisto">
+            <article class="container">
                 <div class="row">
                     <!-- Tarjeta 1 -->
                     <div class="col s12 m6 l4">
@@ -106,14 +121,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
     
-        </div>
+        </section>
         
-
+    
         <footer>
             <div class="footer-container">
-
+    
                 <p>"No es sobre ser el mejor, es sobre ser mejor que ayer"</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/people/MC-Fitness/100063640237382/" target="_blank" title="Redirigir a nuestra pagina de facebook">
@@ -127,6 +142,8 @@
         </footer>
     </main>
 
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 </html>

@@ -71,6 +71,7 @@ header {
     width: 100%; /* Abarca todo el ancho */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
     position: relative; /* Para que el banner pueda posicionarse dentro de este contenedor */
+    
 }
 
 .plan-text {
@@ -112,20 +113,24 @@ header {
     width: 15rem;
 }
 
-.plan-image {
-    background-color: #eeeeee;
-    width: 58%;
-    height: 250px;
+.plans-infoCompleta {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
+.plan-image {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
+}
+
+
 .plan-image img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
 }
 

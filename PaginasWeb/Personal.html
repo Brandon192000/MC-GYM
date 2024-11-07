@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     
@@ -17,25 +17,45 @@
 
 </head>
 <body>
+    <main>
+        <header>
+            <div class="navbar-fixed">
+                <nav class="black">
+                    <div class="nav-wrapper container">
+                        <!-- Botón de menú para móvil -->
+                        <a href="#" data-target="mobile-menu" class="sidenav-trigger right">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <!-- Logo -->
+                        <a href="/PaginasWeb/index.html" class="brand-logo">
+                            <img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img">
+                        </a>
+                        <!-- Navegación para pantallas grandes -->
+                        <ul id="nav-mobile" class="right hide-on-med-and-down custom-nav">
+                            <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+                            <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
+                            <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+                            <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+                            <li><a href="/PaginasWeb/Contacto.html">Contacto</a></li>
+                            <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+                            <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    
 
-    <!-- Barra de navegación -->
-    <header>
-        <nav>
-            <ul class="navbar">
-                <li class="logo">
-                    <a href="/PaginasWeb/index.html"><img src="/Img/logos gym/WhatsApp Image 2024-10-23 at 15.05.41 (1).jpeg" alt="Logo" class="logo-img"></a>
-                </li>
-                    <li><a href="/PaginasWeb/index.html">Inicio</a></li>
-                    <li><a href="#Horarios">Horarios</a></li>
-                    <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
-                    <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
-                    <li><a href="/PaginasWeb/Planes.html">Contacto</a></li>
-                    <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
-                    <li><a href="/PaginasWeb/Historias.html">Historias</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Sidenav para dispositivos móviles -->
+        <ul class="sidenav" id="mobile-menu">
+            <li><a href="/PaginasWeb/index.html">Inicio</a></li>
+            <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
+            <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+            <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+            <li><a href="/PaginasWeb/Contacto.html">Contacto</a></li>
+            <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+            <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+        </ul>
 
     <!-- Quote Section -->
     <section class="quote">
@@ -44,76 +64,77 @@
 
     <div class="container">
         <div class="row">
-            <div class="col s12 m6 l4">
-                <div class="card z-depth-3 card-custom">
+            <div class="col s12 m12 l12">
+                <div class="card z-depth-3 card-horizontal">
                     <div class="card-image">
                         <img src="/Img/Titulos Norman/Captura de pantalla 2024-11-04 010805.png" alt="Coach">
                     </div>
                     <div class="card-content">
-                        <span class="card-title">Norman Loria </span>
-                        <p>Especialista en fitness y nutrición deportiva con años de experiencia ayudando a transformar vidas.</p>
-                    </div>
-                    <div class="card-action">
-                        <details>
-                            <summary class="view-more">Ver más</summary>
-                            <ul class="titles-list">
-                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.09 (1).jpeg" target="_blank">Certificado Entrenador de fútbol infantil FIFA GRASSROOTS</a></li>
-                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.09.jpeg" target="_blank">Especialista en Nutrición Deportiva</a></li>
-                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10 (1).jpeg" target="_blank">Certificado en Rehabilitación Física</a></li>
-                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10 (2).jpeg" target="_blank">Entrenador Funcional Nivel Avanzado</a></li>
-                                <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10.jpeg" target="_blank">Master en Rendimiento Deportivo</a></li>
-                            </ul>
-                        </details>
+                        <span class="card-title">Norman Loria</span>
+                        <p class="black-text">Especialista en fitness y nutrición deportiva con años de experiencia ayudando a transformar vidas.</p>
+                        <div class="card-action">
+                            <details>
+                                <summary class="view-more">Ver más</summary>
+                                <ul class="titles-list">
+                                    <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.09 (1).jpeg" target="_blank">Certificado Entrenador de fútbol infantil FIFA GRASSROOTS</a></li>
+                                    <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.09.jpeg" target="_blank">Especialista en Nutrición Deportiva</a></li>
+                                    <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10 (1).jpeg" target="_blank">Certificado en Rehabilitación Física</a></li>
+                                    <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10 (2).jpeg" target="_blank">Entrenador Funcional Nivel Avanzado</a></li>
+                                    <li><a href="/Img/Titulos Norman/WhatsApp Image 2024-10-26 at 16.30.10.jpeg" target="_blank">Master en Rendimiento Deportivo</a></li>
+                                </ul>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col s12 m6 l4">
-                <div class="card z-depth-3 card-custom">
+    
+            <div class="col s12 m12 l12">
+                <div class="card z-depth-3 card-horizontal">
                     <div class="card-image">
                         <img src="/Img/titulos Waldhein Villalobos Morales/Captura de pantalla 2024-11-04 010841.png" alt="Coach">
                     </div>
                     <div class="card-content">
                         <span class="card-title">Waldhein Villalobos</span>
-                        <p>Entrenador especializado en crossfit y nutrición deportiva con experiencia en programas de transformación física.</p>
-                    </div>
-                    <div class="card-action">
-                        <details>
-                            <summary class="view-more">Ver más</summary>
-                            <ul class="titles-list">
-                                <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.11.jpeg" target="_blank">Certificado International Professional Training Crossfitness</a></li>
-                                <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.47 (1).jpeg" target="_blank">Certificado International Professional Training Entrenamiento Funcional</a></li>
-                                <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.47.jpeg" target="_blank">Certificado International Professional Training Nutrición y suplementación deportiva</a></li>
-                                <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.48.jpeg" target="_blank">Certificado International Professional Training Hipertrofia Muscular</a></li>
-                            </ul>
-                        </details>
+                        <p class="black-text">Entrenador especializado en crossfit y nutrición deportiva con experiencia en programas de transformación física.</p>
+                        <div class="card-action">
+                            <details>
+                                <summary class="view-more">Ver más</summary>
+                                <ul class="titles-list">
+                                    <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.11.jpeg" target="_blank">Certificado International Professional Training Crossfitness</a></li>
+                                    <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.47 (1).jpeg" target="_blank">Certificado International Professional Training Entrenamiento Funcional</a></li>
+                                    <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.47.jpeg" target="_blank">Certificado International Professional Training Nutrición y suplementación deportiva</a></li>
+                                    <li><a href="/Img/titulos Waldhein Villalobos Morales/WhatsApp Image 2024-11-04 at 00.30.48.jpeg" target="_blank">Certificado International Professional Training Hipertrofia Muscular</a></li>
+                                </ul>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col s12 m6 l4">
-                <div class="card z-depth-3 card-custom">
+    
+            <div class="col s12 m12 l12">
+                <div class="card z-depth-3 card-horizontal">
                     <div class="card-image">
                         <img src="/Img/Titulos irma/Captura de pantalla 2024-11-04 020049.png" alt="Coach">
                     </div>
                     <div class="card-content">
                         <span class="card-title">Irma</span>
-                        <p>Irma es una entrenadora especializada en fortalecimiento del núcleo y prevención de lesiones, gracias a su certificación en metodología Core y kinesiotape. Con conocimientos en primeros auxilios y RCP, asegura un entorno de entrenamiento seguro y profesional.</p>
-                    </div>
-                    <div class="card-action">
-                        <details>
-                            <summary class="view-more">Ver más</summary>
-                            <ul class="titles-list">
-                                <li><a href="/Img/Titulos irma/WhatsApp Image 2024-11-04 at 01.49.02 (1).jpeg" target="_blank">Certificación en Principios de la Metodologia Core</a></li>
-                                <li><a href="/Img/Titulos irma/WhatsApp Image 2024-11-04 at 01.49.02 (2).jpeg" target="_blank">Certificado en Taller de Kinesiotape VNM</a></li>
-                                <li><a href="/Img/Titulos irma/WhatsApp Image 2024-11-04 at 01.49.02 (3).jpeg" target="_blank">Certificación en Primeros Auxilios y reanimación cardiopulmonar (RCP)</a></li>
-                            </ul>
-                        </details>
+                        <p class="black-text">Irma es una entrenadora especializada en fortalecimiento del núcleo y prevención de lesiones, gracias a su certificación en metodología Core y kinesiotape. Con conocimientos en primeros auxilios y RCP, asegura un entorno de entrenamiento seguro y profesional.</p>
+                        <div class="card-action">
+                            <details>
+                                <summary class="view-more">Ver más</summary>
+                                <ul class="titles-list">
+                                    <li><a href="/Img/Titulos irma/WhatsApp Image 2024-11-04 at 01.49.02 (1).jpeg" target="_blank">Certificación en Principios de la Metodologia Core</a></li>
+                                    <li><a href="/Img/Titulos irma/WhatsApp Image 2024-11-04 at 01.49.02 (2).jpeg" target="_blank">Certificado en Taller de Kinesiotape VNM</a></li>
+                                    <li><a href="/Img/Titulos irma/WhatsApp Image 2024-11-04 at 01.49.02 (3).jpeg" target="_blank">Certificación en Primeros Auxilios y reanimación cardiopulmonar (RCP)</a></li>
+                                </ul>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>
-            
         </div>
+    </div>
+    
 
     </div>
     
@@ -126,7 +147,7 @@
         <div class="footer-banner">
             <h2>Forma parte de nuestra familia</h2>
             <div class="footer-icons">
-                <a href="#"><img src="/Img/imagenesIconsRedes/facebook.png" alt="Facebook"></a>
+                <a href="https://www.facebook.com/people/MC-Fitness/100063640237382/"><img src="/Img/imagenesIconsRedes/facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="/Img/imagenesIconsRedes/instagram.png" alt="Instagram"></a>
                 <a href="#"><img src="/Img/imagenesIconsRedes/whatsapp_1384095.png" alt="WhatsApp"></a>
                 <a href="#"><img src="/Img/imagenesIconsRedes/mail_16866791.png" alt="Email"></a>
@@ -134,10 +155,11 @@
         </div>
         
     </footer>
-
+    </main>
+   
     <!-- Vinculación con el archivo JavaScript -->
     <script src="scripts.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 </html>
