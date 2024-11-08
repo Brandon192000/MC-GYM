@@ -33,8 +33,8 @@ header {
 /*-------------------------------------------------------------------------*/
 
 #nav-mobile a {
-font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
-color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
+    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
+    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
 }
 
 .logo-img{
@@ -137,7 +137,7 @@ color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
 }
 
 .contenedorprincipalCarrucel {
-    max-width: 80%; /* Ancho máximo del contenedor */
+    max-width: 50%; /* Ancho máximo del contenedor */
     margin: auto;
 }
 
@@ -206,49 +206,146 @@ color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
 }
 
 /*-------------------------------------------------------------------------------------------*/
-/* Caja de contacto */
-.contact-box {
-    width: 100%; /* Ajustar el tamaño de ancho */
-    height: 250px; /* Ajustar el tamaño de alto */
-    border: 1px solid #eeeeee;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-/* Encabezado de contacto en rojo */
-.contact-header {
-    width: 100%; /* Ajustar el tamaño de ancho */
-    background-color: #cf0a0a; /* Rojo fuerte */
-    color: #eeeeee;
-    text-align: center;
-    padding: 2rem;
-    font-family: Arial, sans-serif;
-}
-
-.contact-header h3 {
-    margin: 0;
-    font-size: 20px; /* Aumentar el tamaño de la fuente */
+/*FOOTER PART, aqui estaran los estilos personalizados para el apartados del foot*/
+.footer-container p {
+    font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
     font-weight: bold;
-}
-.contact-header p {
-    margin: 5px 0 0;
-    font-size: 16px; /* Ajustar el tamaño del texto */
+    color: #e74c3c;
 }
 
-/* Cuerpo con el icono de WhatsApp */
-.contact-body {
-    background-color: #eeeeee;
-    text-align: center;
-    padding: 3rem; /* Aumentar el padding para más espacio */
+
+.FootPlanes{
+
+    display: flex;
+    flex-direction: row-reverse;
+    
 }
 
-.whatsapp-icon {
-    width: 50px; /* Aumentar el tamaño del icono */
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    }
+}
+
+.logo-Foot {
+    animation: pulse 2s infinite; /* Animación continua */
+}
+
+
+/* Logo */
+.logo-container {
+    position: absolute;
+    bottom: 10px;
+    width: 8rem; /* Tamaño más pequeño del logo */
+    opacity: 0.3;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.info-box1{
+    
+    background-color: #D3D3D3;
+    padding: 1rem;
+    text-align: left;
+    flex: 1;
+}
+
+.separator {
+    width: 80%;/* Empieza con un ancho de 0 */
+    margin: 1rem auto; /* Centra la línea horizontalmente */
+    border-top: 1px solid black;
+}
+
+
+.PaginasWebsFoot{
+    display: flex;
+    justify-content: center;
+}
+
+
+@keyframes slideInfoLeft {
+
+    from{
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+    
+}
+
+
+.containerImg{
+    display: flex;
+    justify-content: center;
+}
+.containerImg .logo-Foot{
+    height: 200px;
+    width: 200px;
+    
+}
+
+.container-Redes-Foot{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.ImgIcons{
     height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
 }
 
-.contact-body a {
-    display: inline-block;
-    text-decoration: none;
+
+.ImgIcons:hover{
+    animation: bounce 0.5s ease forwards infinite;
+
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+.info-Foot a {
+    transition: text-shadow 0.3s ease;
+}
+
+.info-Foot a:hover {
+    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
+}
+
+.PaginasWebsFoot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.info-Foot {
+    flex: 1;
+}
+
+.location {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.location .material-icons {
+    vertical-align: middle;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
 /*-------------------------------------------------------------*/

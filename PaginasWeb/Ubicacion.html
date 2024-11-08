@@ -9,10 +9,10 @@
 
     <!-- Agregar CSS de Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-    <!-- JavaScript de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
     
 </head>
 <body>
@@ -48,12 +48,12 @@
     <!-- Sidenav para dispositivos móviles -->
     <ul class="sidenav" id="mobile-menu">
         <li><a href="/PaginasWeb/index.html">Inicio</a></li>
-        <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
-        <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
-        <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
-        <li><a href="/PaginasWeb/Contacto.html">Contacto</a></li>
-        <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
-        <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
+            <li><a href="/PaginasWeb/#Horarios">Horarios</a></li>
+            <li><a href="/PaginasWeb/Planes.html">Planes</a></li>
+            <li><a href="/PaginasWeb/Ubicacion.html">Ubicación</a></li>
+            <li><a href="/PaginasWeb/Planes.html#contacto">Contacto</a></li>
+            <li><a href="/PaginasWeb/Personal.html">Personal</a></li>
+            <li><a href="/PaginasWeb/Historias.html">Historias</a></li>
     </ul>
 
 
@@ -74,7 +74,7 @@
     </section>
 
     <section class="conteinarCarrusel">
-        <div class="container contenedorprincipalCarrucel">
+        <div class="contenedorprincipalCarrucel">
             <h1 class="center-align white-text PNuestraFam">Nuestra familia.</h1>
             
             <div class="carousel carousel-slider center" id="carouselExample">
@@ -95,24 +95,54 @@
             </div>
     
             <div class="center-align">
-                <button class="btn botonVermas custom-btn" type="button">Conocer más</button>
+                <a href="/PaginasWeb/Planes.html"><button class="btn botonVermas custom-btn" type="button">Conocer más</button></a>
             </div>
         </div>
     </section>
     
     
 
-    <div class="contact-box">
-        <div class="contact-header">
-            <h3>Contáctanos</h3>
-            <p>Da clic acá para redirigir al Whatsapp</p>
+    <footer>
+        <div class="info-box1">
+            <div class="containerImg">
+                <a href="/PaginasWeb/index.html"><img class="logo-Foot" src="/Img/logos gym/image.png" alt="LogoGym"></a>
+            </div>
+
+            <div class="separator"></div>
+            <h5 class="red-text center"><strong>Nuestras redes sociales</strong></h5><br>
+
+            <div class="container-Redes-Foot">
+                <a href="https://www.facebook.com/people/MC-Fitness/100063640237382/"><img src="/Img/imagenesIconsRedes/facebook.svg" alt="Facebook" class="ImgIcons"></a>
+                <a href="https://www.instagram.com/mc_fitness_gym/?hl=es"><img src="/Img/imagenesIconsRedes/instagram (1).svg" alt="Instagram" class="ImgIcons"></a>
+                <a href="https://wa.me/86495651"><img src="/Img/imagenesIconsRedes/whatsapp (1).svg" alt="WhatsApp" class="ImgIcons"></a>
+                <a href="mailto:mcfitness0818@gmail.com"><img src="/Img/imagenesIconsRedes/gmail.svg" alt="Email" class="ImgIcons"></a>
+            </div>
+
+            <div class="separator"></div>
+            <h5 class="red-text center">Información</h5><br>
+            <section class="PaginasWebsFoot container">
+                
+                <div class="info-Foot">
+                    <a class="black-text" href="Planes.html">»Forma parte de nuestra familia«</a><br>
+                    <a class="black-text" href="/PaginasWeb/Historias.html">»Mira nuestras historias de motivacion«</a><br>
+                    <a class="black-text" href="Ubicacion.html">»Mira donde estamos ubicados«</a>
+                    
+                </div>
+
+                <div class="location">
+                    <p> <a href="/PaginasWeb/Ubicacion.html"><i class="material-icons red-text">location_on</i></a> 
+                    Estamos ubicados en Piedades sur de San Ramon, 100mts sur del restaurante El Puntalito.</p>
+                </div>
+            </section>
+
+            <div class="separator"></div>
+
+            <section class="footer black-text center">
+                © 2024 By <a class="red-text" href="https://www.facebook.com/zurdo.bch/?_rdr">Brandon Blanco Chinchilla</a> Alajuela-Costa Rica
+            </section>
+
         </div>
-        <div class="contact-body">
-            <a href="https://wa.me/86495651" target="_blank">
-                <img src="/Img/imagenesIconsRedes/whatsapp_1384095.png" alt="WhatsApp" class="whatsapp-icon">
-            </a>
-        </div>
-    </div>
+    </footer>
 
     
     <!-- Agregar JavaScript de Materialize -->

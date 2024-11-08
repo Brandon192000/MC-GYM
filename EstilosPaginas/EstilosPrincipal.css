@@ -74,95 +74,7 @@ header {
     margin: 20px 0;
 }
 
-/* Estilo del botón */
-.button {
-    border: none;
-    background: none;
-    color: #252525;
-    cursor: pointer;
-    position: relative;
-    padding: 10px 20px; /* Reduce el padding */
-    font-weight: bold;
-    font-size: 1rem; /* Reduce el tamaño de fuente */
-    transition: all 2s ease;
-}
 
-.button::before,
-.button::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    left: 0;
-    height: calc(50% - 5px);
-    border: 1px solid #7D8082;
-    transition: all 2s ease;
-}
-
-.button::before {
-    top: 0;
-    border-bottom-width: 0;
-}
-
-.button::after {
-    bottom: 0;
-    border-top-width: 0;
-}
-
-.button:active,
-.button:focus {
-    outline: none;
-}
-
-.button:active::before,
-.button:active::after {
-    right: 3px;
-    left: 3px;
-}
-
-.button:active::before {
-    top: 3px;
-}
-
-.button:active::after {
-    bottom: 3px;
-}
-
-.button_lg {
-    padding: 10px 20px;
-    color: #eeeeee;
-    background-color: #0f1923;
-    overflow: hidden;
-    box-shadow: inset 0px 0px 0px 1px transparent;
-}
-
-.button_sl {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    left: -8px;
-    width: 0;
-    background-color: #cf0a0a;
-    transform: skew(-15deg);
-    transition: all 2s ease;
-}
-
-.button_text {
-    color: #eeeeee;
-}
-
-.button:hover {
-    color: #252525; 
-}
-
-.button:hover .button_sl {
-    width: 90rem;
-}
-
-.button:hover .button_lg::after {
-    background-color: #eeeeee;
-}
 
 
 /*---------------------------------------------------------------------------------------*/
@@ -206,11 +118,10 @@ header {
 
 
 
-/* Carrusel */
 .carousel {
-    display: flex;
-    align-items: center;
-    max-width: 20rem;
+    position: relative;
+    z-index: 1;
+    max-width: 55rem;
     margin: auto;
 }
 
@@ -227,53 +138,88 @@ header {
 /*---------------------------------------------------------------------------------------*/
 
 
-/* Membresía Section */
 .membership-container {
     display: flex;
-    flex-direction: column; /* Los elementos se apilan verticalmente */
+    flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem; /* Reduce el padding para móviles */
+    padding: 2rem 1rem;
     background-color: #252525;
     color: #eeeeee;
+    position: relative; /* Para que la imagen se posicione dentro del contenedor */
+}
+
+/* Estilo para la imagen decorativa en la esquina */
+.decoracion-esquina {
+    position: absolute;
+    top: 10px; /* Ajusta según la esquina deseada */
+    right: 10px; /* Ajusta según la esquina deseada */
+    width: 200px; /* Tamaño de la imagen decorativa */
+    height: auto;
+    opacity: 0.3; /* Transparencia para un efecto decorativo */
+    z-index: 2; /* Asegura que la imagen esté sobre el fondo, pero debajo de otros elementos */
 }
 
 .membership-box {
-    background-color: #cf0a0a;
+    background-color: #ee2727;
     padding: 2rem;
     text-align: center;
     border-radius: 8px;
-    margin-bottom: 2rem; /* Margen inferior para separar elementos */
+    margin-bottom: 2rem;
     color: #eeeeee;
     border: 0.3rem solid #eeeeee;
     position: relative;
+    z-index: 1;
 }
 
 .membership-box h2 {
+    position: relative;
+    top: -10px;
+    font-size: 2.5rem;
     color: #252525;
-    font-size: 2.5rem; /* Reduce el tamaño del título */
-    margin: 0;
 }
 
 .membership-box .price {
-    font-size: 2rem; /* Reduce el tamaño del precio */
+    font-size: 2rem;
     font-weight: bold;
     margin: 2rem 0;
 }
 
-.membership-box button {
-    color: #252525;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-}
 
-.membership-box button:hover {
-    background-color: #252525;
+
+/*-----------------------------------------------------------------------------------------------*/
+/*estilo general del botom*/
+
+
+.custom-btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+    width: 13rem;
+    height: 60px;
+    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%); /* Gradiente de negro a rojo */
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 10px;
     color: #eeeeee;
 }
 
+.custom-btn:hover {
+    transform: translateY(3px); /* Efecto de desplazamiento */
+    box-shadow: none; /* Elimina la sombra en hover */
+}
+
+.custom-btn:active {
+    opacity: 0.7; /* Reduce la opacidad al hacer clic */
+    transform: scale(0.95); /* Efecto de reducción de tamaño en clic */
+}
+
+.custom-2{
+    width: 20rem;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
 
 
 /* Información adicional */
@@ -305,8 +251,6 @@ header {
 
 /*---------------------------------------------------------------------------------------*/
 /*FOOTER PART, aqui estaran los estilos personalizados para el apartados del foot*/
-
-
 .footer-container p {
     font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
     font-weight: bold;
@@ -321,6 +265,21 @@ header {
     
 }
 
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    }
+}
+
+.logo-Foot {
+    animation: pulse 2s infinite; /* Animación continua */
+}
+
+
 /* Logo */
 .logo-container {
     position: absolute;
@@ -333,16 +292,16 @@ header {
 
 .info-box1{
     
-    background-color: #eeeeee;
-    padding: 2rem;
-    color: #eeeeee;
+    background-color: #D3D3D3;
+    padding: 1rem;
     text-align: left;
     flex: 1;
 }
 
-.info-box1 .separator{
-    margin: 3rem 0;
-    border-top: 2px solid black;
+.separator {
+    width: 80%;/* Empieza con un ancho de 0 */
+    margin: 1rem auto; /* Centra la línea horizontalmente */
+    border-top: 1px solid black;
 }
 
 .hero-content>h1{
@@ -391,10 +350,51 @@ header {
 .ImgIcons{
     height: 50px;
     width: 50px;
+    transition: transform 0.3s ease;
 }
 
 
+.ImgIcons:hover{
+    animation: bounce 0.5s ease forwards infinite;
 
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+.info-Foot a {
+    transition: text-shadow 0.3s ease;
+}
+
+.info-Foot a:hover {
+    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
+}
+
+.PaginasWebsFoot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.info-Foot {
+    flex: 1;
+}
+
+.location {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.location .material-icons {
+    vertical-align: middle;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
 
 /*---------------------------------------------------------------------------------------*/
 
@@ -451,131 +451,40 @@ header {
     .logo-img{
         height: 63px;
     }
-    /* Estilo del botón */
-    .button {
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        border: none;
-        background: none;
-        color: #252525;
-        cursor: pointer;
-        position: relative;
-        padding: 1rem;
-        margin-bottom: 2rem;
-        font-weight: bold;
-        font-size: 14px;
-        transition: all 2s ease;
-    }
+   
 
-    .button::before,
-    .button::after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        left: 0;
-        height: calc(50% - 5px);
-        border: 1px solid #7D8082;
-        transition: all 2s ease;
-    }
 
-    .button::before {
-        top: 0;
-        border-bottom-width: 0;
-    }
 
-    .button::after {
-        bottom: 0;
-        border-top-width: 0;
-    }
-
-    .button:active,
-    .button:focus {
+    .custom-btn {
+        transition: all 0.3s ease-in-out;
+        font-family: "Dosis", sans-serif;
+        width: 23rem;
+        height: 60px;
+        background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%); /* Gradiente de negro a rojo */
         outline: none;
-    }
-
-    .button:active::before,
-    .button:active::after {
-        right: 3px;
-        left: 3px;
-    }
-
-    .button:active::before {
-        top: 3px;
-    }
-
-    .button:active::after {
-        bottom: 3px;
-    }
-
-    /* Estilo del contenedor interior del botón */
-    .button_lg {
-        position: relative;
-        display: block;
-        padding: 10px 20px;
-        color: #eeeeee;
-        background-color: #0f1923;
-        overflow: hidden;
-        box-shadow: inset 0px 0px 0px 1px transparent;
-    }
-
-
-
-    .button_lg::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 2px;
-        height: 2px;
-        background-color: #0f1923;
-    }
-
-    .button_lg::after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 4px;
-        height: 4px;
-        background-color: #252525;
-        transition: all 2s ease;
-    }
-
-    /* Efecto de barra que pasa por detrás */
-    .button_sl {
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: -1px;
-        left: -8px;
-        width: 0;
-        background-color: #cf0a0a; /* Rojo */
-        transform: skew(-15deg);
-        transition: all 2s ease;
-    }
-
-    /* Estilo del texto dentro del botón */
-    .button_text {
-        position: relative;
+        cursor: pointer;
+        border: none;
+        font-size: 24px;
         color: #eeeeee;
     }
-
-    /* Efectos al hacer hover */
-    .button:hover {
-        color: #252525;
+    
+    .custom-btn:hover {
+        transform: translateY(3px); /* Efecto de desplazamiento */
+        box-shadow: none; /* Elimina la sombra en hover */
     }
-
-    .button:hover .button_sl {
-        width: 90rem;
+    
+    .custom-btn:active {
+        opacity: 0.7; /* Reduce la opacidad al hacer clic */
+        transform: scale(0.95); /* Efecto de reducción de tamaño en clic */
     }
-
-    .button:hover .button_lg::after {
-        background-color: #eeeeee;
+    
+    .custom-2{
+        width: 23rem;
+        border-radius: 2px solid white;
     }
+    
+
+
 
 
     /* Hero Section */
@@ -603,7 +512,7 @@ header {
 
 
     .carousel-item img{
-        height: 150vh;
+        height: 100vh;
         background: no-repeat center scroll;
         -webkit-backgroud-size: cover;
         -moz-box-size: cover;

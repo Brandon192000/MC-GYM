@@ -1,132 +1,154 @@
-/* Ajuste de margen en el body */
+/*--------------------- Estilos generales para dispositivos móviles ---------------------*/
+
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed (1).jpeg'); /* Ruta de la imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    filter: blur(10px); /* Aplica el efecto blur */
-    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
-}
-
 header {
     background-color: #25252525;
-    width: 100%; /* Asegura que el header ocupe el ancho completo */
+    width: 100%;
 }
 
-
-
 .logo-img {
-    width: 63px;
+    width: 56px; /* Tamaño reducido para móviles */
     height: auto;
 }
 
 #nav-mobile a {
-    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
-    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
+    font-size: 1rem; /* Tamaño reducido para móviles */
+    color: #eeeeee;
 }
 
 .custom-nav a:hover {
-    background-color:  #cf0a0a;
+    background-color: #cf0a0a;
     transition: 2s;
 }
 
-/* Banner rojo */
 .banner {
     background-color: #cf0a0a;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 20px;
+    padding: 15px;
+    font-size: 16px;
     font-weight: bold;
-    width: 70%; /* Ajusta el tamaño según sea necesario */
-    position: absolute; /* Hace que el banner se superponga */
-    top: -30px; /* Ajusta la posición vertical según tu necesidad */
+    width: 90%;
+    position: relative;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centra el banner horizontalmente */
-    z-index: 2; /* Asegura que el banner se superponga sobre los otros elementos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para mayor visibilidad */
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Contenedor general de los planes */
 .plans-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: block;
     background-color: #1d1d1d;
-    padding: 5rem;
-    margin: 10rem auto;
-    width: 100%; /* Abarca todo el ancho */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-    position: relative; /* Para que el banner pueda posicionarse dentro de este contenedor */
-    
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .plan-text {
-    max-width: 300px;
-    text-align: left;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem; /* Espacio entre los planes */
 }
 
 .plan-text h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #f2f2f2;
 }
 
 .custom-btn {
-    transition: all 0.3s ease-in-out;
-    font-family: "Dosis", sans-serif;
-    width: 13rem;
-    height: 60px;
-    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%); /* Gradiente de negro a rojo */
-    outline: none;
-    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%);
     border: none;
-    font-size: 24px;
+    cursor: pointer;
     color: #eeeeee;
+    transition: all 0.3s ease-in-out;
 }
 
 .custom-btn:hover {
-    transform: translateY(3px); /* Efecto de desplazamiento */
-    box-shadow: none; /* Elimina la sombra en hover */
+    transform: translateY(3px);
 }
 
 .custom-btn:active {
-    opacity: 0.7; /* Reduce la opacidad al hacer clic */
-    transform: scale(0.95); /* Efecto de reducción de tamaño en clic */
+    opacity: 0.7;
+    transform: scale(0.95);
 }
 
-.custom-2{
-    width: 15rem;
-}
-
-.plans-infoCompleta {
+.contact-container {
+    background-color: #cf0a0a;
+    width: 100%;
+    padding: 15px;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.contact-info p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.contactenos {
+    text-align: center;
+    color: #cf0a0a;
+    font-size: 2rem; /* Tamaño reducido para móvil */
+    background-color: #eeeeee;
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    padding: 10px; /* Espaciado interno para dar margen en el contenedor */
+}
+
+.footer-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.container-Redes-Foot {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ImgIcons {
+    height: 40px;
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.info-Foot a {
+    transition: text-shadow 0.3s ease;
+}
+
+.PaginasWebsFoot {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
 }
 
 .plan-image {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    height: 100%; /* Asegura que ocupe toda la altura disponible */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
-
 
 .plan-image img {
     width: 80%;
@@ -134,85 +156,314 @@ header {
     object-fit: cover;
 }
 
-.plan-details {
-    font-size: 1rem;
-    color: #eeeeee;
-    margin-top: 10px;
+/* Ajustes responsivos para la imagen del footer en móviles */
+.containerImg .logo-Foot {
+    height: 100px; /* Tamaño adecuado para móviles */
+    width: 100px;
+    display: block;
+    margin: 0 auto; /* Centrado horizontal en el contenedor */
 }
 
-.plan-details ul {
-    list-style-type: none; /* Cambia a "circle" o "square" si prefieres otro estilo de viñeta */
-    margin-left: 20px; /* Ajusta el margen para que la lista tenga un poco de sangría */
+/*--------------------- Animaciones ---------------------*/
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
-.plan-details li {
-    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
-
-/* Contacto */
-.contact-container {
-    background-color: #cf0a0a;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
-.contact-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #eeeeee;
-    padding: 20px;
-    border-radius: 10px;
-    width: 50%;
+@keyframes slideInfoLeft {
+    from { margin-left: 100%; width: 300%; }
+    to { margin-left: 0%; width: 100%; }
 }
 
-.contact-info {
-    flex: 1;
-    padding-right: 20px;
+.logo-Foot {
+    animation: pulse 2s infinite;
 }
 
-.contact-info p {
-    margin: 0;
-    line-height: 1.6;
-    font-size: 18px;
+.ImgIcons:hover {
+    animation: bounce 0.5s ease forwards infinite;
 }
 
-.contact-details img {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-    margin-left: 20px;
+.logo-container {
+    animation: float 6s ease-in-out infinite;
 }
 
-/* Footer */
-.footer {
-    background-color: #eeeeee;
-    padding: 5rem;
-    text-align: center;
-    font-size: 16px;
+.info-box1 {
+    background-color: #D3D3D3;
+    padding: 1rem;
+    text-align: left;
 }
 
-.footer span {
-    font-weight: bold;
+.separator {
+    width: 80%;
+    margin: 1rem auto;
+    border-top: 1px solid black;
 }
 
-.contactenos {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: #cf0a0a;
-    font-size: 3.5rem;
-    margin-top: -10rem; 
-    background-color: #eeeeee;
-   
-}
+/*--------------------- Fin de los estilos para dispositivos móviles ---------------------*/
 
 
-.RESTRICCION{
-    text-decoration: underline;
+/*--------------------- Estilos para pantallas de computadora ---------------------*/
+@media (min-width: 1024px) {
+    /* Ajuste de margen en el body */
+    body {
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed (1).jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: blur(10px);
+        z-index: -1;
+    }
+
+    header {
+        background-color: #25252525;
+        width: 100%;
+    }
+
+    .logo-img {
+        width: 63px;
+        height: auto;
+    }
+
+    #nav-mobile a {
+        font-size: 1.2rem;
+        color: #eeeeee;
+    }
+
+    /* Banner rojo */
+    .banner {
+        background-color: #cf0a0a;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        width: 70%;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Contenedor general de los planes */
+    .plans-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #1d1d1d;
+        padding: 5rem;
+        margin: 10rem auto;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .plan-text {
+        max-width: 300px;
+        text-align: left;
+    }
+
+    .plan-text h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #f2f2f2;
+    }
+
+    .custom-btn {
+        width: 13rem;
+        height: 60px;
+        font-size: 24px;
+        transition: all 0.3s ease-in-out;
+        font-family: "Dosis", sans-serif;
+    }
+
+    .plans-infoCompleta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plan-details {
+        font-size: 1rem;
+        color: #eeeeee;
+        margin-top: 10px;
+    }
+
+    .plan-details ul {
+        list-style-type: none;
+        margin-left: 20px;
+    }
+
+    .plan-details li {
+        margin-bottom: 10px;
+    }
+
+    /* Contacto */
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: row; /* Alineación en fila en pantallas grandes */
+        align-items: center;
+        justify-content: space-between;
+        background-color: #eeeeee;
+        padding: 40px;
+        border-radius: 10px;
+        width: 70%;
+        max-width: 800px; /* Ancho máximo del contenedor en escritorio */
+    }
+
+    .contact-info {
+        text-align: left; /* Alineación de texto a la izquierda en escritorio */
+        margin-right: 20px; /* Espacio entre el texto y la imagen */
+    }
+
+    .contact-info p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .contact-details img {
+        max-width: 300px; /* Tamaño más grande para la imagen en pantallas grandes */
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    /* Footer */
+    .footer-container p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e74c3c;
+    }
+
+    .FootPlanes {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .logo-Foot {
+        animation: pulse 2s infinite;
+    }
+
+    .logo-container {
+        position: absolute;
+        bottom: 10px;
+        width: 8rem;
+        opacity: 0.3;
+        z-index: 2;
+    }
+
+    .info-box1 {
+        background-color: #D3D3D3;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .separator {
+        width: 80%;
+        margin: 1rem auto;
+        border-top: 1px solid black;
+    }
+
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: center;
+    }
+
+    .containerImg {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Ajustes responsivos para la imagen del footer en escritorio */
+    .containerImg .logo-Foot {
+        height: 200px;
+        width: 200px;
+    }
+
+    .container-Redes-Foot {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .ImgIcons {
+        height: 50px;
+        width: 50px;
+        transition: transform 0.3s ease;
+    }
+
+    .info-Foot a:hover {
+        text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
+    }
+
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .info-Foot {
+        flex: 1;
+    }
+
+    .location {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .location .material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    .contactenos {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #cf0a0a;
+        font-size: 3.5rem;
+        margin-top: -10rem;
+        background-color: #eeeeee;
+    }
+
+    .RESTRICCION {
+        text-decoration: underline;
+    }
 }

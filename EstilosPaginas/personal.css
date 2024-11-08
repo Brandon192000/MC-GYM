@@ -51,6 +51,7 @@ main::before {
 }
 
 
+/* Estilos para la cita */
 .quote {
     background-color: white;
     padding: 20px;
@@ -58,14 +59,13 @@ main::before {
     font-size: 1.2rem;
     color: #cf0a0a;
     margin: 20px auto;
-    width: 70%;
+    width: 100%;
+    max-width: 1100px; /* Mismo max-width */
     border: 2px solid #cf0a0a;
-    
+    box-sizing: border-box; /* Asegura que el padding no expanda el tamaño total */
 }
 
-
-/*---------------------------------------------------------------------------------------*/
-/* Estilos personalizados */
+/* Estilos personalizados para la tarjeta horizontal */
 .card-horizontal {
     display: flex;
     flex-direction: row;
@@ -75,10 +75,13 @@ main::before {
     background-color: #252525;
     color: #ffffff;
     width: 100%;
-    max-width: 1100px;
-    margin: 100px auto;
+    max-width: 1100px; /* Mismo max-width */
+    margin: 20px auto; /* Mismo margen vertical */
+    padding: 20px; /* Agrega padding para mantener consistencia con .quote */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no expanda el tamaño total */
 }
+
 
 .card-horizontal .card-image {
     flex: 0 0 200px; /* Define el ancho de la imagen en la tarjeta horizontal */
@@ -147,52 +150,150 @@ main::before {
 
 /*----------------------------------------------------------------------------------*/
 
-.containerFoot {
-    background-color: black; /* Fondo negro para el footer */
-    padding: 20px;
-    text-align: center; /* Centra el contenido */
-    position: relative; /* Asegura que el footer-banner se posicione relativamente a este contenedor */
-}
-
-/* Footer Banner */
-.footer-banner {
-    width: 50%; /* Define el ancho del div rojo */
-    background-color: #cf0a0a; /* Fondo rojo */
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto; /* Centrar horizontalmente */
-    
-    position: relative; /* Permite posicionar el div dentro del contenedor */
-    top: -40px; /* Desplaza el div rojo 20px hacia arriba, ajusta este valor según lo que necesites */
-}
-
-.footer-banner h2 {
-    font-size: 1.5rem;
-    color: #cf0a0a;
+/*FOOTER PART, aqui estaran los estilos personalizados para el apartados del foot*/
+.footer-container p {
+    font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
     font-weight: bold;
-    margin: 0;
-    padding: 10px;
-    background-color: black; /* Fondo negro detrás del texto */
-    display: inline-block;
+    color: #e74c3c;
 }
 
-/* Footer Icons */
-.footer-icons {
+
+.FootPlanes{
+
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    }
+}
+
+.logo-Foot {
+    animation: pulse 2s infinite; /* Animación continua */
+}
+
+
+/* Logo */
+.logo-container {
+    position: absolute;
+    bottom: 10px;
+    width: 8rem; /* Tamaño más pequeño del logo */
+    opacity: 0.3;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.info-box1{
+    
+    background-color: #D3D3D3;
+    padding: 1rem;
+    text-align: left;
+    flex: 1;
+}
+
+.separator {
+    width: 80%;/* Empieza con un ancho de 0 */
+    margin: 1rem auto; /* Centra la línea horizontalmente */
+    border-top: 1px solid black;
+}
+
+.hero-content>h1{
+
+    animation-duration: 5s;
+    animation-name: slideInfoLeft;
+}
+
+.PaginasWebsFoot{
     display: flex;
     justify-content: center;
+}
+
+
+@keyframes slideInfoLeft {
+
+    from{
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+    
+}
+
+
+.containerImg{
+    display: flex;
+    justify-content: center;
+}
+.containerImg .logo-Foot{
+    height: 200px;
+    width: 200px;
+    
+}
+
+.container-Redes-Foot{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.ImgIcons{
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+
+.ImgIcons:hover{
+    animation: bounce 0.5s ease forwards infinite;
+
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+.info-Foot a {
+    transition: text-shadow 0.3s ease;
+}
+
+.info-Foot a:hover {
+    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
+}
+
+.PaginasWebsFoot {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #cf0a0a; /* Mismo fondo rojo */
     padding: 20px 0;
 }
 
-.footer-icons a {
-    margin: 0 15px;
-    text-decoration: none;
+.info-Foot {
+    flex: 1;
 }
 
-.footer-icons img {
-    width: 50px; /* Tamaño de los iconos */
-    height: auto;
+.location {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.location .material-icons {
+    vertical-align: middle;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
 
