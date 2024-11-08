@@ -61,6 +61,8 @@ header {
     color: #f2f2f2;
 }
 
+
+
 .custom-btn {
     font-size: 20px;
     width: 100%;
@@ -92,18 +94,38 @@ header {
 
 .contact-details {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
     background-color: #eeeeee;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     width: 90%;
+    max-width: 600px; /* Ancho máximo para asegurar que no sea demasiado grande */
+    margin: 0 auto; /* Centra el contenedor dentro de la página */
+}
+
+.contact-info {
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-bottom: 20px;
 }
 
 .contact-info p {
     margin: 0;
-    line-height: 1.4;
-    font-size: 16px;
+    line-height: 1.6;
+    font-size: 18px;
 }
+
+/* Ajuste responsivo para que la imagen esté centrada y un poco más grande en pantallas grandes */
+.contact-details img {
+    width: 100%;
+    max-width: 200px; /* Tamaño por defecto de la imagen en móviles */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-top: 20px; /* Añade espacio entre el texto y la imagen */
+}
+
 
 .contactenos {
     text-align: center;
@@ -158,11 +180,12 @@ header {
 
 /* Ajustes responsivos para la imagen del footer en móviles */
 .containerImg .logo-Foot {
-    height: 100px; /* Tamaño adecuado para móviles */
-    width: 100px;
+    height:200px; /* Tamaño adecuado para móviles */
+    width: 200px;
     display: block;
     margin: 0 auto; /* Centrado horizontal en el contenedor */
 }
+
 
 /*--------------------- Animaciones ---------------------*/
 @keyframes pulse {
@@ -209,7 +232,7 @@ header {
 }
 
 .separator {
-    width: 80%;
+    width: 100%;
     margin: 1rem auto;
     border-top: 1px solid black;
 }
@@ -327,37 +350,39 @@ header {
         margin-bottom: 10px;
     }
 
-    /* Contacto */
     .contact-container {
         display: flex;
         justify-content: center;
         padding: 40px;
     }
-
+    
     .contact-details {
         display: flex;
-        flex-direction: row; /* Alineación en fila en pantallas grandes */
+        flex-direction: row; /* Alineación en fila para contener la imagen y el texto en horizontal */
         align-items: center;
         justify-content: space-between;
         background-color: #eeeeee;
         padding: 40px;
         border-radius: 10px;
         width: 70%;
-        max-width: 800px; /* Ancho máximo del contenedor en escritorio */
+        max-width: 800px;
     }
-
+    
     .contact-info {
-        text-align: left; /* Alineación de texto a la izquierda en escritorio */
-        margin-right: 20px; /* Espacio entre el texto y la imagen */
+        display: flex;
+        flex-direction: column; /* Alineación vertical de los elementos de texto */
+        text-align: left;
+        margin-right: 20px;
     }
-
+    
     .contact-info p {
-        font-size: 18px;
+        margin: 0 0 10px 0; /* Margen inferior para separar cada línea de texto */
         line-height: 1.6;
+        font-size: 18px;
     }
-
+    
     .contact-details img {
-        max-width: 300px; /* Tamaño más grande para la imagen en pantallas grandes */
+        max-width: 300px;
         width: 100%;
         height: auto;
         border-radius: 5px;

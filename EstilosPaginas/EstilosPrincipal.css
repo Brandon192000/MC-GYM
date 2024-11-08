@@ -275,6 +275,14 @@ header {
     }
 }
 
+/* Ajustes responsivos para la imagen del footer en móviles */
+.containerImg .logo-Foot {
+    height: 100px; /* Tamaño adecuado para móviles */
+    width: 100px;
+    display: block;
+    margin: 0 auto; /* Centrado horizontal en el contenedor */
+}
+
 .logo-Foot {
     animation: pulse 2s infinite; /* Animación continua */
 }
@@ -299,9 +307,15 @@ header {
 }
 
 .separator {
-    width: 80%;/* Empieza con un ancho de 0 */
+    width: 100%;/* Empieza con un ancho de 0 */
     margin: 1rem auto; /* Centra la línea horizontalmente */
     border-top: 1px solid black;
+}
+
+.separator2{
+    width: 100%;
+    margin: 1rem auto; /* Centra la línea horizontalmente */
+    border-top: 2px solid #D3D3D3;
 }
 
 .hero-content>h1{
@@ -562,6 +576,11 @@ header {
     .social-icons img {
         width: 5rem;
         height: 5rem;
+    }
+    .separator {
+        width: 80%;/* Empieza con un ancho de 0 */
+        margin: 1rem auto; /* Centra la línea horizontalmente */
+        border-top: 1px solid black;
     }
 
     .carousel-control:active{
