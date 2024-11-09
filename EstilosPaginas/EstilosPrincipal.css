@@ -415,8 +415,8 @@ header {
 
 
 
-/* Media query para pantallas grandes (PC) */
-@media (min-width: 769px) {
+/* Media query para pantallas Dde pc*/
+@media (min-width: 1024px) {
     
     /* Estilos generales */
     body {
@@ -463,7 +463,7 @@ header {
     }
 
     .logo-img{
-        height: 63px;
+        height: 64px;
     }
    
 

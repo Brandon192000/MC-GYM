@@ -14,7 +14,7 @@ header {
 }
 
 .logo-img {
-    height: 50px;
+    height: 56px;
 }
 
 #nav-mobile a {
@@ -119,6 +119,18 @@ header {
     transition: transform 0.3s ease;
 }
 
+#titlesList.expanded {
+    display: block;
+    max-height: none;
+}
+#titlesList {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+
 .separator {
     width: 80%;
     margin: 1rem auto;
@@ -193,7 +205,7 @@ header {
     }
 
     .logo-img {
-        height: 63px;
+        height: 64px;
     }
 
     #nav-mobile a {

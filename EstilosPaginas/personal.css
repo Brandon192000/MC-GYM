@@ -1,17 +1,18 @@
+/* Estilos mobile-first (por defecto) */
+
 /* Fondo de pantalla con efecto de vidrio en el body */
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #eeeeee;
+    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed (1).jpeg'); /* Aplica la imagen de fondo en todas las pantallas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     overflow-x: hidden; /* Para evitar desbordamiento horizontal */
 }
 
-
 main {
-    background-image: url('/Img/FondosImagenes/gettyimages-1316572851-640x640-transformed\ \(1\).jpeg'); /* Cambia esta ruta */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
     position: relative;
     z-index: 1;
 }
@@ -24,67 +25,59 @@ main::before {
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: blur(10px); /* Aplica el efecto de vidrio borroso */
-    z-index: -1; /* Para que quede debajo del contenido */
+    backdrop-filter: blur(10px);
+    z-index: -1;
 }
 
-
 #nav-mobile a {
-    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
-    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
+    font-size: 1rem;
+    color: #eeeeee;
 }
 
 .custom-nav a:hover {
-    background-color:  #cf0a0a;
+    background-color: #cf0a0a;
     transition: 2s;
 }
 
-
-.left-logo {
-    position: relative;
-    top: 8rem; 
-    left: 10rem;  
+.logo-img {
+    height: 50px;
 }
-
-.logo-img{
-    height: 63px;
-}
-
 
 /* Estilos para la cita */
 .quote {
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #cf0a0a;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 1100px; /* Mismo max-width */
+    margin: 15px auto;
+    width: 90%;
     border: 2px solid #cf0a0a;
-    box-sizing: border-box; /* Asegura que el padding no expanda el tamaño total */
 }
 
-/* Estilos personalizados para la tarjeta horizontal */
 .card-horizontal {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-radius: 10px;
     overflow: hidden;
     background-color: #252525;
     color: #ffffff;
-    width: 100%;
-    max-width: 1100px; /* Mismo max-width */
-    margin: 20px auto; /* Mismo margen vertical */
-    padding: 20px; /* Agrega padding para mantener consistencia con .quote */
+    padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Asegura que el padding no expanda el tamaño total */
+    box-sizing: border-box;
 }
 
 
+.quote, .card-horizontal {
+    width: 90%;
+    max-width: 400px; /* Ancho máximo para móviles */
+    margin: 15px auto;
+}
+
 .card-horizontal .card-image {
-    flex: 0 0 200px; /* Define el ancho de la imagen en la tarjeta horizontal */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,18 +85,18 @@ main::before {
 
 .card-horizontal .card-image img {
     width: 100%;
-    height: auto;
     object-fit: cover;
-    border: 3px solid #cf0a0a; /* Borde temporal para verificar */
+    border: 3px solid #cf0a0a;
 }
 
+
 .card-horizontal .card-content {
-    flex: 1;
-    padding: 20px;
+    padding: 15px;
+    text-align: center;
 }
 
 .card-horizontal .card-title {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
     color: #cf0a0a;
     margin-bottom: 10px;
@@ -147,116 +140,30 @@ main::before {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/*----------------------------------------------------------------------------------*/
-
-/*FOOTER PART, aqui estaran los estilos personalizados para el apartados del foot*/
+/* Footer */
 .footer-container p {
-    font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
+    font-size: 1rem;
     font-weight: bold;
     color: #e74c3c;
 }
 
-
-.FootPlanes{
-
+.FootPlanes {
     display: flex;
     flex-direction: row-reverse;
-    
 }
 
-
+/* Animaciones */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+        transform: scale(1.05);
     }
 }
 
 .logo-Foot {
-    animation: pulse 2s infinite; /* Animación continua */
-}
-
-
-/* Logo */
-.logo-container {
-    position: absolute;
-    bottom: 10px;
-    width: 8rem; /* Tamaño más pequeño del logo */
-    opacity: 0.3;
-    z-index: 2;
-    animation: float 6s ease-in-out infinite;
-}
-
-.info-box1{
-    
-    background-color: #D3D3D3;
-    padding: 1rem;
-    text-align: left;
-    flex: 1;
-}
-
-.separator {
-    width: 80%;/* Empieza con un ancho de 0 */
-    margin: 1rem auto; /* Centra la línea horizontalmente */
-    border-top: 1px solid black;
-}
-
-.hero-content>h1{
-
-    animation-duration: 5s;
-    animation-name: slideInfoLeft;
-}
-
-.PaginasWebsFoot{
-    display: flex;
-    justify-content: center;
-}
-
-
-@keyframes slideInfoLeft {
-
-    from{
-        margin-left: 100%;
-        width: 300%;
-    }
-
-    to{
-        margin-left: 0%;
-        width: 100%;
-    }
-    
-}
-
-
-.containerImg{
-    display: flex;
-    justify-content: center;
-}
-.containerImg .logo-Foot{
-    height: 200px;
-    width: 200px;
-    
-}
-
-.container-Redes-Foot{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-.ImgIcons{
-    height: 50px;
-    width: 50px;
-    transition: transform 0.3s ease;
-}
-
-
-.ImgIcons:hover{
-    animation: bounce 0.5s ease forwards infinite;
-
+    animation: pulse 2s infinite;
 }
 
 @keyframes bounce {
@@ -265,6 +172,60 @@ main::before {
     100% { transform: translateY(0); }
 }
 
+@keyframes slideInfoLeft {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.PaginasWebsFoot {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.info-box1 {
+    background-color: #D3D3D3;
+    padding: 1rem;
+    text-align: left;
+    flex: 1;
+}
+
+.separator {
+    width: 100%;
+    margin: 1rem auto;
+    border-top: 1px solid black;
+}
+
+.containerImg {
+    display: flex;
+    justify-content: center;
+}
+
+.containerImg .logo-Foot {
+    height: 150px;
+    width: 150px;
+}
+
+.container-Redes-Foot {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ImgIcons {
+    height: 40px;
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.ImgIcons:hover {
+    animation: bounce 0.5s ease forwards infinite;
+}
 
 .info-Foot a {
     transition: text-shadow 0.3s ease;
@@ -274,26 +235,159 @@ main::before {
     text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
 }
 
-.PaginasWebsFoot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
+/* Media Query para pantallas grandes (computadoras) */
+@media (min-width: 1024px) {
+    #nav-mobile a {
+        font-size: 1.2rem;
+        color: #eeeeee;
+    }
 
-.info-Foot {
-    flex: 1;
-}
+    .custom-nav a:hover {
+        background-color: #cf0a0a;
+        transition: 2s;
+    }
 
-.location {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
+    .left-logo {
+        position: relative;
+        top: 8rem;
+        left: 10rem;
+    }
 
-.location .material-icons {
-    vertical-align: middle;
-    margin-right: 8px; /* Espacio entre el icono y el texto */
+    .logo-img {
+        height: 63px;
+    }
+
+    .quote {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #cf0a0a;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 1100px;
+        border: 2px solid #cf0a0a;
+        box-sizing: border-box;
+    }
+
+    .card-horizontal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #252525;
+        color: #ffffff;
+        width: 100%;
+        max-width: 1100px;
+        margin: 20px auto;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .card-horizontal .card-image {
+        flex: 0 0 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-horizontal .card-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 3px solid #cf0a0a;
+    }
+
+    .card-horizontal .card-content {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .card-horizontal .card-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #cf0a0a;
+        margin-bottom: 10px;
+    }
+
+    .card-horizontal .card-content p {
+        font-size: 1em;
+        color: #ffffff;
+        margin: 0 0 10px;
+    }
+
+    .separator {
+        width: 80%;
+        margin: 1rem auto;
+        border-top: 1px solid black;
+    }
+
+    .card-horizontal .card-action {
+        padding-top: 10px;
+    }
+
+    .titles-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 10px 0;
+    }
+
+    .titles-list li a {
+        color: #cf0a0a;
+        text-decoration: none;
+    }
+
+    .titles-list li a:hover {
+        text-decoration: underline;
+    }
+
+    .view-more {
+        color: #cf0a0a;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 0.9em;
+    }
+
+    .card-horizontal:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer-container p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e74c3c;
+    }
+
+    .FootPlanes {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .info-Foot {
+        flex: 1;
+    }
+
+    .location {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .location .material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
 }
 
 
