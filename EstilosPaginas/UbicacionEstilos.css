@@ -1,13 +1,12 @@
+/*-------------------------------------------*/
+/* Estilos base (Mobile First) */
+/*-------------------------------------------*/
+
 /* Ajuste de margen en el body */
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-
-/*-------------------------------------------------------------------------*/
-
-
 
 body::before {
     content: '';
@@ -25,298 +24,195 @@ body::before {
     z-index: -1;
 }
 
+/*-------------------------------------------*/
+/* Encabezado y navegación */
+/*-------------------------------------------*/
 
 header {
     background-color: #252525;
 }
 
-/*-------------------------------------------------------------------------*/
-
 #nav-mobile a {
-    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
-    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
+    font-size: 1rem;
+    color: #eeeeee;
 }
 
-.logo-img{
-    height: 63px;
+.logo-img {
+    height: 56px;
 }
 
 .custom-nav a:hover {
-    background-color:  #cf0a0a;
+    background-color: #cf0a0a;
     transition: 2s;
 }
 
-
-.left-logo {
-    position: relative;
-    top: 8rem; 
-    left: 10rem;  
-}
-/*-------------------------------------------------------------------------*/
-
+/*-------------------------------------------*/
 /* Banner */
+/*-------------------------------------------*/
+
 .banner {
     background-color: #252525;
     color: #eeeeee;
     text-align: center;
     padding: 10px;
-    font-size: 1.7rem;
-    margin: 5rem auto;
-    width: 73%;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+    width: 90%;
 }
 
-/*-------------------------------------------------------------------------*/
+/*-------------------------------------------*/
+/* Sección del mapa */
+/*-------------------------------------------*/
 
-.map-section {/*seccion que contiene el contenedor del mapa*/
+.map-section {
     text-align: center;
-    margin: 5rem 5rem;
-    
+    margin: 2rem 2rem;
 }
 
-
-.map-container {/*contenedor del mapa*/
-    width: 80%; 
-    height: 500px;
-    margin: 5rem auto;
+.map-container {
+    width: 90%;
+    height: 300px;
+    margin: 2rem auto;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: black 5px solid;
-    margin-top: -2rem;
+    border: black 3px solid;
 }
 
-.map-iframe { /*clase del mapa*/
+.map-iframe {
     width: 100%;
     height: 100%;
     border: 0;
 }
 
+/*-------------------------------------------*/
+/* Carrusel */
+/*-------------------------------------------*/
 
-/*-------------------------------------------------------------------------*/
-
-/* Background text */
-.background-text {
-    text-align: center;
-    font-size: 2rem;
-    color: grey;
-    margin: 20px 0;
-}
-
-/* Family Section */
-.family-section {
-    background-color: #252525;
-    color: #eeeeee;
-    text-align: center;
-    padding: 2rem;
-}
-
-.family-section h2 {
-    font-size: 2.5rem;
-}
-
-.family-content {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.image-block {
-    background-color: #ccc;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: #555;
-}
-/*---------------------------------------------------------------------------------------------------------------*/
 .conteinarCarrusel {
     padding: 1px 0;
     background-color: #252525;
 }
 
 .contenedorprincipalCarrucel {
-    max-width: 50%; /* Ancho máximo del contenedor */
+    max-width: 100%;
     margin: auto;
 }
 
 .PNuestraFam {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .carousel img {
-    max-height: 100%; /* Limita la altura de las imágenes */
+    max-height: 100%;
     object-fit: cover;
     width: 100%;
     border-radius: 10px;
-    margin-top: -2rem;
 }
 
 .carousel-control {
     position: absolute;
     top: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     transform: translateY(-50%);
     z-index: 1;
 }
 
 .carousel-control.prev {
-    left: 10px;
+    left: 5px;
 }
 
 .carousel-control.next {
-    right: 10px;
+    right: 5px;
 }
 
-.botonVermas{
-    margin-bottom: 2rem;
+
+.botonVermas {
+    margin-top: 2rem;
+    margin-bottom: 3rem; 
 }
 
-/*-------------------------------------------------------------------------------------------*/
-/*botones generales*/
+
+/*-------------------------------------------*/
+/* Botones personalizados */
+/*-------------------------------------------*/
 
 .custom-btn {
     transition: all 0.3s ease-in-out;
     font-family: "Dosis", sans-serif;
-    width: 16rem;
-    height: 60px;
-    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%); /* Gradiente de negro a rojo */
+    width: 12rem;
+    height: 50px;
+    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%);
     outline: none;
     cursor: pointer;
     border: none;
-    font-size: 24px;
+    font-size: 20px;
     color: #eeeeee;
 }
 
-.custom-btn:hover {
-    transform: translateY(3px); /* Efecto de desplazamiento */
-    box-shadow: none; /* Elimina la sombra en hover */
-}
+/*-------------------------------------------*/
+/* Footer */
+/*-------------------------------------------*/
 
-.custom-btn:active {
-    opacity: 0.7; /* Reduce la opacidad al hacer clic */
-    transform: scale(0.95); /* Efecto de reducción de tamaño en clic */
-}
-
-/*-------------------------------------------------------------------------------------------*/
-
-/*FOOTER PART, aqui estaran los estilos personalizados para el apartados del foot*/
 .footer-container p {
-    font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
+    font-size: 1rem;
     font-weight: bold;
     color: #e74c3c;
 }
 
-
-.FootPlanes{
-
-    display: flex;
-    flex-direction: row-reverse;
-    
-}
-
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    }
-}
-
 .logo-Foot {
-    animation: pulse 2s infinite; /* Animación continua */
+    animation: pulse 2s infinite;
 }
 
-
-/* Logo */
-.logo-container {
-    position: absolute;
-    bottom: 10px;
-    width: 8rem; /* Tamaño más pequeño del logo */
-    opacity: 0.3;
-    z-index: 2;
-    animation: float 6s ease-in-out infinite;
-}
-
-.info-box1{
-    
+.info-box1 {
     background-color: #D3D3D3;
     padding: 1rem;
     text-align: left;
-    flex: 1;
 }
 
 .separator {
-    width: 80%;/* Empieza con un ancho de 0 */
-    margin: 1rem auto; /* Centra la línea horizontalmente */
+    width: 90%;
+    margin: 1rem auto;
     border-top: 1px solid black;
 }
 
+/*-------------------------------------------*/
+/* Contenedor de imágenes y redes sociales */
+/*-------------------------------------------*/
 
-.PaginasWebsFoot{
+.containerImg {
     display: flex;
     justify-content: center;
 }
 
-
-@keyframes slideInfoLeft {
-
-    from{
-        margin-left: 100%;
-        width: 300%;
-    }
-
-    to{
-        margin-left: 0%;
-        width: 100%;
-    }
-    
+.containerImg .logo-Foot {
+    height: 150px;
+    width: 150px;
 }
 
-
-.containerImg{
-    display: flex;
-    justify-content: center;
-}
-.containerImg .logo-Foot{
-    height: 200px;
-    width: 200px;
-    
-}
-
-.container-Redes-Foot{
+.container-Redes-Foot {
     display: flex;
     justify-content: space-evenly;
 }
 
-
-.ImgIcons{
-    height: 50px;
-    width: 50px;
+.ImgIcons {
+    height: 40px;
+    width: 40px;
     transition: transform 0.3s ease;
 }
 
-
-.ImgIcons:hover{
+.ImgIcons:hover {
     animation: bounce 0.5s ease forwards infinite;
-
 }
 
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
+/*-------------------------------------------*/
+/* Enlaces de pie de página */
+/*-------------------------------------------*/
 
 .info-Foot a {
     transition: text-shadow 0.3s ease;
@@ -328,9 +224,9 @@ header {
 
 .PaginasWebsFoot {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .info-Foot {
@@ -345,9 +241,140 @@ header {
 
 .location .material-icons {
     vertical-align: middle;
-    margin-right: 8px; /* Espacio entre el icono y el texto */
+    margin-right: 8px;
 }
 
-/*-------------------------------------------------------------*/
+/*-------------------------------------------*/
+/* Animaciones */
+/*-------------------------------------------*/
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
 
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/*-------------------------------------------*/
+/* Estilos para pantallas medianas */
+/*-------------------------------------------*/
+
+@media (min-width: 768px) {
+    #nav-mobile a {
+        font-size: 1.2rem;
+    }
+
+    .banner {
+        font-size: 1.7rem;
+        width: 80%;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .contenedorprincipalCarrucel {
+        max-width: 75%;
+    }
+
+    .carousel-control {
+        font-size: 1.8rem;
+    }
+
+    .custom-btn {
+        width: 14rem;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .footer-container p {
+        font-size: 1.2rem;
+    }
+
+    .containerImg .logo-Foot {
+        height: 180px;
+        width: 180px;
+    }
+
+    .ImgIcons {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+/*-------------------------------------------*/
+/* Estilos para pantallas grandes */
+/*-------------------------------------------*/
+
+@media (min-width: 1024px) {
+    .logo-img {
+        height: 63px;
+    }
+
+    .banner {
+        font-size: 1.7rem;
+        margin: 5rem auto;
+        width: 73%;
+    }
+
+    .map-section {
+        margin: 5rem 5rem;
+    }
+
+    .map-container {
+        width: 80%;
+        height: 500px;
+        margin: 5rem auto;
+    }
+
+    .conteinarCarrusel {
+        padding: 1px 0;
+    }
+
+    .contenedorprincipalCarrucel {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .PNuestraFam {
+        font-size: 2rem;
+    }
+
+    .carousel-control {
+        font-size: 2rem;
+    }
+
+    .botonVermas {
+        margin-top: 2rem;
+        margin-bottom: 3rem;margin-bottom: 2rem;
+    }
+
+    .custom-btn {
+        width: 16rem;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .footer-container p {
+        font-size: 1.5rem;
+    }
+
+    .containerImg .logo-Foot {
+        height: 200px;
+        width: 200px;
+    }
+
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+}

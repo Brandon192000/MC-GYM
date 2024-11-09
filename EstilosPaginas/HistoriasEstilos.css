@@ -1,205 +1,128 @@
-/* Fondo de pantalla con efecto de vidrio en el body */
+/*--------------------- Estilos base para dispositivos móviles (Mobile-First) ---------------------*/
+
+/* Fondo y configuración general */
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #eeeeee;
-    overflow-x: hidden; /* Para evitar desbordamiento horizontal */
+    overflow-x: hidden;
 }
-
 
 header {
     background-color: #252525;
-    width: 100%; /* Asegura que el header ocupe el ancho completo */
+    width: 100%;
 }
 
+.logo-img {
+    height: 50px;
+}
 
 #nav-mobile a {
-    font-size: 1.2rem; /* Ajusta el tamaño inicial de la fuente */
-    color: #eeeeee; /* Puedes ajustar el color de los enlaces si lo necesitas */
+    font-size: 1rem;
+    color: #eeeeee;
 }
 
 .custom-nav a:hover {
-    background-color:  #cf0a0a;
+    background-color: #cf0a0a;
     transition: 2s;
 }
 
-
-.left-logo {
-    position: relative;
-    top: 8rem; 
-    left: 10rem;  
-}
-
-.logo-img{
-    height: 63px;
-}
-.navbar-menu li a:hover {
-    background-color: #cf0a0a;
-    transition: 0.3s;
-}
-
-/*Modifys contenedor info historias*/
-
+/* Contenedor principal de historias */
 .containerPrincipalHisto {
     background-color: #252525;
-    height: 200vh;
-
-    /* Flexbox para centrar el contenedor */
+    padding: 1rem;
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    flex-direction: column;
+    align-items: center;
 }
 
-
-
-.container-customHistorias{
-    width: 100vw;
-    height:150vh ;
-    padding: 10px 10px;
+.container-customHistorias {
+    width: 100%;
+    padding: 1rem;
 }
-
-
 
 /* Estilos para la frase */
 .frase {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que ocupe todo el contenedor */
+    padding: 2rem; /* Ajuste de espacio para pantallas grandes y móviles */
 }
 
 .frase-text {
     color: #d32f2f; /* Rojo oscuro similar al red darken-2 de Materialize */
     font-weight: bold;
-    font-size: 1.5em; /* Ajuste de tamaño de fuente */
-    margin-top: 5rem;
+    font-size: 1.5em;
+    margin-top: 0; /* Elimina el margen superior */
+    margin-bottom: 0; /* Elimina el margen inferior */
 }
 
-/* Estilos para centrar el contenedor */
-.container-custom {
-    width: 600px;
-    text-align: center;
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-
-    margin-bottom: 5rem;
-}
-
-/*-----------------------------------------------------------------------------------------*/
-
-/*FOOTER PART, aqui estaran los estilos personalizados para el apartados del foot*/
-.footer-container p {
-    font-size: 1.5rem; /* Reduce el tamaño del texto del footer */
-    font-weight: bold;
-    color: #e74c3c;
-}
-
-
-.FootPlanes{
-
+/* Tarjetas de historias */
+.card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 15px auto;
+    overflow: hidden;
     display: flex;
-    flex-direction: row-reverse;
-    
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    }
+.card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo-Foot {
-    animation: pulse 2s infinite; /* Animación continua */
+.card-content p {
+    font-size: 14px;
 }
 
-
-/* Logo */
-.logo-container {
-    position: absolute;
-    bottom: 10px;
-    width: 8rem; /* Tamaño más pequeño del logo */
-    opacity: 0.3;
-    z-index: 2;
-    animation: float 6s ease-in-out infinite;
+.card-content .card-title {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.info-box1{
-    
+/* Footer - manteniendo exactamente como estaba */
+.info-box1 {
     background-color: #D3D3D3;
     padding: 1rem;
     text-align: left;
     flex: 1;
 }
 
-.separator {
-    width: 80%;/* Empieza con un ancho de 0 */
-    margin: 1rem auto; /* Centra la línea horizontalmente */
-    border-top: 1px solid black;
-}
-
-
-.PaginasWebsFoot{
+/* Ajuste para centrar el logo en el footer */
+.containerImg {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-
-@keyframes slideInfoLeft {
-
-    from{
-        margin-left: 100%;
-        width: 300%;
-    }
-
-    to{
-        margin-left: 0%;
-        width: 100%;
-    }
-    
+.containerImg .logo-Foot {
+    height: 100px; /* Ajusta el tamaño para móviles */
+    width: 100px;
+    animation: pulse 2s infinite;
 }
 
-
-.containerImg{
-    display: flex;
-    justify-content: center;
-}
-.containerImg .logo-Foot{
-    height: 200px;
-    width: 200px;
-    
-}
-
-.container-Redes-Foot{
+.container-Redes-Foot {
     display: flex;
     justify-content: space-evenly;
 }
 
-
-.ImgIcons{
+.ImgIcons {
     height: 50px;
     width: 50px;
     transition: transform 0.3s ease;
 }
 
-
-.ImgIcons:hover{
-    animation: bounce 0.5s ease forwards infinite;
-
-}
-
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-
-.info-Foot a {
-    transition: text-shadow 0.3s ease;
-}
-
-.info-Foot a:hover {
-    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
+.separator {
+    width: 80%;
+    margin: 1rem auto;
+    border-top: 1px solid black;
 }
 
 .PaginasWebsFoot {
@@ -213,6 +136,15 @@ header {
     flex: 1;
 }
 
+.info-Foot a {
+    transition: text-shadow 0.3s ease;
+    color: #000;
+}
+
+.info-Foot a:hover {
+    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.8);
+}
+
 .location {
     flex: 1;
     display: flex;
@@ -221,71 +153,148 @@ header {
 
 .location .material-icons {
     vertical-align: middle;
-    margin-right: 8px; /* Espacio entre el icono y el texto */
+    margin-right: 8px;
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.logo-Foot {
+    animation: pulse 2s infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.ImgIcons:hover {
+    animation: bounce 0.5s ease forwards infinite;
+}
+
+/*--------------------- Media Query para pantallas grandes (desktop) ---------------------*/
+
+@media (min-width: 1024px) {
+    /* Fondo y configuración general */
+    body {
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: #eeeeee;
+        overflow-x: hidden;
+    }
+
+    header {
+        background-color: #252525;
+        width: 100%;
+    }
+
+    .logo-img {
+        height: 63px;
+    }
+
+    #nav-mobile a {
+        font-size: 1.2rem;
+        color: #eeeeee;
+    }
+
+    .custom-nav a:hover {
+        background-color: #cf0a0a;
+        transition: 2s;
+    }
+
+    /* Contenedor principal de historias */
+    .containerPrincipalHisto {
+        background-color: #252525;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .container-customHistorias {
+        width: 90vw;
+        max-width: 1200px;
+        padding: 10px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Estilos para la frase */
+    .frase {
+        text-align: center;
+    }
+
+    .frase-text {
+        font-size: 1.8em;
+        padding: 1rem 2rem; /* Espacio adicional en pantallas grandes */
+    }
+
+    /* Tarjetas de historias */
+    .card {
+        width: 300px;
+        height: 480px;
+        margin: 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-image img {
+        width: 100%;
+        max-width: 300px;
+        max-height: 200px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid red;
+    }
+
+    .card-content p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .card-content .card-title {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Animaciones al hacer hover en las tarjetas */
+    .card-content {
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover .card-content {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .card-image:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ajuste para centrar el logo en el footer en pantallas grandes */
+    .containerImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerImg .logo-Foot {
+        height: 200px; /* Tamaño original en pantallas grandes */
+        width: 200px;
+    }
 }
 
 
-/*-----------------------------------------------------------------------------------------*/
 
-/* Tamaño específico para las cartas */
-.card {
-    width: 300px; /* Ancho específico para cada carta */
-    height: 480px; /* Altura específica para cada carta */
-    margin: 15px auto; /* Centra las cartas horizontalmente */
-    overflow: hidden; /* Asegura que el contenido no sobresalga */
-    display: flex;
-    flex-direction: column; /* Coloca el contenido verticalmente */
-    justify-content: space-between; /* Espacia el contenido */
-}
-
-/* Estilo del contenedor de la imagen en la tarjeta */
-.card-image-placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddd;
-    height: 80px; /* Altura de la imagen más pequeña */
-    color: #333;
-    font-size: 20px; /* Tamaño de ícono más pequeño */
-}
-
-/* Ajuste del tamaño de texto */
-.card-content p {
-    font-size: 14px; /* Texto más pequeño */
-    margin: 0;
-}
-
-.card-content .card-title {
-    font-size: 16px; /* Título de tamaño más pequeño */
-    font-weight: bold;
-}
-
-/* Efectos al hacer hover */
-.card-content {
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.card:hover .card-content {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra interna suave */
-    transform: translateY(-5px); /* Desplaza el contenido ligeramente hacia arriba */
-}
-
-
-
-.card-image img {
-    width: 100%;
-    max-width: 300px;
-    max-height: 200px; /* Altura máxima de la imagen */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    border-radius: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid red;
-}
-
-.card-image:hover img {
-    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra */
-}
