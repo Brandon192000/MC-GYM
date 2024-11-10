@@ -416,6 +416,98 @@ header {
 /*---------------------------------------------------------------------------------------*/
 
 
+/* Media query para pantallas de tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    /* Header */
+    header {
+        background-color: #252525;
+    }
+
+    /* Logo en el header */
+    .logo-img {
+        height: 64px; /* Tamaño del logo adecuado para tablets */
+    }
+
+    /* Navbar */
+    #nav-mobile a {
+        font-size: 1rem; /* Ajusta el tamaño de la fuente */
+        color: #eeeeee;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 70vh; /* Reduce la altura para tablets */
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Tamaño de título ajustado para tablets */
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Tamaño de texto reducido */
+    }
+
+    /* Botón personalizado */
+    .custom-btn {
+        width: 18rem;
+        height: 50px;
+        font-size: 10px; /* Ajuste para tablets */
+    }
+
+    /* Carousel */
+    .carousel {
+        max-width: 30rem; /* Anchura máxima del carrusel para tablets */
+    }
+
+    .carousel-item img {
+        height: 55vh; /* Reduce la altura de las imágenes del carrusel */
+    }
+
+    /* Membership Section */
+    .membership-container {
+        flex-direction: column; /* Cambia la dirección a columna en tablets */
+        padding: 3rem 2rem;
+    }
+
+    .membership-box {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .membership-box h2 {
+        font-size: 4rem;
+    }
+
+    .membership-box .price {
+        font-size: 3rem;
+    }
+
+    /* Información adicional */
+    .info-box {
+        padding: 3rem;
+    }
+
+    /* Footer */
+    .footer-container p {
+        font-size: 1.2rem;
+    }
+
+    .social-icons img {
+        width: 3.5rem;
+        height: 3.5rem; /* Ajusta el tamaño de los íconos sociales */
+    }
+
+    .separator {
+        width: 100%; /* Ancho ajustado de los separadores en tablets */
+        margin: 1rem auto;
+    }
+
+    .container-Redes-Foot {
+        gap: 1rem; /* Espacio entre íconos sociales */
+    }
+}
+
 
 
 /* Media query para pantallas Dde pc*/
@@ -500,10 +592,6 @@ header {
         border-radius: 2px solid white;
     }
     
-
-
-
-
     /* Hero Section */
     .hero h1 {
         font-size: 4.5em;
@@ -529,7 +617,7 @@ header {
 
 
     .hero-content>h1{
-        animation: slideInfoFromCenter 0.8s ease-out forwards;
+        animation: slideInfoFromCenter 2s ease-out forwards;
     }
 
     .carousel-item img{
@@ -595,3 +683,7 @@ header {
     }
     
 }
+
+
+/*-----------------------------------------------------------------------------------------*/
+

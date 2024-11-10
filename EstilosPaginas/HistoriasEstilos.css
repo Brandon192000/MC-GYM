@@ -209,8 +209,44 @@ header {
     animation: bounce 0.5s ease forwards infinite;
 }
 
-/*--------------------- Media Query para pantallas grandes (desktop) ---------------------*/
 
+/*--------------------- Media Query para pantallas de tablets (tablet) ---------------------*/
+@media (min-width: 600px) and (max-width: 1024px) {
+    /* Ajustes en el tamaño de las tarjetas */
+    .container-customHistorias .col {
+        width: 48%; /* Ocupa aproximadamente la mitad del ancho para dos columnas */
+        max-width: 350px;
+        margin: 15px auto; /* Centrado y ajuste de margen */
+    }
+
+    /* Tamaño de fuente y espaciado en la frase */
+    .frase-text {
+        font-size: 1.6em;
+        padding: 1.5rem;
+    }
+
+    /* Espaciado y alineación */
+    .container-customHistorias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Ajuste en el tamaño de fuente de la barra de navegación para tablets */
+    #nav-mobile a {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustes en el footer para tablet */
+    .containerImg .logo-Foot {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+
+/*--------------------- Media Query para pantallas grandes (desktop) ---------------------*/
 @media (min-width: 1024px) {
     /* Fondo y configuración general */
     body {
@@ -273,7 +309,6 @@ header {
     .card {
         width: 300px;
         height: 480px;
-        margin: 15px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -334,6 +369,3 @@ header {
         border-top: 1px solid black;
     }
 }
-
-
-
