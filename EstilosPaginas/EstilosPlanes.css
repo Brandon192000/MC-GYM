@@ -5,6 +5,13 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Transición global para tamaños, márgenes y paddings */
+*,
+*::before,
+*::after {
+    transition: all 0.3s ease-in-out; /* Aplica una transición general a todos los elementos */
+}
+
 header {
     background-color: #25252525;
     width: 100%;
@@ -282,9 +289,216 @@ header {
 
 /*--------------------- Fin de los estilos para dispositivos móviles ---------------------*/
 
+/*--------------------- Estilos para pantallas de tablets ---------------------*/
+@media (min-width: 600px) and (max-width: 1024px) {
+    /* Ajuste del header */
+    header {
+        background-color: #252525;
+        width: 100%;
+    }
+
+    .logo-img {
+        width: 64px; /* Tamaño adecuado para tablets */
+        height: auto;
+    }
+
+    #nav-mobile a {
+        font-size: 1.1rem; /* Ajuste de fuente para tablets */
+        color: #eeeeee;
+    }
+
+    /* Banner rojo */
+    .banner {
+        background-color: #cf0a0a;
+        color: white;
+        text-align: center;
+        padding: 18px;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        transform: translateX(-50%);
+        z-index: 2;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Contenedor general de los planes */
+    .plans-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1d1d1d;
+        padding: 3rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .plan-text {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .plan-text h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #f2f2f2;
+    }
+
+    .custom-btn {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .plan-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .plan-image img {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .plan-details {
+        font-size: 1rem;
+        color: #eeeeee;
+        margin-top: 10px;
+        margin-left: 4rem;
+    }
+
+    .plan-details2{
+        margin-left: 5rem;
+    }
+
+    .plan-details ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .plan-details li {
+        margin-bottom: 10px;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: #cf0a0a;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-info p {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    .contact-details img {
+        width: 100%;
+        max-width: 250px; /* Tamaño adecuado para tablets */
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
+        margin-top: 15px;
+    }
+
+    /* Contact Header */
+    .contactenos {
+        text-align: center;
+        color: #cf0a0a;
+        font-size: 2.3rem; /* Tamaño adecuado para tablets */
+        background-color: #eeeeee;
+        padding: 15px;
+    }
+
+    /* Footer */
+    .footer-container p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #cf0a0a;
+    }
+
+    .container-Redes-Foot {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .ImgIcons {
+        height: 40px;
+        width: 40px;
+    }
+
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    /* Ajustes de la imagen del logo en el footer */
+    .containerImg .logo-Foot {
+        height: 150px;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .info-box1 {
+        background-color: #D3D3D3;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .separator {
+        width: 100%;
+        margin: 1rem auto;
+        border-top: 1px solid black;
+    }
+    
+    .location {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .location .material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+}
+
+
 
 /*--------------------- Estilos para pantallas de computadora ---------------------*/
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     /* Ajuste de margen en el body */
     body {
         margin: 0;

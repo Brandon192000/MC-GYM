@@ -6,6 +6,14 @@ body {
     overflow-x: hidden; /* Para evitar desbordamiento horizontal */
 }
 
+/* Transición global para tamaños, márgenes y paddings */
+*,
+*::before,
+*::after {
+    transition: all 0.3s ease-in-out; /* Aplica una transición general a todos los elementos */
+}
+
+
 body::before {
     content: '';
     position: fixed;
@@ -511,7 +519,7 @@ header {
 
 
 /* Media query para pantallas Dde pc*/
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     
     /* Estilos generales */
     body {
