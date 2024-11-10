@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (direction === 'prev') {
             instance.prev();
         }
+
+        
     };
   
     // Inicializar el sidenav

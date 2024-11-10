@@ -29,10 +29,30 @@ header {
 }
 
 .logo-img{
-    height: 55px;
+    height: 56px;
 }
 
 
+.sidenav .sidenav-header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.sidenav-logo {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 50%; /* Hace la imagen circular */
+}
+
+
+.sidenav a {
+    color: #eeeeee;
+}
+
+.sidenav a:hover {
+    background-color: #cf0a0a;
+}
 
 
 /* Hero Section */
@@ -65,13 +85,13 @@ header {
 }
 
 .hero h1 {
-    font-size: 2rem; /* Reduce el tamaño del título */
+    font-size: 3rem;
     margin: 0;
 }
 
 .hero p {
-    font-size: 1.2rem; /* Reduce el subtítulo */
-    margin: 20px 0;
+    font-size: 1.5rem; 
+    margin: 25px 0;
 }
 
 
@@ -148,16 +168,6 @@ header {
     position: relative; /* Para que la imagen se posicione dentro del contenedor */
 }
 
-/* Estilo para la imagen decorativa en la esquina */
-.decoracion-esquina {
-    position: absolute;
-    top: 10px; /* Ajusta según la esquina deseada */
-    right: 10px; /* Ajusta según la esquina deseada */
-    width: 200px; /* Tamaño de la imagen decorativa */
-    height: auto;
-    opacity: 0.3; /* Transparencia para un efecto decorativo */
-    z-index: 2; /* Asegura que la imagen esté sobre el fondo, pero debajo de otros elementos */
-}
 
 .membership-box {
     background-color: #ee2727;
@@ -301,7 +311,7 @@ header {
 .info-box1{
     
     background-color: #D3D3D3;
-    padding: 1rem;
+    padding: 2.5rem;
     text-align: left;
     flex: 1;
 }
@@ -318,11 +328,7 @@ header {
     border-top: 2px solid #D3D3D3;
 }
 
-.hero-content>h1{
 
-    animation-duration: 5s;
-    animation-name: slideInfoLeft;
-}
 
 .PaginasWebsFoot{
     display: flex;
@@ -330,18 +336,15 @@ header {
 }
 
 
-@keyframes slideInfoLeft {
-
-    from{
-        margin-left: 100%;
-        width: 300%;
+@keyframes slideInfoFromCenter {
+    from {
+        transform: translateY(50px); /* Empieza desde abajo del centro */
+        opacity: 0;
     }
-
-    to{
-        margin-left: 0%;
-        width: 100%;
+    to {
+        transform: translateY(0); /* Llega al centro */
+        opacity: 1;
     }
-    
 }
 
 
@@ -524,6 +527,10 @@ header {
         
     }
 
+
+    .hero-content>h1{
+        animation: slideInfoFromCenter 0.8s ease-out forwards;
+    }
 
     .carousel-item img{
         height: 100vh;

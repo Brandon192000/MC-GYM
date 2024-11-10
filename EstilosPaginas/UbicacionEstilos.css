@@ -46,6 +46,27 @@ header {
     transition: 2s;
 }
 
+.sidenav .sidenav-header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.sidenav-logo {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 50%; /* Hace la imagen circular */
+}
+
+/* Opcional: estilos para los enlaces del sidenav */
+.sidenav a {
+    color: #eeeeee;
+}
+
+.sidenav a:hover {
+    background-color: #cf0a0a;
+}
+
+
 /*-------------------------------------------*/
 /* Banner */
 /*-------------------------------------------*/
@@ -107,7 +128,6 @@ header {
     max-height: 100%;
     object-fit: cover;
     width: 100%;
-    border-radius: 10px;
 }
 
 .carousel-control {
@@ -123,6 +143,8 @@ header {
     z-index: 1;
 }
 
+
+
 .carousel-control.prev {
     left: 5px;
 }
@@ -136,6 +158,8 @@ header {
     margin-top: 2rem;
     margin-bottom: 3rem; 
 }
+
+
 
 
 /*-------------------------------------------*/
@@ -160,7 +184,7 @@ header {
 /*-------------------------------------------*/
 
 .footer-container p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #e74c3c;
 }
@@ -169,14 +193,16 @@ header {
     animation: pulse 2s infinite;
 }
 
-.info-box1 {
+.info-box1{
+    
     background-color: #D3D3D3;
-    padding: 1rem;
+    padding: 2.5rem;
     text-align: left;
+    flex: 1;
 }
 
 .separator {
-    width: 90%;
+    width: 100%;
     margin: 1rem auto;
     border-top: 1px solid black;
 }
@@ -191,8 +217,8 @@ header {
 }
 
 .containerImg .logo-Foot {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
 }
 
 .container-Redes-Foot {
@@ -316,7 +342,7 @@ header {
 
 @media (min-width: 1024px) {
     .logo-img {
-        height: 63px;
+        height: 64px;
     }
 
     .banner {
@@ -376,5 +402,11 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 20px 0;
+    }
+
+    .separator {
+        width: 80%;
+        margin: 1rem auto;
+        border-top: 1px solid black;
     }
 }

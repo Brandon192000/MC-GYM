@@ -22,6 +22,26 @@ header {
     color: #eeeeee;
 }
 
+.sidenav .sidenav-header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.sidenav-logo {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 50%; /* Hace la imagen circular */
+}
+
+/* Opcional: estilos para los enlaces del sidenav */
+.sidenav a {
+    color: #eeeeee;
+}
+
+.sidenav a:hover {
+    background-color: #cf0a0a;
+}
+
 .custom-nav a:hover {
     background-color: #cf0a0a;
     transition: 2s;
@@ -87,13 +107,14 @@ header {
     font-weight: bold;
 }
 
-/* Footer - manteniendo exactamente como estaba */
-.info-box1 {
+.info-box1{
+    
     background-color: #D3D3D3;
-    padding: 1rem;
+    padding: 2.5rem;
     text-align: left;
     flex: 1;
 }
+
 
 /* Ajuste para centrar el logo en el footer */
 .containerImg {
@@ -103,8 +124,8 @@ header {
 }
 
 .containerImg .logo-Foot {
-    height: 100px; /* Ajusta el tamaño para móviles */
-    width: 100px;
+    height: 200px; /* Ajusta el tamaño para móviles */
+    width: 200px;
     animation: pulse 2s infinite;
 }
 
@@ -132,7 +153,7 @@ header {
 
 
 .separator {
-    width: 80%;
+    width: 100%;
     margin: 1rem auto;
     border-top: 1px solid black;
 }
@@ -305,6 +326,12 @@ header {
     .containerImg .logo-Foot {
         height: 200px; /* Tamaño original en pantallas grandes */
         width: 200px;
+    }
+
+    .separator {
+        width: 80%;
+        margin: 1rem auto;
+        border-top: 1px solid black;
     }
 }
 
