@@ -1,50 +1,59 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar el carousel
-    var carouselElems = document.querySelectorAll('.carousel');
-    var carouselInstances = M.Carousel.init(carouselElems, {
+document.addEventListener('DOMContentLoaded', function () {
+    // Inicializar el carrusel
+    var carouselElem = document.querySelector('.carousel');
+    var carouselInstance = M.Carousel.init(carouselElem, {
         fullWidth: true,
         indicators: true
     });
-  
-    // Función para mover el carrusel
-    window.moveCarousel = function(direction) {
-        var instance = M.Carousel.getInstance(carouselElems[0]);
-        if (direction === 'next') {
-            instance.next();
-        } else if (direction === 'prev') {
-            instance.prev();
-        }
 
-        
+    // Función para mover el carrusel manualmente
+    window.moveCarousel = function (direction) {
+        if (direction === 'next') {
+            carouselInstance.next();
+        } else if (direction === 'prev') {
+            carouselInstance.prev();
+        }
     };
-  
+
+    // Configuración para que el carrusel pase automáticamente cada 3 segundos
+    setInterval(function () {
+        carouselInstance.next();
+    }, 6000); // Cambia el tiempo (en milisegundos) según tus necesidades
+
     // Inicializar el sidenav
     var sidenavElems = document.querySelectorAll('.sidenav');
     var sidenavInstances = M.Sidenav.init(sidenavElems);
-  
-    // Función para cerrar el sidenav al cambiar a vista de escritorio
-    function closeSidenavOnResize() {
-        if (window.innerWidth > 992) { // 992px es el breakpoint típico de Materialize para escritorio
-            sidenavInstances.forEach(function(instance) {
-                instance.close();
-            });
-        }
+
+    // Función debounce para cerrar el sidenav al cambiar a vista de escritorio
+    function debounce(func, wait) {
+        let timeout;
+        return function () {
+            const context = this,
+                args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), wait);
+        };
     }
-  
-    // Llamar a la función al redimensionar la ventana
+
+    // Cerrar sidenav automáticamente en vista de escritorio
+    const closeSidenavOnResize = debounce(() => {
+        if (window.innerWidth > 992) {
+            sidenavInstances.forEach(instance => instance.close());
+        }
+    }, 200); // Espera 200ms después de redimensionar
+
     window.addEventListener('resize', closeSidenavOnResize);
-  });
-  
-  // Código para el botón "Ver más"
-  const viewMoreBtn = document.getElementById("viewMoreBtn");
-  const titlesList = document.getElementById("titlesList");
-  
-  // Variable para controlar si está expandido o no
-  let isExpanded = false;
-  
-  if (viewMoreBtn && titlesList) {  // Verifica que los elementos existen
-    viewMoreBtn.addEventListener("click", function() {
-        // Alternar la clase expanded para mostrar u ocultar la lista
+});
+
+// Código para el botón "Ver más"
+const viewMoreBtn = document.getElementById("viewMoreBtn");
+const titlesList = document.getElementById("titlesList");
+
+// Variable para controlar si la lista está expandida o no
+let isExpanded = false;
+
+if (viewMoreBtn && titlesList) {
+    viewMoreBtn.addEventListener("click", function () {
         if (isExpanded) {
             titlesList.classList.remove("expanded");
             viewMoreBtn.textContent = "Ver más";
@@ -52,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             titlesList.classList.add("expanded");
             viewMoreBtn.textContent = "Ver menos";
         }
-        isExpanded = !isExpanded; // Cambiar el estado
+        isExpanded = !isExpanded;
     });
-  }
-
+}

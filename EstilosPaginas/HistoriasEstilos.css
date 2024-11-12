@@ -1,121 +1,147 @@
-/*--------------------- Estilos base para dispositivos móviles (Mobile-First) ---------------------*/
+/*--------------------- Estilos base para dispositivos Mobile-First ---------------------*/
 
+/*------------------------------------------------*/
 /* Fondo y configuración general */
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #eeeeee;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal en móviles */
 }
 
 header {
     background-color: #252525;
-    width: 100%;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
 
+/*-------------------------------------------------*/
+*,
+*::before,
+*::after {
+    transition: all 0.3s ease-in-out; /* Aplica una transición general a todos los elementos */
+}
+/*------------------------------------------------*/
+/* Logo en el header para dispositivos móviles */
 .logo-img {
-    height: 56px;
+    height: 56px; /* Tamaño del logo para dispositivos móviles */
+    width: auto;
 }
 
+/*------------------------------------------------*/
+/* Estilos de navegación para dispositivos móviles */
 #nav-mobile a {
-    font-size: 1rem;
+    font-size: 1rem; /* Tamaño de fuente en el menú móvil */
     color: #eeeeee;
 }
 
+/* Estilos de la cabecera del menú lateral */
 .sidenav .sidenav-header {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px 0; /* Espaciado superior e inferior */
 }
+
+/* Logo en el menú lateral */
 .sidenav-logo {
     width: 100px; /* Tamaño de la imagen */
     height: auto;
     border-radius: 50%; /* Hace la imagen circular */
 }
 
+/*------------------------------------------------*/
 /* Opcional: estilos para los enlaces del sidenav */
 .sidenav a {
     color: #eeeeee;
 }
 
 .sidenav a:hover {
-    background-color: #cf0a0a;
+    background-color: #cf0a0a; /* Cambia el fondo al pasar el mouse */
 }
 
+/*------------------------------------------------*/
+/* Efecto hover en la navegación personalizada */
 .custom-nav a:hover {
     background-color: #cf0a0a;
-    transition: 2s;
+    transition: 2s; /* Suaviza el cambio de color en 2 segundos */
 }
 
-/* Contenedor principal de historias */
-.containerPrincipalHisto {
-    background-color: #252525;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container-customHistorias {
-    width: 100%;
-    padding: 1rem;
-}
-
-/* Estilos para la frase */
+/*------------------------------------------------*/
+/* Estilos para la frase destacada */
 .frase {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Asegura que ocupe todo el contenedor */
-    padding: 2rem; /* Ajuste de espacio para pantallas grandes y móviles */
+    height: 100%;
+    padding: 2rem; /* Espaciado para pantallas pequeñas y grandes */
 }
 
 .frase-text {
-    color: #d32f2f; /* Rojo oscuro similar al red darken-2 de Materialize */
+    color: #d32f2f; /* Rojo oscuro */
     font-weight: bold;
     font-size: 1.5em;
     margin-top: 0; /* Elimina el margen superior */
     margin-bottom: 0; /* Elimina el margen inferior */
 }
 
+/*------------------------------------------------*/
+/* Estilos del contenedor principal de historias */
+.containerPrincipalHisto {
+    background-color: #252525;
+    padding: 20px;
+}
+
+/*------------------------------------------------*/
 /* Tarjetas de historias */
-.card {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 15px auto;
-    overflow: hidden;
+.card.horizontal {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row; /* Alinea imagen y contenido en una fila */
+    align-items: stretch;
+    max-width: 100%; /* Ajusta el ancho para dispositivos móviles */
+    max-height: 80%; /* Ajusta la altura máxima */
+}
+
+.card-image {
+    width: 50%; /* Imagen ocupa el 50% del ancho */
 }
 
 .card-image img {
-    width: 100%;
+    width: 50%;
     height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
+.card-stacked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%; /* El contenido ocupa el 60% del ancho */
+    padding: 20px;
+}
+
+/*------------------------------------------------*/
+/* Estilo del contenido de la tarjeta */
 .card-content p {
-    font-size: 14px;
+    font-size: 15px;
+    margin: 0;
 }
 
 .card-content .card-title {
-    font-size: 16px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-.info-box1{
-    
+/*------------------------------------------------*/
+/* Caja de información en el footer */
+.info-box1 {
     background-color: #D3D3D3;
     padding: 2.5rem;
     text-align: left;
     flex: 1;
 }
 
-
+/*------------------------------------------------*/
 /* Ajuste para centrar el logo en el footer */
 .containerImg {
     display: flex;
@@ -124,40 +150,48 @@ header {
 }
 
 .containerImg .logo-Foot {
-    height: 200px; /* Ajusta el tamaño para móviles */
+    height: 200px; /* Tamaño del logo para móviles */
     width: 200px;
-    animation: pulse 2s infinite;
+    animation: pulse 2s infinite; /* Animación de pulso */
 }
 
+/*------------------------------------------------*/
+/* Redes sociales en el footer */
 .container-Redes-Foot {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* Espacio entre los iconos */
 }
 
 .ImgIcons {
     height: 50px;
     width: 50px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transición suave en tamaño */
 }
 
+/*------------------------------------------------*/
+/* Lista desplegable con transiciones */
 #titlesList.expanded {
     display: block;
     max-height: none;
 }
+
 #titlesList {
     display: none;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease; /* Transición de apertura suave */
 }
 
-
+/*------------------------------------------------*/
+/* Separador de contenido */
 .separator {
     width: 100%;
     margin: 1rem auto;
     border-top: 1px solid black;
 }
 
+/*------------------------------------------------*/
+/* Footer links y layout */
 .PaginasWebsFoot {
     display: flex;
     justify-content: space-between;
@@ -170,14 +204,16 @@ header {
 }
 
 .info-Foot a {
-    transition: text-shadow 0.3s ease;
+    transition: text-shadow 0.3s ease; /* pone lenta la transición de sombra */
     color: #000;
 }
 
 .info-Foot a:hover {
-    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.8);
+    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.8); /* Sombra roja en hover */
 }
 
+/*------------------------------------------------*/
+/* Ubicación en el footer */
 .location {
     flex: 1;
     display: flex;
@@ -186,68 +222,44 @@ header {
 
 .location .material-icons {
     vertical-align: middle;
-    margin-right: 8px;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
-/* Animaciones */
+/*--------------------- Animaciones ---------------------*/
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    50% { transform: scale(1.05); } /* Aumenta ligeramente en el medio del ciclo */
 }
 
 .logo-Foot {
-    animation: pulse 2s infinite;
+    animation: pulse 2s infinite; /* Animación continua de pulso */
 }
 
+/* Animación de rebote */
 @keyframes bounce {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-10px); } /* Rebota hacia arriba */
     100% { transform: translateY(0); }
 }
 
 .ImgIcons:hover {
-    animation: bounce 0.5s ease forwards infinite;
+    animation: bounce 0.5s ease forwards infinite; /* Rebote al pasar el mouse */
 }
 
+/*--------------------- Media Query para pantallas de tablets (768px - 1023px) ---------------------*/
 
-/*--------------------- Media Query para pantallas de tablets (tablet) ---------------------*/
-@media (min-width: 600px) and (max-width: 1024px) {
-    /* Ajustes en el tamaño de las tarjetas */
-    .container-customHistorias .col {
-        width: 48%; /* Ocupa aproximadamente la mitad del ancho para dos columnas */
-        max-width: 350px;
-        margin: 15px auto; /* Centrado y ajuste de margen */
-    }
-
-    /* Tamaño de fuente y espaciado en la frase */
-    .frase-text {
-        font-size: 1.6em;
-        padding: 1.5rem;
-    }
-
-    /* Espaciado y alineación */
-    .container-customHistorias {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    /* Ajuste en el tamaño de fuente de la barra de navegación para tablets */
-    #nav-mobile a {
-        font-size: 1.1rem;
-    }
-
-    /* Ajustes en el footer para tablet */
-    .containerImg .logo-Foot {
-        height: 180px;
-        width: 180px;
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Forzar el tamaño del logo en tablets */
+    .logo-img {
+        height: 64px; /* Tamaño del logo específico para tablets */
+        width: auto;
     }
 }
 
+/*--------------------- Media Query para pantallas grandes (1024px y mayores) ---------------------*/
 
-/*--------------------- Media Query para pantallas grandes (desktop) ---------------------*/
 @media (min-width: 1024px) {
+    /*------------------------------------------------*/
     /* Fondo y configuración general */
     body {
         margin: 0;
@@ -261,24 +273,39 @@ header {
         width: 100%;
     }
 
+    /*------------------------------------------------*/
+    /* Logo en el header para pantallas grandes */
     .logo-img {
-        height: 64px;
+        height: 64px; /* Tamaño del logo para computadoras */
+        width: auto;
     }
 
     #nav-mobile a {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Fuente más grande para escritorio */
         color: #eeeeee;
     }
 
+    /* Efecto hover en la navegación personalizada */
     .custom-nav a:hover {
         background-color: #cf0a0a;
         transition: 2s;
     }
 
+    /*------------------------------------------------*/
+    /* Estilos para la frase en pantallas grandes */
+    .frase {
+        text-align: center;
+    }
+
+    .frase-text {
+        font-size: 1.8em;
+        padding: 1rem 2rem; /* Espaciado adicional en pantallas grandes */
+        background-color: #eeeeee;
+    }
+
+    /*------------------------------------------------*/
     /* Contenedor principal de historias */
     .containerPrincipalHisto {
-        background-color: #252525;
-        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -286,7 +313,7 @@ header {
     }
 
     .container-customHistorias {
-        width: 90vw;
+        width: 100%;
         max-width: 1200px;
         padding: 10px 10px;
         display: flex;
@@ -295,48 +322,43 @@ header {
         justify-content: center;
     }
 
-    /* Estilos para la frase */
-    .frase {
-        text-align: center;
+    /* Tarjetas de historias en pantallas grandes */
+    .card.horizontal {
+        width: 100%;
+        max-width: 1200px;
+        height: 400px;
+        flex-direction: row;
     }
 
-    .frase-text {
-        font-size: 1.8em;
-        padding: 1rem 2rem; /* Espacio adicional en pantallas grandes */
+    .card.horizontal:hover {
+        transform: translateY(-5px); /* Mueve la tarjeta ligeramente hacia arriba */
     }
 
-    /* Tarjetas de historias */
-    .card {
-        width: 300px;
-        height: 480px;
-        overflow: hidden;
+    .card-image {
+        width: 40%; /* Ajusta el ancho de la imagen */
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
     }
 
     .card-image img {
-        width: 100%;
-        max-width: 300px;
-        max-height: 200px;
-        height: auto;
+        width: 100%; /* Imagen ocupa todo el contenedor */
+        height: 100%;
         object-fit: cover;
-        border-radius: 0;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid red;
     }
 
     .card-content p {
-        font-size: 14px;
+        font-size: 20px;
         margin: 0;
     }
 
     .card-content .card-title {
-        font-size: 16px;
+        font-size: 40px;
         font-weight: bold;
     }
 
-    /* Animaciones al hacer hover en las tarjetas */
+    /*------------------------------------------------*/
+    /* Efecto hover en el contenido de la tarjeta */
     .card-content {
         transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
@@ -346,11 +368,7 @@ header {
         transform: translateY(-5px);
     }
 
-    .card-image:hover img {
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
+    /*------------------------------------------------*/
     /* Ajuste para centrar el logo en el footer en pantallas grandes */
     .containerImg {
         display: flex;
@@ -359,10 +377,12 @@ header {
     }
 
     .containerImg .logo-Foot {
-        height: 200px; /* Tamaño original en pantallas grandes */
+        height: 200px; /* Tamaño del logo en pantallas grandes */
         width: 200px;
     }
 
+    /*------------------------------------------------*/
+    /* Separador de contenido en pantallas grandes */
     .separator {
         width: 80%;
         margin: 1rem auto;

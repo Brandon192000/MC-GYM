@@ -1,5 +1,6 @@
 /*--------------------- Estilos generales para dispositivos móviles ---------------------*/
 
+/* Configuración básica del cuerpo de la página */
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -9,110 +10,123 @@ body {
 *,
 *::before,
 *::after {
-    transition: all 0.3s ease-in-out; /* Aplica una transición general a todos los elementos */
+    transition: all 0.3s ease-in-out; /* Añade una transición suave a todos los elementos */
 }
 
+/* Estilo para el encabezado de la página */
 header {
-    background-color: #25252525;
+    background-color: #25252525; /* Fondo semitransparente */
     width: 100%;
 }
 
+/* Tamaño y estilo del logo en dispositivos móviles */
 .logo-img {
     width: 56px; /* Tamaño reducido para móviles */
     height: auto;
 }
 
+/* Estilo de los enlaces de navegación para móviles */
 #nav-mobile a {
-    font-size: 1rem; /* Tamaño reducido para móviles */
-    color: #eeeeee;
+    font-size: 1rem; /* Tamaño del texto reducido en móviles */
+    color: #eeeeee; /* Color gris claro */
 }
 
+/* Efecto hover para los enlaces de navegación */
 .custom-nav a:hover {
-    background-color: #cf0a0a;
+    background-color: #cf0a0a; /* Cambia el color de fondo al pasar el ratón */
     transition: 2s;
 }
 
+/* Estilo de la cabecera del menú lateral */
 .sidenav .sidenav-header {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px 0; /* Espaciado en la cabecera del menú lateral */
 }
+
+/* Tamaño y forma del logo en el sidenav */
 .sidenav-logo {
-    width: 100px; /* Tamaño de la imagen */
+    width: 100px; /* Tamaño del logo */
     height: auto;
-    border-radius: 50%; /* Hace la imagen circular */
+    border-radius: 50%; /* Forma circular */
 }
 
-/* Opcional: estilos para los enlaces del sidenav */
+/* Estilo de los enlaces del sidenav */
 .sidenav a {
-    color: #eeeeee;
+    color: #eeeeee; /* Color de los enlaces en el sidenav */
 }
 
+/* Efecto hover para los enlaces del sidenav */
 .sidenav a:hover {
-    background-color: #cf0a0a;
+    background-color: #cf0a0a; /* Color de fondo al pasar el ratón */
 }
 
-
+/* Estilo para el banner de la página */
 .banner {
-    background-color: #cf0a0a;
+    background-color: #cf0a0a; /* Color rojo oscuro */
     color: white;
     text-align: center;
     padding: 15px;
     font-size: 16px;
     font-weight: bold;
-    width: 90%;
+    width: 100%;
     position: relative;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el banner */
 }
 
+/* Contenedor para los planes de membresía */
 .plans-container {
     display: block;
-    background-color: #1d1d1d;
+    background-color: #1d1d1d; /* Fondo oscuro */
     padding: 2rem;
     box-sizing: border-box;
 }
 
+/* Estilo del texto en el contenedor de los planes */
 .plan-text {
     max-width: 100%;
     text-align: center;
     margin-bottom: 1.5rem; /* Espacio entre los planes */
 }
 
+/* Título de los planes */
 .plan-text h2 {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #f2f2f2;
+    color: #f2f2f2; /* Color blanco */
 }
 
-
-
+/* Botón personalizado para los planes */
 .custom-btn {
     font-size: 20px;
-    width: 100%;
+    width: 50%;
     height: 50px;
-    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%);
+    background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%); /* Gradiente de color */
     border: none;
     cursor: pointer;
     color: #eeeeee;
     transition: all 0.3s ease-in-out;
 }
 
+/* Efecto hover para el botón */
 .custom-btn:hover {
-    transform: translateY(3px);
+    transform: translateY(3px); /* Desplaza el botón hacia abajo */
 }
 
+/* Efecto al hacer clic en el botón */
 .custom-btn:active {
     opacity: 0.7;
-    transform: scale(0.95);
+    transform: scale(0.95); /* Reduce el tamaño del botón al hacer clic */
 }
 
+/* Contenedor para la sección de contacto */
 .contact-container {
-    background-color: #cf0a0a;
+    background-color: #cf0a0a; /* Fondo rojo oscuro */
     width: 100%;
     padding: 15px;
     display: flex;
@@ -120,71 +134,79 @@ header {
     box-sizing: border-box;
 }
 
+/* Detalles del contenedor de contacto */
 .contact-details {
     display: flex;
-    flex-direction: column; /* Organiza el contenido en columna */
+    flex-direction: column; /* Disposición en columna */
     align-items: center; /* Centra el contenido horizontalmente */
     justify-content: center;
     background-color: #eeeeee;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    max-width: 600px; /* Ancho máximo para asegurar que no sea demasiado grande */
-    margin: 0 auto; /* Centra el contenedor dentro de la página */
+    max-width: 600px; /* Ancho máximo para evitar que se expanda demasiado */
+    margin: 0 auto; /* Centra el contenedor en la página */
 }
 
+/* Texto en la sección de contacto */
 .contact-info {
-    text-align: center; /* Centra el texto dentro del contenedor */
+    text-align: center; /* Centra el texto */
     margin-bottom: 20px;
 }
 
+/* Estilo para los párrafos en la sección de contacto */
 .contact-info p {
     margin: 0;
     line-height: 1.6;
     font-size: 18px;
 }
 
-/* Ajuste responsivo para que la imagen esté centrada y un poco más grande en pantallas grandes */
+/* Ajustes de imagen en la sección de contacto */
 .contact-details img {
     width: 100%;
-    max-width: 200px; /* Tamaño por defecto de la imagen en móviles */
+    max-width: 200px; /* Tamaño predeterminado para móviles */
     height: auto;
     border-radius: 5px;
     object-fit: cover;
-    margin-top: 20px; /* Añade espacio entre el texto y la imagen */
+    margin-top: 20px; /* Espacio entre el texto y la imagen */
 }
 
-
+/* Contenedor para el mensaje de contacto */
 .contactenos {
     text-align: center;
     color: #cf0a0a;
-    font-size: 2rem; /* Tamaño reducido para móvil */
+    font-size: 2rem;
     background-color: #eeeeee;
-    width: 100%; /* Ocupa el 100% del ancho disponible */
-    padding: 10px; /* Espaciado interno para dar margen en el contenedor */
+    width: 100%; /* Ancho completo */
+    padding: 10px;
 }
 
+/* Texto del footer */
 .footer-container p {
     font-size: 1.2rem;
     font-weight: bold;
     color: #cf0a0a;
 }
 
+/* Contenedor de iconos de redes sociales en el footer */
 .container-Redes-Foot {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Espacio entre iconos */
 }
 
+/* Tamaño de los iconos de redes sociales */
 .ImgIcons {
     height: 40px;
     width: 40px;
     transition: transform 0.3s ease;
 }
 
+/* Enlaces en el footer */
 .info-Foot a {
     transition: text-shadow 0.3s ease;
 }
 
+/* Estilo para la sección de enlaces en el footer */
 .PaginasWebsFoot {
     display: flex;
     justify-content: space-between;
@@ -192,6 +214,7 @@ header {
     padding: 15px 0;
 }
 
+/* Contenedor de la imagen del plan */
 .plan-image {
     display: flex;
     justify-content: center;
@@ -200,73 +223,83 @@ header {
     height: 100%;
 }
 
+/* Estilo de la imagen del plan */
 .plan-image img {
     width: 80%;
     height: 80%;
     object-fit: cover;
 }
 
-/* Ajustes responsivos para la imagen del footer en móviles */
+/* Ajustes de imagen en el footer en móviles */
 .containerImg .logo-Foot {
-    height:200px; /* Tamaño adecuado para móviles */
+    height: 200px;
     width: 200px;
     display: block;
-    margin: 0 auto; /* Centrado horizontal en el contenedor */
+    margin: 0 auto; /* Centrado horizontal */
 }
 
+/* Icono con posición en línea con el texto */
 .icon-pos {
-    vertical-align: middle; /* Alinea el icono con el texto */
-    margin-right: 8px; /* Espacio entre el icono y el texto */
-    color: #252525; /* Color del icono */
-    
+    vertical-align: middle;
+    margin-right: 8px;
+    color: #252525;
 }
 
-.under{
+/* Estilo para enlaces subrayados */
+.under {
     text-decoration: underline;
 }
-.under:hover{
-    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
+.under:hover {
+    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801); /* Efecto hover en el subrayado */
 }
 
-
 /*--------------------- Animaciones ---------------------*/
+
+/* Animación de pulso */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.05); /* Aumenta el tamaño al 105% */
     }
 }
 
+/* Animación de rebote */
 @keyframes bounce {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-10px); /* Sube 10px */ }
     100% { transform: translateY(0); }
 }
 
+/* Animación de flotación */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-10px); /* Sube 10px */ }
 }
 
+/* Animación de deslizamiento hacia la izquierda */
 @keyframes slideInfoLeft {
     from { margin-left: 100%; width: 300%; }
     to { margin-left: 0%; width: 100%; }
 }
 
+/* Aplicación de animación de pulso al logo del footer */
 .logo-Foot {
     animation: pulse 2s infinite;
 }
 
+/* Aplicación de animación de rebote a los iconos de redes sociales al hacer hover */
 .ImgIcons:hover {
     animation: bounce 0.5s ease forwards infinite;
 }
 
+/* Contenedor animado para el logo */
 .logo-container {
     animation: float 6s ease-in-out infinite;
 }
 
+/* Contenedor de información en el footer */
 .info-box1 {
     background-color: #D3D3D3;
     padding: 1rem;
@@ -276,11 +309,11 @@ header {
 /* Separador móvil entre planes */
 .separator-mobile {
     width: 100%;
-    height: 10px; /* Altura del separador */
-    background-color: #D3D3D3; /* Color del separador */
+    height: 10px;
+    background-color: #D3D3D3;
 }
 
-
+/* Separador para otras secciones */
 .separator {
     width: 100%;
     margin: 1rem auto;
@@ -289,222 +322,110 @@ header {
 
 /*--------------------- Fin de los estilos para dispositivos móviles ---------------------*/
 
+
 /*--------------------- Estilos para pantallas de tablets ---------------------*/
-@media (min-width: 600px) and (max-width: 1024px) {
-    /* Ajuste del header */
-    header {
-        background-color: #252525;
-        width: 100%;
-    }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Ajuste del tamaño del logo en tablets */
     .logo-img {
-        width: 64px; /* Tamaño adecuado para tablets */
+        width: 64px;
         height: auto;
-    }
-
-    #nav-mobile a {
-        font-size: 1.1rem; /* Ajuste de fuente para tablets */
-        color: #eeeeee;
-    }
-
-    /* Banner rojo */
-    .banner {
-        background-color: #cf0a0a;
-        color: white;
-        text-align: center;
-        padding: 18px;
-        font-size: 18px;
-        font-weight: bold;
-        width: 100%;
-        transform: translateX(-50%);
-        z-index: 2;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Contenedor general de los planes */
-    .plans-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #1d1d1d;
-        padding: 3rem 1.5rem;
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
-    }
-
-    .plan-text {
-        max-width: 100%;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-
-    .plan-text h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: #f2f2f2;
-    }
-
-    .custom-btn {
-        width: 100%;
-        height: 50px;
-        font-size: 18px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .plan-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    .plan-image img {
-        width: 80%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .plan-details {
-        font-size: 1rem;
-        color: #eeeeee;
-        margin-top: 10px;
-        margin-left: 4rem;
-    }
-
-    .plan-details2{
-        margin-left: 5rem;
-    }
-
-    .plan-details ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    .plan-details li {
-        margin-bottom: 10px;
-    }
-
-    /* Contact Section */
-    .contact-container {
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        background-color: #cf0a0a;
-    }
-
-    .contact-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #eeeeee;
-        padding: 20px;
-        border-radius: 10px;
-        width: 90%;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .contact-info {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .contact-info p {
-        margin: 0;
-        line-height: 1.6;
-        font-size: 16px;
-    }
-
-    .contact-details img {
-        width: 100%;
-        max-width: 250px; /* Tamaño adecuado para tablets */
-        height: auto;
-        border-radius: 5px;
-        object-fit: cover;
-        margin-top: 15px;
-    }
-
-    /* Contact Header */
-    .contactenos {
-        text-align: center;
-        color: #cf0a0a;
-        font-size: 2.3rem; /* Tamaño adecuado para tablets */
-        background-color: #eeeeee;
-        padding: 15px;
-    }
-
-    /* Footer */
-    .footer-container p {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #cf0a0a;
-    }
-
-    .container-Redes-Foot {
-        display: flex;
-        justify-content: space-around;
-        padding: 10px 0;
-    }
-
-    .ImgIcons {
-        height: 40px;
-        width: 40px;
-    }
-
-    .PaginasWebsFoot {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-    }
-
-    /* Ajustes de la imagen del logo en el footer */
-    .containerImg .logo-Foot {
-        height: 150px;
-        width: 150px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .info-box1 {
-        background-color: #D3D3D3;
-        padding: 1rem;
-        text-align: left;
-    }
-
-    .separator {
-        width: 100%;
-        margin: 1rem auto;
-        border-top: 1px solid black;
     }
     
-    .location {
-        flex: 1;
-        display: flex;
-        align-items: center;
+    /* Tamaño de texto en el menú de navegación en tablets */
+    .custom-nav {
+        font-size: 1rem;
     }
 
-    .location .material-icons {
-        vertical-align: middle;
-        margin-right: 8px;
+    /* Estilo de las tarjetas de entrenadores en tablets */
+    .container .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Distribuye espacio entre las tarjetas */
+    }
+
+    /* Configuración de las tarjetas en tablets */
+    .card-horizontal {
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+
+    /* Ajuste de la imagen dentro de la tarjeta en tablets */
+    .card-image img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    /* Ajuste del contenido de la tarjeta en tablets */
+    .card-content {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    /* Ajuste del título de la tarjeta en tablets */
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #252525;
+    }
+
+    /* Ajuste del texto en la tarjeta en tablets */
+    .card-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Ajuste de detalles desplegables */
+    details {
+        width: 100%;
+    }
+
+    /* Estilo para la vista de más detalles */
+    .view-more {
+        cursor: pointer;
+        color: #e74c3c;
+        font-weight: bold;
+    }
+
+    /* Estilo para los elementos de la lista de títulos */
+    .titles-list li {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    /* Ajuste en el footer */
+    .footer-container p {
+        font-size: 1rem;
+    }
+
+    /* Alineación de redes sociales en el footer */
+    .container-Redes-Foot {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Tamaño de los iconos de redes sociales en tablets */
+    .ImgIcons {
+        width: 40px;
+        height: 40px;
     }
 }
 
-
-
 /*--------------------- Estilos para pantallas de computadora ---------------------*/
-@media (min-width: 1025px) {
-    /* Ajuste de margen en el body */
+
+@media (min-width: 1024px) {
+    /* Ajuste de márgenes en el cuerpo de la página */
     body {
         margin: 0;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
+    /* Imagen de fondo fija y desenfocada en pantallas grandes */
     body::before {
         content: '';
         position: fixed;
@@ -521,26 +442,30 @@ header {
         z-index: -1;
     }
 
+    /* Ajuste de la cabecera */
     header {
         background-color: #25252525;
         width: 100%;
     }
 
+    /* Tamaño del logo en pantallas grandes */
     .logo-img {
         width: 64px;
         height: auto;
     }
 
+    /* Tamaño del texto en el menú de navegación */
     #nav-mobile a {
         font-size: 1.2rem;
         color: #eeeeee;
     }
 
+    /* Ocultar el separador móvil */
     .separator-mobile {
         display: none;
     }
 
-    /* Banner rojo */
+    /* Configuración del banner rojo */
     .banner {
         background-color: #cf0a0a;
         color: white;
@@ -557,7 +482,7 @@ header {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* Contenedor general de los planes */
+    /* Contenedor de planes en pantallas grandes */
     .plans-container {
         display: flex;
         justify-content: space-around;
@@ -570,11 +495,13 @@ header {
         position: relative;
     }
 
+    /* Texto de los planes */
     .plan-text {
         max-width: 300px;
         text-align: left;
     }
 
+    /* Título del plan en pantallas grandes */
     .plan-text h2 {
         font-size: 2.5rem;
         font-weight: bold;
@@ -582,6 +509,7 @@ header {
         color: #f2f2f2;
     }
 
+    /* Botón personalizado para planes en pantallas grandes */
     .custom-btn {
         width: 13rem;
         height: 60px;
@@ -590,18 +518,21 @@ header {
         font-family: "Dosis", sans-serif;
     }
 
+    /* Contenedor de información de planes */
     .plans-infoCompleta {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+    /* Detalles del plan */
     .plan-details {
         font-size: 1rem;
         color: #eeeeee;
         margin-top: 10px;
     }
 
+    /* Lista de detalles del plan */
     .plan-details ul {
         list-style-type: none;
         margin-left: 20px;
@@ -611,15 +542,17 @@ header {
         margin-bottom: 10px;
     }
 
+    /* Contenedor de contacto en pantallas grandes */
     .contact-container {
         display: flex;
         justify-content: center;
         padding: 40px;
     }
     
+    /* Ajustes del contenedor de contacto en pantallas grandes */
     .contact-details {
         display: flex;
-        flex-direction: row; /* Alineación en fila para contener la imagen y el texto en horizontal */
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         background-color: #eeeeee;
@@ -629,102 +562,115 @@ header {
         max-width: 800px;
     }
 
-    
+    /* Icono en la sección de contacto */
     .icon-pos {
-        vertical-align: middle; /* Alinea el icono con el texto */
-        margin-right: 8px; /* Espacio entre el icono y el texto */
-        color: #252525; /* Color del icono */
+        vertical-align: middle;
+        margin-right: 8px;
+        color: #252525;
     }
 
-    
+    /* Información de contacto en pantallas grandes */
     .contact-info {
         display: flex;
-        flex-direction: column; /* Alineación vertical de los elementos de texto */
+        flex-direction: column;
         text-align: left;
         margin-right: 20px;
     }
     
+    /* Párrafos en la información de contacto */
     .contact-info p {
-        margin: 0 0 10px 0; /* Margen inferior para separar cada línea de texto */
+        margin: 0 0 10px 0;
         line-height: 1.6;
         font-size: 18px;
     }
     
+    /* Imagen en la sección de contacto */
     .contact-details img {
         max-width: 300px;
         width: 100%;
         height: auto;
         border-radius: 5px;
-        object-fit: cover;
+        object-fit: cover; /* Ajuste de imagen dentro del contenedor */
     }
 
-    /* Footer */
+    /* Texto en el footer */
     .footer-container p {
         font-size: 1.5rem;
         font-weight: bold;
         color: #e74c3c;
     }
 
+    /* Ajuste del footer en planes */
     .FootPlanes {
         display: flex;
         flex-direction: row-reverse;
     }
 
+    /* Logo del footer con animación de pulso */
     .logo-Foot {
         animation: pulse 2s infinite;
     }
 
+    /* Contenedor de logo animado */
     .logo-container {
         position: absolute;
         bottom: 10px;
         width: 8rem;
-        opacity: 0.3;
+        opacity: 0.3; /* Transparencia */
         z-index: 2;
     }
 
+    /* Caja de información en el footer */
     .info-box1 {
         background-color: #D3D3D3;
         padding: 1rem;
         text-align: left;
     }
 
+    /* Separador para secciones en el footer */
     .separator {
         width: 80%;
         margin: 1rem auto;
         border-top: 1px solid black;
     }
 
+    /* Organización de enlaces en el footer */
     .PaginasWebsFoot {
         display: flex;
         justify-content: center;
     }
 
+    /* Centrado de imagen en el footer */
     .containerImg {
         display: flex;
         justify-content: center;
     }
 
-    /* Ajustes responsivos para la imagen del footer en escritorio */
+    /* Tamaño de logo en el footer para pantallas grandes */
     .containerImg .logo-Foot {
         height: 200px;
         width: 200px;
     }
 
+    /* Redes sociales en el footer */
     .container-Redes-Foot {
         display: flex;
         justify-content: space-evenly;
     }
 
+    /* Iconos de redes sociales en el footer */
     .ImgIcons {
         height: 50px;
         width: 50px;
         transition: transform 0.3s ease;
     }
 
+    /* Efecto de sombra en los enlaces de información */
     .info-Foot a:hover {
         text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
     }
 
+    /* Alineación de elementos en el footer */
     .PaginasWebsFoot {
         display: flex;
         justify-content: space-between;
@@ -732,21 +678,25 @@ header {
         padding: 20px 0;
     }
 
+    /* Configuración de la sección de información en el footer */
     .info-Foot {
         flex: 1;
     }
 
+    /* Alineación de iconos en la sección de ubicación */
     .location {
         flex: 1;
         display: flex;
         align-items: center;
     }
 
+    /* Ajuste del icono de ubicación */
     .location .material-icons {
         vertical-align: middle;
         margin-right: 8px;
     }
 
+    /* Contenedor de mensaje de contacto */
     .contactenos {
         display: flex;
         justify-content: center;
@@ -757,7 +707,9 @@ header {
         background-color: #eeeeee;
     }
 
+    /* Estilo de restricción de texto */
     .RESTRICCION {
         text-decoration: underline;
     }
 }
+

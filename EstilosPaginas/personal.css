@@ -9,29 +9,28 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow-x: hidden; /* Para evitar desbordamiento horizontal */
+    overflow-x: hidden;
+    position: relative; /* Necesario para usar z-index y pseudo-elementos */
 }
 
-/* Asegúrate de que main esté configurado para abarcar todo */
-main {
-    position: relative;
-    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
-    z-index: 1;
+/* Transición global para tamaños, márgenes y paddings */
+*,
+*::before,
+*::after {
+    transition: all 0.3s ease-in-out; /* Aplica una transición general a todos los elementos */
 }
 
-/* Capa de filtro de vidrio */
-main::before {
+/* Capa de filtro de vidrio en el body */
+body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Desenfoque para el efecto de vidrio */
     background-color: rgba(255, 255, 255, 0.1); /* Opcional: agrega un ligero color para el vidrio */
-    z-index: -1;
+    z-index: -1; /* Asegura que el efecto esté detrás del contenido */
 }
 
 #nav-mobile a {
@@ -52,6 +51,7 @@ main::before {
 .sidenav {
     background-color: #ffffff !important;
     color: #333333; /* Color oscuro para el texto */
+    z-index: 1000;
 }
 
 .sidenav a {
@@ -75,6 +75,10 @@ main::before {
     margin-bottom: 10px;
 }
 
+.sidenav-overlay {
+    display: none !important;
+}
+
 /* Estilos para la cita */
 .quote {
     background-color: white;
@@ -83,14 +87,15 @@ main::before {
     font-size: 1rem;
     color: #cf0a0a;
     margin: 15px auto;
-    width: 90%;
+    width: 100%;
+    max-width: 1000px;
     border: 2px solid #cf0a0a;
 }
 
 
-.quote, .card-horizontal {
+.card-horizontal {
     width: 100%;
-    max-width: 400px; /* Ancho máximo para móviles */
+    max-width: 1000px; /* Ancho máximo para móviles */
     margin: 15px auto;
 }
 
@@ -236,8 +241,8 @@ main::before {
 }
 
 .ImgIcons {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -252,6 +257,147 @@ main::before {
 .info-Foot a:hover {
     text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
 }
+
+/* Media Query para pantallas de tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Ajuste de la barra de navegación */
+    #nav-mobile a {
+        font-size: 1.1rem;
+        color: #eeeeee
+    }
+
+    .custom-nav a:hover {
+        background-color: #cf0a0a;
+        transition: 2s;
+    }
+
+    .logo-img {
+        height: 64px; /* Ajuste del tamaño del logo */
+    }
+
+    
+
+    /* Ajuste de la cita */
+    .quote {
+        background-color: white;
+        padding: 18px;
+        text-align: center;
+        font-size: 1.1rem;
+        color: #cf0a0a;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 1000px;
+        border: 2px solid #cf0a0a;
+        box-sizing: border-box;
+    }
+
+    /* Ajuste de la tarjeta (card) */
+    .card-horizontal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #252525;
+        color: #ffffff;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-sizing: border-box;
+        text-align: center; /* Centrar el texto dentro de la tarjeta */
+    }
+
+    .card-horizontal .card-image {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .card-horizontal .card-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 3px solid #cf0a0a;
+    }
+
+    .card-horizontal .card-content {
+        padding: 15px;
+    }
+
+    .card-horizontal .card-title {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #cf0a0a;
+        margin-bottom: 10px;
+    }
+
+    .card-horizontal .card-content p {
+        font-size: 1em;
+        color: #ffffff;
+        margin: 0 0 10px;
+    }
+
+    .card-horizontal .card-action {
+        padding-top: 10px;
+    }
+
+    /* Footer */
+    .footer-container p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #e74c3c;
+    }
+
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .containerImg .logo-Foot {
+        height: 180px;
+        width: 180px;
+    }
+
+    .separator {
+        width: 90%;
+        margin: 1rem auto;
+        border-top: 1px solid black;
+    }
+
+    /* Ajuste de los iconos de redes sociales */
+    .container-Redes-Foot {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .ImgIcons {
+        height: 45px;
+        width: 45px;
+        transition: transform 0.3s ease;
+    }
+
+    .info-Foot {
+        flex: 1;
+    }
+
+    .location {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .location .material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+}
+
+
 
 /* Media Query para pantallas grandes (computadoras) */
 @media (min-width: 1024px) {
@@ -283,7 +429,7 @@ main::before {
         color: #cf0a0a;
         margin: 20px auto;
         width: 100%;
-        max-width: 1100px;
+        max-width: 100%;
         border: 2px solid #cf0a0a;
         box-sizing: border-box;
     }
@@ -298,7 +444,6 @@ main::before {
         color: #ffffff;
         width: 100%;
         max-width: 1100px;
-        margin: 20px auto;
         padding: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         box-sizing: border-box;

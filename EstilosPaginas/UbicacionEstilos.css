@@ -8,6 +8,20 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Transición global para tamaños, márgenes y paddings */
+*,
+*::before,
+*::after {
+    transition: all 0.3s ease-in-out; /* Aplica una transición general a todos los elementos */
+}
+
+/* Desactivar la transición en el carrusel */
+.carousel,
+.carousel * {
+    transition: none;
+}
+
+
 body::before {
     content: '';
     position: fixed;
@@ -57,7 +71,6 @@ header {
     border-radius: 50%; /* Hace la imagen circular */
 }
 
-/* Opcional: estilos para los enlaces del sidenav */
 .sidenav a {
     color: #eeeeee;
 }
@@ -169,16 +182,25 @@ header {
 .custom-btn {
     transition: all 0.3s ease-in-out;
     font-family: "Dosis", sans-serif;
-    width: 12rem;
+    width: 18rem;
     height: 50px;
     background-image: linear-gradient(100deg, #000000 0%, #ff0000 50%);
     outline: none;
     cursor: pointer;
     border: none;
-    font-size: 20px;
+    font-size: 10px;
     color: #eeeeee;
 }
 
+
+.custom-btn:hover {
+    transform: translateY(3px);
+}
+
+.custom-btn:active {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
 /*-------------------------------------------*/
 /* Footer */
 /*-------------------------------------------*/
@@ -227,8 +249,8 @@ header {
 }
 
 .ImgIcons {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -293,48 +315,109 @@ header {
 /* Estilos para pantallas medianas */
 /*-------------------------------------------*/
 
-@media (min-width: 768px) {
-    #nav-mobile a {
-        font-size: 1.2rem;
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Encabezado */
+    header {
+        background-color: #252525;
     }
 
+    .logo-img {
+        height: 64px; /* Tamaño adecuado para tablets */
+    }
+
+    #nav-mobile a {
+        font-size: 1.1rem; /* Tamaño de fuente un poco mayor para tablets */
+    }
+
+    /* Banner */
     .banner {
-        font-size: 1.7rem;
-        width: 80%;
+        font-size: 1.6rem;
+        margin: 3rem auto;
+        width: 85%; /* Ajusta el ancho para tablets */
+        padding: 15px;
+    }
+
+    /* Sección del mapa */
+    .map-section {
+        margin: 3rem 3rem;
     }
 
     .map-container {
-        height: 400px;
+        width: 85%;
+        height: 500px; /* Ajuste de altura para tablets */
+        margin: 3rem auto;
+    }
+
+    /* Carrusel */
+    .conteinarCarrusel {
+        padding: 10px 0;
     }
 
     .contenedorprincipalCarrucel {
-        max-width: 75%;
+        max-width: 80%; /* Más ancho que en móvil pero menos que en escritorio */
+        margin: auto;
     }
 
-    .carousel-control {
+    .PNuestraFam {
         font-size: 1.8rem;
     }
 
-    .custom-btn {
-        width: 14rem;
-        height: 55px;
-        font-size: 22px;
+    .carousel img {
+        max-height: 100%;
+        object-fit: cover;
+        width: 100%;
     }
 
+    .carousel-control {
+        font-size: 1.8rem; /* Ajuste de tamaño del control para tablets */
+    }
+
+    .botonVermas {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Botones personalizados */
+    .custom-btn {
+        width: 20rem; /* Ajuste de ancho del botón para tablets */
+        height: 55px;
+        font-size: 15px;
+    }
+
+    /* Footer */
     .footer-container p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .containerImg .logo-Foot {
-        height: 180px;
+        height: 180px; /* Tamaño adecuado para tablets */
         width: 180px;
     }
 
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+
+    .separator {
+        width: 85%; /* Ajuste de ancho del separador para tablets */
+        margin: 1rem auto;
+        border-top: 1px solid black;
+    }
+
+    .container-Redes-Foot {
+        display: flex;
+        justify-content: space-around;
+    }
+
     .ImgIcons {
-        height: 45px;
-        width: 45px;
+        height: 35px;
+        width: 35px;
     }
 }
+
 
 /*-------------------------------------------*/
 /* Estilos para pantallas grandes */
@@ -350,6 +433,13 @@ header {
         margin: 5rem auto;
         width: 73%;
     }
+
+    /* Tamaño del texto en el menú de navegación */
+    #nav-mobile a {
+        font-size: 1.2rem;
+        color: #eeeeee;
+    }
+
 
     .map-section {
         margin: 5rem 5rem;
