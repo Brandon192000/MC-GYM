@@ -191,13 +191,13 @@ header {
 /* Contenedor de iconos de redes sociales en el footer */
 .container-Redes-Foot {
     display: flex;
-    justify-content: space-around; /* Espacio entre iconos */
+    justify-content: space-evenly; /* Espacio entre iconos */
 }
 
 /* Tamaño de los iconos de redes sociales */
 .ImgIcons {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -206,12 +206,10 @@ header {
     transition: text-shadow 0.3s ease;
 }
 
-/* Estilo para la sección de enlaces en el footer */
 .PaginasWebsFoot {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
 }
 
 /* Contenedor de la imagen del plan */
@@ -230,12 +228,15 @@ header {
     object-fit: cover;
 }
 
+.containerImg{
+    display: flex;
+    justify-content: center;
+}
+
 /* Ajustes de imagen en el footer en móviles */
 .containerImg .logo-Foot {
     height: 200px;
     width: 200px;
-    display: block;
-    margin: 0 auto; /* Centrado horizontal */
 }
 
 /* Icono con posición en línea con el texto */
@@ -320,6 +321,33 @@ header {
     border-top: 1px solid black;
 }
 
+.info-Foot {
+    flex: 1;
+}
+
+.location {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.location .material-icons {
+    vertical-align: middle;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+
+.footer {
+    width: 100%; /* Ocupa el 100% del ancho */
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #D3D3D3; /* Color de fondo */
+    color: #000; /* Color de texto */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+
+
 /*--------------------- Fin de los estilos para dispositivos móviles ---------------------*/
 
 
@@ -373,6 +401,24 @@ header {
         color: #252525;
     }
 
+    .PaginasWebsFoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .info-Foot {
+        flex: 1;
+    }
+    
+    .location {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+    
+
     /* Ajuste del texto en la tarjeta en tablets */
     .card-content p {
         font-size: 1rem;
@@ -402,18 +448,44 @@ header {
         font-size: 1rem;
     }
 
-    /* Alineación de redes sociales en el footer */
-    .container-Redes-Foot {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
+    
 
     /* Tamaño de los iconos de redes sociales en tablets */
     .ImgIcons {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
+
+    .separator {
+        width: 100%;
+        margin: 1rem auto;
+        border-top: 1px solid black;
+    }
+
+    .info-box1{
+    
+        background-color: #D3D3D3;
+        padding: 1.5rem;
+        text-align: left;
+        flex: 1;
+    }
+
+    .containerImg .logo-Foot{
+        height: 200px;
+        width: 200px;
+        
+    }
+
+    .footer {
+        width: 100%; /* Ocupa el 100% del ancho */
+        padding: 1rem 0;
+        text-align: center;
+        background-color: #D3D3D3; /* Color de fondo */
+        color: #000; /* Color de texto */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
+    }
+
+    
 }
 
 /*--------------------- Estilos para pantallas de computadora ---------------------*/
@@ -634,12 +706,7 @@ header {
         border-top: 1px solid black;
     }
 
-    /* Organización de enlaces en el footer */
-    .PaginasWebsFoot {
-        display: flex;
-        justify-content: center;
-    }
-
+    
     /* Centrado de imagen en el footer */
     .containerImg {
         display: flex;
@@ -675,7 +742,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+        
     }
 
     /* Configuración de la sección de información en el footer */

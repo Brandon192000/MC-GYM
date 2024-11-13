@@ -208,15 +208,25 @@ body::before {
 
 .PaginasWebsFoot {
     display: flex;
-    justify-content: center;
-    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.info-box1 {
+.info-box1{
+    
     background-color: #D3D3D3;
     padding: 1rem;
     text-align: left;
     flex: 1;
+}
+
+.footer {
+    width: 100%; /* Ocupa el 100% del ancho */
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #D3D3D3; /* Color de fondo */
+    color: #000; /* Color de texto */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
 .separator {
@@ -248,6 +258,21 @@ body::before {
 
 .ImgIcons:hover {
     animation: bounce 0.5s ease forwards infinite;
+}
+
+.info-Foot {
+    flex: 1;
+}
+
+.location {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.location .material-icons {
+    vertical-align: middle;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
 .info-Foot a {
@@ -358,22 +383,25 @@ body::before {
         padding: 15px 0;
     }
 
+    .info-box1{
+    
+        background-color: #D3D3D3;
+        padding: 1.5rem;
+        text-align: left;
+        flex: 1;
+    }
+
     .containerImg .logo-Foot {
-        height: 180px;
-        width: 180px;
+        height: 200px;
+        width: 200px;
     }
 
     .separator {
-        width: 90%;
+        width: 100%;
         margin: 1rem auto;
         border-top: 1px solid black;
     }
 
-    /* Ajuste de los iconos de redes sociales */
-    .container-Redes-Foot {
-        display: flex;
-        justify-content: space-evenly;
-    }
 
     .ImgIcons {
         height: 45px;
@@ -394,6 +422,15 @@ body::before {
     .location .material-icons {
         vertical-align: middle;
         margin-right: 8px;
+    }
+
+    .footer {
+        width: 100%; /* Ocupa el 100% del ancho */
+        padding: 1rem 0;
+        text-align: center;
+        background-color: #D3D3D3; /* Color de fondo */
+        color: #000; /* Color de texto */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
     }
 }
 

@@ -137,33 +137,46 @@ header {
     font-weight: bold;
 }
 
+.carousel {
+    position: relative;
+    z-index: 1;
+    max-width: 55rem;
+    margin: auto;
+}
+
 .carousel img {
-    max-height: 100%;
-    object-fit: cover;
-    width: 100%;
+    height: 50vh;
+    background: no-repeat center scroll;
+    -webkit-backgroud-size: cover;
+    -moz-box-size: cover;
+    -moz-background-size:cover;
+    background-size: cover;
+    background-position: center center;
 }
 
 .carousel-control {
     position: absolute;
     top: 50%;
-    font-size: 1.5rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 5px;
-    cursor: pointer;
     transform: translateY(-50%);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 
 
 .carousel-control.prev {
-    left: 5px;
+    left: 10px;
+    background-color: black;
 }
 
 .carousel-control.next {
-    right: 5px;
+    right: 10px;
+    background-color: black;
 }
 
 
@@ -218,7 +231,7 @@ header {
 .info-box1{
     
     background-color: #D3D3D3;
-    padding: 2.5rem;
+    padding: 1rem;
     text-align: left;
     flex: 1;
 }
@@ -228,6 +241,16 @@ header {
     margin: 1rem auto;
     border-top: 1px solid black;
 }
+
+.footer {
+    width: 100%; /* Ocupa el 100% del ancho */
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #D3D3D3; /* Color de fondo */
+    color: #000; /* Color de texto */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
 
 /*-------------------------------------------*/
 /* Contenedor de imágenes y redes sociales */
@@ -272,9 +295,9 @@ header {
 
 .PaginasWebsFoot {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    
 }
 
 .info-Foot {
@@ -390,10 +413,20 @@ header {
         font-size: 1.4rem;
     }
 
-    .containerImg .logo-Foot {
-        height: 180px; /* Tamaño adecuado para tablets */
-        width: 180px;
+    .containerImg .logo-Foot{
+        height: 200px;
+        width: 200px;
+        
     }
+
+    .info-box1{
+    
+        background-color: #D3D3D3;
+        padding: 1.5rem;
+        text-align: left;
+        flex: 1;
+    }
+
 
     .PaginasWebsFoot {
         display: flex;
@@ -402,19 +435,27 @@ header {
     }
 
     .separator {
-        width: 85%; /* Ajuste de ancho del separador para tablets */
+        width: 100%; /* Ajuste de ancho del separador para tablets */
         margin: 1rem auto;
         border-top: 1px solid black;
     }
 
+    .footer {
+        width: 100%; /* Ocupa el 100% del ancho */
+        padding: 1rem 0;
+        text-align: center;
+        background-color: #D3D3D3; /* Color de fondo */
+        color: #000; /* Color de texto */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
+    }
+    
     .container-Redes-Foot {
-        display: flex;
-        justify-content: space-around;
+        gap: 1rem; /* Espacio entre íconos sociales */
     }
 
     .ImgIcons {
-        height: 35px;
-        width: 35px;
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -455,8 +496,25 @@ header {
         padding: 1px 0;
     }
 
+    /* Carrusel */
+    .carousel {
+        max-width: 50rem;
+        margin: auto;
+        
+    }
+
+    .carousel-item img{
+        height: 60vh;
+        background: no-repeat center scroll;
+        -webkit-backgroud-size: cover;
+        -moz-box-size: cover;
+        -moz-background-size:cover;
+        background-size: cover;
+        background-position: center center;
+    }
+
     .contenedorprincipalCarrucel {
-        max-width: 50%;
+        max-width: 40%;
         margin: auto;
     }
 

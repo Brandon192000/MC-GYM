@@ -300,8 +300,6 @@ header {
 
 /* Ajustes responsivos para la imagen del footer en móviles */
 .containerImg .logo-Foot {
-    height: 100px; /* Tamaño adecuado para móviles */
-    width: 100px;
     display: block;
     margin: 0 auto; /* Centrado horizontal en el contenedor */
 }
@@ -324,7 +322,7 @@ header {
 .info-box1{
     
     background-color: #D3D3D3;
-    padding: 2.5rem;
+    padding: 1rem;
     text-align: left;
     flex: 1;
 }
@@ -352,10 +350,6 @@ header {
 
 
 
-.PaginasWebsFoot{
-    display: flex;
-    justify-content: center;
-}
 
 
 @keyframes slideInfoFromCenter {
@@ -374,6 +368,7 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .containerImg .logo-Foot{
     height: 200px;
     width: 200px;
@@ -417,7 +412,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    
 }
 
 .info-Foot {
@@ -510,6 +505,14 @@ header {
         padding: 3rem;
     }
 
+    .info-box1{
+    
+        background-color: #D3D3D3;
+        padding: 1.5rem;
+        text-align: left;
+        flex: 1;
+    }
+
     /* Footer */
     .footer-container p {
         font-size: 1.2rem;
@@ -527,6 +530,20 @@ header {
 
     .container-Redes-Foot {
         gap: 1rem; /* Espacio entre íconos sociales */
+    }
+
+    .containerImg .logo-Foot{
+        height: 200px;
+        width: 200px;
+        
+    }
+    .footer {
+        width: 100%; /* Ocupa el 100% del ancho */
+        padding: 1rem 0;
+        text-align: center;
+        background-color: #D3D3D3; /* Color de fondo */
+        color: #000; /* Color de texto */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
     }
 }
 

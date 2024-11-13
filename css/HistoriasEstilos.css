@@ -92,32 +92,28 @@ header {
 }
 
 /*------------------------------------------------*/
-/* Tarjetas de historias */
 .card.horizontal {
-    display: flex;
-    flex-direction: row; /* Alinea imagen y contenido en una fila */
-    align-items: stretch;
-    max-width: 100%; /* Ajusta el ancho para dispositivos móviles */
-    max-height: 80%; /* Ajusta la altura máxima */
+    flex-direction: column; /* Coloca la imagen encima del texto */
+    align-items: center; /* Centra la imagen horizontalmente */
+    height: auto; /* Ajusta la altura automáticamente */
 }
 
 .card-image {
-    width: 50%; /* Imagen ocupa el 50% del ancho */
+    width: 100%; /* La imagen ocupa todo el ancho */
+    display: flex;
+    justify-content: center;
 }
 
 .card-image img {
-    width: 50%;
-    height: auto;
-    object-fit: cover; /* Recorta la imagen sin deformarla */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    width: 80%; /* Ajusta el tamaño de la imagen en móviles */
+    height: auto; /* Mantén la proporción de la imagen */
+    object-fit: cover;
 }
 
 .card-stacked {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%; /* El contenido ocupa el 60% del ancho */
-    padding: 20px;
+    width: 100%; /* El contenido ocupa todo el ancho */
+    padding: 10px; /* Ajusta el espacio alrededor del texto */
+    text-align: center; /* Centra el texto en móviles */
 }
 
 /*------------------------------------------------*/
@@ -134,12 +130,14 @@ header {
 
 /*------------------------------------------------*/
 /* Caja de información en el footer */
-.info-box1 {
+.info-box1{
+    
     background-color: #D3D3D3;
-    padding: 2.5rem;
+    padding: 1rem;
     text-align: left;
     flex: 1;
 }
+
 
 /*------------------------------------------------*/
 /* Ajuste para centrar el logo en el footer */
@@ -196,7 +194,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
 }
 
 .info-Foot {
@@ -223,6 +220,15 @@ header {
 .location .material-icons {
     vertical-align: middle;
     margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.footer {
+    width: 100%; /* Ocupa el 100% del ancho */
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #D3D3D3; /* Color de fondo */
+    color: #000; /* Color de texto */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
 /*--------------------- Animaciones ---------------------*/
@@ -254,7 +260,59 @@ header {
         height: 64px; /* Tamaño del logo específico para tablets */
         width: auto;
     }
+
+    .info-box1{
+    
+        background-color: #D3D3D3;
+        padding: 1.5rem;
+        text-align: left;
+        flex: 1;
+    }
+    .containerImg .logo-Foot{
+        height: 200px;
+        width: 200px;
+        
+    }
+    .footer {
+        width: 100%; /* Ocupa el 100% del ancho */
+        padding: 1rem 0;
+        text-align: center;
+        background-color: #D3D3D3; /* Color de fondo */
+        color: #000; /* Color de texto */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
+    }
+
+        /* Tarjetas de historias */
+    .card.horizontal {
+        display: flex;
+        flex-direction: row; /* Alinea imagen y contenido en una fila */
+        align-items: stretch;
+        max-width: 100%; /* Ajusta el ancho para dispositivos móviles */
+        max-height: 80%; /* Ajusta la altura máxima */
+    }
+
+    .card-image {
+        width: 50%; /* Imagen ocupa el 50% del ancho */
+    }
+
+    .card-image img {
+        width: 50%;
+        height: auto;
+        object-fit: cover; /* Recorta la imagen sin deformarla */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    }
+
+    .card-stacked {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%; /* El contenido ocupa el 60% del ancho */
+        padding: 20px;
+    }
+
+
 }
+
 
 /*--------------------- Media Query para pantallas grandes (1024px y mayores) ---------------------*/
 
@@ -322,29 +380,27 @@ header {
         justify-content: center;
     }
 
-    /* Tarjetas de historias en pantallas grandes */
     .card.horizontal {
+        flex-direction: row; /* Imagen a la izquierda y texto a la derecha */
         width: 100%;
         max-width: 1200px;
         height: 400px;
-        flex-direction: row;
-    }
-
-    .card.horizontal:hover {
-        transform: translateY(-5px); /* Mueve la tarjeta ligeramente hacia arriba */
     }
 
     .card-image {
-        width: 40%; /* Ajusta el ancho de la imagen */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 40%; /* Imagen ocupa el 40% del ancho */
+        height: 100%;
     }
 
     .card-image img {
-        width: 100%; /* Imagen ocupa todo el contenedor */
+        width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; /* Recorta la imagen sin distorsión */
+    }
+
+    .card-stacked {
+        width: 60%; /* Contenido ocupa el 60% del ancho */
+        padding: 20px;
     }
 
     .card-content p {
@@ -356,7 +412,13 @@ header {
         font-size: 40px;
         font-weight: bold;
     }
+    
 
+    .card.horizontal:hover {
+        transform: translateY(-5px); /* Mueve la tarjeta ligeramente hacia arriba */
+    }
+
+   
     /*------------------------------------------------*/
     /* Efecto hover en el contenido de la tarjeta */
     .card-content {
