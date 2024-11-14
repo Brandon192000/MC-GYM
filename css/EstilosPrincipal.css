@@ -429,6 +429,9 @@ header {
     vertical-align: middle;
     margin-right: 8px; /* Espacio entre el icono y el texto */
 }
+.hero-content>h1{
+    animation: slideInfoFromCenter 2s ease-out forwards;
+}
 
 /*---------------------------------------------------------------------------------------*/
 
@@ -544,6 +547,10 @@ header {
         background-color: #D3D3D3; /* Color de fondo */
         color: #000; /* Color de texto */
         box-sizing: border-box; /* Incluye padding en el ancho total */
+    }
+
+    .hero-content>h1{
+        animation: slideInfoFromCenter 2s ease-out forwards;
     }
 }
 

@@ -498,13 +498,13 @@ header {
 
     /* Carrusel */
     .carousel {
-        max-width: 50rem;
+        max-width: 45rem;
         margin: auto;
         
     }
 
     .carousel-item img{
-        height: 60vh;
+        height: 57vh;
         background: no-repeat center scroll;
         -webkit-backgroud-size: cover;
         -moz-box-size: cover;

@@ -201,10 +201,11 @@ header {
     transition: transform 0.3s ease;
 }
 
-/* Enlaces en el footer */
-.info-Foot a {
-    transition: text-shadow 0.3s ease;
+
+.info-Foot a:hover {
+    text-shadow: 3px 3px 10px rgba(230, 19, 19, 0.801);
 }
+
 
 .PaginasWebsFoot {
     display: flex;
